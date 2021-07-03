@@ -1,5 +1,7 @@
 package stackPrograms;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 /**
@@ -34,6 +36,7 @@ public class stackMenuDrivenProgram {
             this.next = null;
         }
     }
+
     boolean isEmpty() {
         if (top == null)
             return true;
@@ -48,73 +51,80 @@ public class stackMenuDrivenProgram {
             top = newNode;
         else
             newNode.next = top;
-             top = newNode;
+        top = newNode;
     }
-    int pop(){
-        if (isEmpty()){
+
+    int pop() {
+        if (isEmpty()) {
             return -1;
-        }
-        else{
-            int topValue= top.data;
-            top=top.next;
+        } else {
+            int topValue = top.data;
+            top = top.next;
             return topValue;
         }
 
     }
 
-    int top(){
-        if (isEmpty()){
+    int top() {
+        if (isEmpty()) {
             return -1;
 
-        }
-        else
+        } else
             return top.data;
     }
 
-    int getMin(){
-        if (isEmpty()){
+    int getMin() {
+        if (isEmpty()) {
             return -1;
-        }else{
-            int value=top.data;
-            Node temp=top.next;
-            while (temp.next!=null){
-                if (value>temp.data)
-                    value=temp.data;
+        } else {
+            int value = top.data;
+            Node temp = top.next;
+            while (temp != null) {
+                if (value > temp.data)
+                    value = temp.data;
 
-                temp=temp.next;
+                temp = temp.next;
             }
-        return value;
+            return value;
         }
 
     }
+}
 
 class main{
     public static void main(String[] args) {
         stackMenuDrivenProgram prgm = new stackMenuDrivenProgram();
         Scanner scannerObject = new Scanner(System.in);
+        System.out.println("ENTER THE TEST CASES YOU WANT TO RUN:");
         int testCase = scannerObject.nextInt();
         while (testCase!=0){
+            System.out.println("ENTER THE NUMBER B/W 1-4" +" \n"+
+                    "1. push(x) - Push element x onto stack.\n" +
+                    "2. pop() - Removes the element on top of the stack.\n" +
+                    "3. top() - Get the top element.\n" +
+                    "4. getMin() - Get the minimum element in the stack.");
             int run = scannerObject.nextInt();
             if (run==1){
+                System.out.println("ENTER THE DATA TO PUCH IN THE STACK:-");
                 int dataToPush= scannerObject.nextInt();
                 prgm.push(dataToPush);
             }else if (run==2){
                 int val=prgm.pop();
-                System.out.println(val);
+                System.out.println("THE POPED ELEMENT FROM THE STACK IS:"+" "+val);
             }else if (run==3){
                 int top = prgm.top();
-                System.out.println(top);
+                System.out.println("THE TOP ELEMENT OF THE STACK IS:"+" "+top);
             }else if (run==4){
                 int minEle = prgm.getMin();
-                System.out.println(minEle);
+                System.out.println("THE MINIMUM ELEMENT OF THE STACK IS:"+" "+minEle);
             }else {
-                System.out.println("-1");
+                System.out.println("ENTER THE CORRECT CHOICE");
             }
             testCase--;
         }
     }
 }
 
-}
+
 
 
