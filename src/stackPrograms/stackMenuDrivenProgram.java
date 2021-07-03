@@ -5,22 +5,22 @@ import jdk.swing.interop.SwingInterOpUtils;
 import java.util.Scanner;
 
 /**
- *  Abhishek went for an interview at an IT company. The interviewer asks him to design a Data Structure that performs the Stack operation like push(), pop() and one more operation getMin(), getMin() function should return the minimum element from the stack. The interviewer also told him that all these operations must be in
+ * Abhishek went for an interview at an IT company. The interviewer asks him to design a Data Structure that performs the Stack operation like push(), pop() and one more operation getMin(), getMin() function should return the minimum element from the stack. The interviewer also told him that all these operations must be in
  * O
  * (
  * 1
  * )
- *  time and use only stack data structure.
- *
- *  Note: You have to answer the question according to query.
- *     You will get four types of query.
- *
+ * time and use only stack data structure.
+ * <p>
+ * Note: You have to answer the question according to query.
+ * You will get four types of query.
+ * <p>
  * 1. push(x) - Push element x onto stack.
  * 2. pop() - Removes the element on top of the stack.
  * 3. top() - Get the top element.
  * 4. getMin() - Get the minimum element in the stack.
- *  Expected Time Complexity for each query is O(1)
- *
+ * Expected Time Complexity for each query is O(1)
+ * <p>
  * Note: The Interviewer did not allow you to use any other data structure except stack.
  */
 
@@ -91,33 +91,33 @@ public class stackMenuDrivenProgram {
     }
 }
 
-class main{
+class main {
     public static void main(String[] args) {
         stackMenuDrivenProgram prgm = new stackMenuDrivenProgram();
         Scanner scannerObject = new Scanner(System.in);
         System.out.println("ENTER THE TEST CASES YOU WANT TO RUN:");
         int testCase = scannerObject.nextInt();
-        while (testCase!=0){
-            System.out.println("ENTER THE NUMBER B/W 1-4" +" \n"+
+        while (testCase != 0) {
+            System.out.println("ENTER THE NUMBER B/W 1-4" + " \n" +
                     "1. push(x) - Push element x onto stack.\n" +
                     "2. pop() - Removes the element on top of the stack.\n" +
                     "3. top() - Get the top element.\n" +
                     "4. getMin() - Get the minimum element in the stack.");
             int run = scannerObject.nextInt();
-            if (run==1){
+            if (run == 1) {
                 System.out.println("ENTER THE DATA TO PUCH IN THE STACK:-");
-                int dataToPush= scannerObject.nextInt();
+                int dataToPush = scannerObject.nextInt();
                 prgm.push(dataToPush);
-            }else if (run==2){
-                int val=prgm.pop();
-                System.out.println("THE POPED ELEMENT FROM THE STACK IS:"+" "+val);
-            }else if (run==3){
+            } else if (run == 2) {
+                int val = prgm.pop();
+                System.out.println("THE POPED ELEMENT FROM THE STACK IS:" + " " + val);
+            } else if (run == 3) {
                 int top = prgm.top();
-                System.out.println("THE TOP ELEMENT OF THE STACK IS:"+" "+top);
-            }else if (run==4){
+                System.out.println("THE TOP ELEMENT OF THE STACK IS:" + " " + top);
+            } else if (run == 4) {
                 int minEle = prgm.getMin();
-                System.out.println("THE MINIMUM ELEMENT OF THE STACK IS:"+" "+minEle);
-            }else {
+                System.out.println("THE MINIMUM ELEMENT OF THE STACK IS:" + " " + minEle);
+            } else {
                 System.out.println("ENTER THE CORRECT CHOICE");
             }
             testCase--;
