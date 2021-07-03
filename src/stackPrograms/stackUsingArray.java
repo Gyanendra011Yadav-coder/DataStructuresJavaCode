@@ -21,6 +21,15 @@ package stackPrograms;
  */
 
 public class stackUsingArray {
+    Node top;
+    class  Node{
+        int data;
+        Node next;
+        Node(int Data){
+            this.data=Data;
+            this.next=null;
+        }
+    }
 
 }
 
