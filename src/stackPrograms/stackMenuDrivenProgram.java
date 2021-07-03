@@ -20,16 +20,47 @@ package stackPrograms;
  * Note: The Interviewer did not allow you to use any other data structure except stack.
  */
 
-public class stackUsingArray {
+public class stackMenuDrivenProgram {
     Node top;
-    class  Node{
+
+    class Node {
         int data;
         Node next;
-        Node(int Data){
-            this.data=Data;
-            this.next=null;
+
+        Node(int Data) {
+            this.data = Data;
+            this.next = null;
         }
     }
+    boolean isEmpty() {
+        if (top == null)
+            return true;
+        else
+            return false;
+    }
+
+
+    void push(int data) {
+        Node newNode = new Node(data);
+        if (top == null)
+            top = newNode;
+        else
+            newNode.next = top;
+             top = newNode;
+    }
+    int pop(){
+        if (isEmpty()){
+            return -1;
+        }
+        else{
+            int topValue= top.data;
+            top=top.next;
+            return topValue;
+        }
+
+    }
+
+
 
 }
 
