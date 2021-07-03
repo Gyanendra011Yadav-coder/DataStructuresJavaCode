@@ -69,6 +69,23 @@ public class stackMenuDrivenProgram {
             return top.data;
     }
 
+    int getMin(){
+        if (isEmpty()){
+            return -1;
+        }else{
+            int value=top.data;
+            Node temp=top.next;
+            while (temp.next!=null){
+                if (value>temp.data)
+                    value=temp.data;
+
+                temp=temp.next;
+            }
+        return value;
+        }
+
+    }
+
 
 
 }
