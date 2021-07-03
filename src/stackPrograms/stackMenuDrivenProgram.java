@@ -60,6 +60,15 @@ public class stackMenuDrivenProgram {
 
     }
 
+    int top(){
+        if (isEmpty()){
+            return -1;
+
+        }
+        else
+            return top.data;
+    }
+
 
 
 }
