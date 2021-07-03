@@ -86,7 +86,11 @@ public class stackMenuDrivenProgram {
 
     }
 
+class main{
+    public static void main(String[] args) {
 
+    }
+}
 
 }
 
