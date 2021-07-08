@@ -1,11 +1,12 @@
 package Queue;
 
-public class queueUsingArray {
+public  class queueUsingArray {
+    public final int Size=5;
     int rear=-1,front=-1;  // rear == back          front =begin
-    int []queue;
-    public queueUsingArray(int Size ){
-        int [] queue=new int[Size];
-    }
+    int []queue=new int[Size];
+//    public queueUsingArray(int Size ){
+//        int [] queue=new int[Size];
+//    }
 
     boolean isQueueEmpty(){
         if (rear==-1 &&front==-1){
@@ -45,10 +46,24 @@ public class queueUsingArray {
             rear=-1;
             return data;
         }else {
-            int value= queue[rear];
-            rear++;
+            int value= queue[front];
+            front++;
             return value;
         }
+
+    }
+
+    public static void main(String[] args) {
+        queueUsingArray queue = new queueUsingArray();
+        queue.enqueue(1);
+        queue.enqueue(1);
+        queue.enqueue(1);
+        System.out.println( queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+
+
 
     }
 }
