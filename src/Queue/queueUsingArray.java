@@ -36,7 +36,19 @@ public class queueUsingArray {
             queue[rear]=data;
         }
     }
-    void dequeue(){
+    int  dequeue(){
+        if(isQueueEmpty()){
+            return -1;
+        }else if(rear==front) {
+            int data=queue[rear];
+            front=-1;
+            rear=-1;
+            return data;
+        }else {
+            int value= queue[rear];
+            rear++;
+            return value;
+        }
 
     }
 }
