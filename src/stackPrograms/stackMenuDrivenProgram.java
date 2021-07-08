@@ -98,11 +98,11 @@ class main {
         System.out.println("ENTER THE TEST CASES YOU WANT TO RUN:");
         int testCase = scannerObject.nextInt();
         while (testCase != 0) {
-            System.out.println("ENTER THE NUMBER B/W 1-4" + " \n" +
-                    "1. push(x) - Push element x onto stack.\n" +
-                    "2. pop() - Removes the element on top of the stack.\n" +
-                    "3. top() - Get the top element.\n" +
-                    "4. getMin() - Get the minimum element in the stack.");
+            System.out.println("ENTER THE NUMBER B/W 1-4:-");
+//                    "1. push(x) - Push element x onto stack.\n" +
+//                    "2. pop() - Removes the element on top of the stack.\n" +
+//                    "3. top() - Get the top element.\n" +
+//                    "4. getMin() - Get the minimum element in the stack.");
             int run = scannerObject.nextInt();
             if (run == 1) {
                 System.out.println("ENTER THE DATA TO PUCH IN THE STACK:-");
