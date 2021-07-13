@@ -17,4 +17,11 @@ public class maxHepification {
         heap[heap_size++]=element;
     }
 
+    /*METHOD TO CHECK IF THE NODE IS LEAF OR NON-LEAF*/
+    public boolean isLeaf(int position){
+        if(position>(size/2)){
+            return true;
+        }else
+            return false;
+    }
 }
