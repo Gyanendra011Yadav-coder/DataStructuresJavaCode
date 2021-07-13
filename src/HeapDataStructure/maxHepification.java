@@ -9,7 +9,9 @@ public class maxHepification {
     maxHepification(int heap_size){
         this.heap_size=heap_size;
         this.size=0;
-        heap=new int[heap_size];
+        heap=new int[heap_size+1]; //doing+1:-because the heap starts from 1
+        heap[0]=Integer.MAX_VALUE; //because we don't want to use index 0
     }
+
 
 }
