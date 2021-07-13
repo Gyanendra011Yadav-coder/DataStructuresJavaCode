@@ -1,6 +1,16 @@
 package HeapDataStructure;
 
 import java.util.Scanner;
+/*
+[1,17,10,3,8,15,9,2,13,6]
+          1
+         / \
+       17    10
+      /  \  /  \
+    3     8 15  9
+   / \   /
+  2  13 6
+ */
 
 public class maxHepification {
     int size;
@@ -39,7 +49,32 @@ public class maxHepification {
     }
     /*THIS IS THE MAIN METHOD THAT WILL ARRANGE THE NODE IN THE FORM OF MAX HEAP*/
     public void  maxheap(int []heap, int i){
-
+        if (isLeaf(i))
+            return;
+        int leftChild=i*2;
+        int rightChild=i*2+1;
+        if (rightChild <= size) {  //[1,17,10,3,8,15,9,2,13,6]
+            if (rightChild<=heap[i] && leftChild<=heap[i] ){
+                return;
+            }
+        }else {
+            if (heap[i]>=leftChild){
+                return;
+            }
+        }
+        int largest;
+        if (leftChild<=size && heap[leftChild]>heap[i]){
+            largest=leftChild;
+        }else {
+            largest=i;
+            if (rightChild<=size && heap[rightChild]>heap[i]){
+                largest=rightChild;
+            }
+        }
+        if (largest!=i){
+            swapValue(largest,i);
+        }
+        maxheap(heap,largest);
     }
 
 }
