@@ -82,4 +82,20 @@ public class maxHepification {
             System.out.println(heap[i]);
         }
     }
+
+    /*MAIN, CLASSS TO BUILD THE HEAP*/
+    public static void main(String[] args) {
+        Scanner scannerObject = new Scanner(System.in);
+        int size=scannerObject.nextInt();
+        maxHepification heapObj = new maxHepification(size);
+        for (int i = 0; i <=size+1 ; i++) {
+            int element= scannerObject.nextInt();
+            heapObj.insert(element);
+        }
+        heapObj.printHeap();
+        heapObj.buildHeap();
+        heapObj.printHeap();
+
+
+    }
 }
