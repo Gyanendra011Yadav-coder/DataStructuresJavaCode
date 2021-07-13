@@ -76,5 +76,10 @@ public class maxHepification {
         }
         maxheap(heap,largest);
     }
-
+    /*THE METHOD TO PRINT THE HEAP */
+    void printHeap(){
+        for (int i = 1; i <=size ; i++) {
+            System.out.println(heap[i]);
+        }
+    }
 }
