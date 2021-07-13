@@ -30,5 +30,16 @@ public class maxHepification {
         a=b;
         b=temp;
     }
+/*THIS METHOD WILL BUILD THE HEAP, UNTILL THE HEAP IS NOT GOING TO BE MAX HEAP*/
+    void buildHeap(){
+        int lastNonLeaf=(int)Math.floor(size/2.0); // floor is double so we are typecasting it to int and using 2.0
+        for (int i = lastNonLeaf; i>0 ; i--) {
+            maxheap(heap,i);
+        }
+    }
+    /*THIS IS THE MAIN METHOD THAT WILL ARRANGE THE NODE IN THE FORM OF MAX HEAP*/
+    public void  maxheap(int []heap, int i){
+
+    }
 
 }
