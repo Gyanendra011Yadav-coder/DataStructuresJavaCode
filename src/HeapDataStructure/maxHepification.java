@@ -24,4 +24,11 @@ public class maxHepification {
         }else
             return false;
     }
+    /*METHOD WILL SWAP THE VALUES*/
+    public void swapValue(int a, int b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+
 }
