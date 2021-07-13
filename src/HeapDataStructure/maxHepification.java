@@ -12,6 +12,9 @@ public class maxHepification {
         heap=new int[heap_size+1]; //doing+1:-because the heap starts from 1
         heap[0]=Integer.MAX_VALUE; //because we don't want to use index 0
     }
-
+    /*METHOD TO INSERT IN THE HEAP*/
+    void insert(int element){
+        heap[heap_size++]=element;
+    }
 
 }
