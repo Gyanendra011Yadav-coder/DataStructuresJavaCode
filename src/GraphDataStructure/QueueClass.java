@@ -17,7 +17,7 @@ public class QueueClass {
     }
     /*THIS METHOD WILL TAKE CARE, WHETHER  THE QUEUE IS EMPTY OR NOT*/
     public boolean isEmpty(){
-        if(front==-1)
+        if(rear==-1 )
             return true;
         else
             return false;
@@ -36,7 +36,7 @@ public class QueueClass {
         if (isFull()){
             System.out.println("QUEUE OVER-FLOW");
         }else if(isEmpty()){
-            arr[++front]=data;    // FIRST iNCREAISNG THE VALUE OF THE REAR AND THEN INSERT AT THAT LOCATION
+            arr[front]=data;    // FIRST iNCREAISNG THE VALUE OF THE REAR AND THEN INSERT AT THAT LOCATION
             rear++;
             count++;
         } else {                         // NOT EMPTY, THEN THIS WILL RUN
@@ -70,6 +70,7 @@ public class QueueClass {
     public int peak(){
         return arr[front];
     }
+
 
 
 
