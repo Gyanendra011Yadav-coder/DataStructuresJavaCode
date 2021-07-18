@@ -10,14 +10,14 @@ public class QueueClass {
     QueueClass(int size){
         capacity=size;
         arr=new int[size];
-        front=capacity-1;
+        front=0;
         rear=-1;
         count=0;
 
     }
     /*THIS METHOD WILL TAKE CARE, WHETHER  THE QUEUE IS EMPTY OR NOT*/
     public boolean isEmpty(){
-        if(rear==-1)
+        if(front==-1)
             return true;
         else
             return false;
@@ -25,7 +25,7 @@ public class QueueClass {
 
     /*THIS METHOD WILL TAKE CARE OF QUEUE IS FULL OR NOT*/
     public boolean isFull(){
-        if (rear==front)
+        if (front==capacity)
             return true;
         else
             return false;
@@ -33,29 +33,33 @@ public class QueueClass {
 
     /*THIS METHOD WILL INSERT THE VALUE IN THE QUEUE*/
     public void enqueue(int data){
-        if (isFull()){       //THIS WILL RUN WHEN, OUR QUEUE IS EMPTY.
+        if (isFull()){
             System.out.println("QUEUE OVER-FLOW");
-        }else {                  // NOT EMPTY, THEN THIS WILL RUN
+        }else if(isEmpty()){
+            arr[++front]=data;    // FIRST iNCREAISNG THE VALUE OF THE REAR AND THEN INSERT AT THAT LOCATION
+            rear++;
+            count++;
+        } else {                         // NOT EMPTY, THEN THIS WILL RUN
             /*
             rear=(rear+1)%capacity;
              */
-          arr[++rear]=data;    // FIRST iNCREAISNG THE VALUE OF THE REAR AND THEN INSERTOITNG AT THAT LOCATION
-          front++;
+          arr[++front]=data;    // FIRST iNCREAISNG THE VALUE OF THE REAR AND THEN INSERT AT THAT LOCATION
           count++;
-
         }
     }
 
-    /*THIS METHOD WILL DEQUEUE The ELEMENTS FROM THE QUEUE */
+    /*THIS METHOD WILL ****DEQUEUE**** The ELEMENTS FROM THE QUEUE */
     public int dequeue() {
        if (isEmpty()){
            return -1;
        }
-       int lastValue=arr[front];
-       front--;
-       return lastValue;
+       else {
+           int data = arr[rear];
+           rear++;
+           count--;
+           return data;
+       }
     }
-
 
 
 
