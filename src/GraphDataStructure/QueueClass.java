@@ -60,6 +60,16 @@ public class QueueClass {
            return data;
        }
     }
+    /*THIS METHOD WILL GIVE THE SIZE OF THE QUEUE*/
+
+    public int sizeQueue(){
+        return count;
+    }
+
+    /*THIS METHOD WILL PEAK IN THE QUEUE */
+    public int peak(){
+        return arr[front];
+    }
 
 
 
