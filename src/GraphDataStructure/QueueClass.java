@@ -28,7 +28,20 @@ public class QueueClass {
         else
             return false;
     }
-   
+    public void enqueue(int data){
+        if (isEmpty()){       //THIS WILL RUN WHEN, OUR QUEUE IS EMPTY.
+            rear++;
+            rear=data;
+            front++;
+            capacity++;
+        }else {                  // NOT EMPTY, THEN THIS WILL RUN
+            front=data;
+            rear=front;
+            rear++;
+            capacity++;
+        }
+    }
+
 
 
 }
