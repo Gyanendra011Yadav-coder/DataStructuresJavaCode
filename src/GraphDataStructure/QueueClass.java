@@ -14,13 +14,14 @@ public class QueueClass {
         count=0;
         capacity=size;
     }
-    /*THIS METHOD WILL TAKE CARE, WHEATHER  THE QUEUE IS EMPTY OR NOT*/
+    /*THIS METHOD WILL TAKE CARE, WHETHER  THE QUEUE IS EMPTY OR NOT*/
     public boolean isEmpty(){
         if(rear==-1)
             return true;
         else
             return false;
     }
+
     /*THIS METHOD WILL TAKE CARE OF QUEUE IS FULL OR NOT*/
     public boolean isFull(){
         if (front==capacity)
@@ -28,17 +29,15 @@ public class QueueClass {
         else
             return false;
     }
+
+    /*THIS METHOD WILL INSERT THE VALUE IN THE QUEUE*/
     public void enqueue(int data){
-        if (isEmpty()){       //THIS WILL RUN WHEN, OUR QUEUE IS EMPTY.
-            rear++;
-            rear=data;
-            front++;
-            capacity++;
+        if (isFull()){       //THIS WILL RUN WHEN, OUR QUEUE IS EMPTY.
+            System.out.println("QUEUE OVER-FLOW");
         }else {                  // NOT EMPTY, THEN THIS WILL RUN
-            front=data;
-            rear=front;
-            rear++;
-            capacity++;
+          arr[++rear]=data;
+          front++;
+          capacity++;
         }
     }
 
