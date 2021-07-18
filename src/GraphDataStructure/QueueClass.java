@@ -25,7 +25,7 @@ public class QueueClass {
 
     /*THIS METHOD WILL TAKE CARE OF QUEUE IS FULL OR NOT*/
     public boolean isFull(){
-        if (front==capacity)
+        if (front==capacity-1)
             return true;
         else
             return false;
