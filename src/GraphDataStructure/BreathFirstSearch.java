@@ -12,15 +12,16 @@ public class BreathFirstSearch {
         numberOfNodes=0;
     }
     /*THIS, METHOD WILL INSERT THE VALUES IN THE GRAPH*/
-    void addNode(graphNode element){
+   public void addNode(graphNode element){
         nodeList[numberOfNodes++]=element;
     }
 
     /*THIS METHOD WILL ADD EDGES IN THE GRAPH*/
-    void addEdge(int start, int end){
+    public void addEdge(int start, int end){
         adjMatrix[start][end]=1;
         adjMatrix[end][start]=1;
     }
+
 
 
 }
