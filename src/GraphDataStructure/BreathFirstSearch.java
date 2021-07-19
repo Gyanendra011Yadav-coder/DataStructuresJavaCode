@@ -21,7 +21,10 @@ public class BreathFirstSearch {
         adjMatrix[start][end]=1;
         adjMatrix[end][start]=1;
     }
-
+    /*this method wil print the Node */
+    public void print(int index ){           //PASSING:-  index-->> because to access the element at specified position
+        System.out.println(nodeList[index].data);
+    }
 
 
 }
