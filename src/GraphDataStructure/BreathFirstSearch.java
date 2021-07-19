@@ -16,6 +16,11 @@ public class BreathFirstSearch {
         nodeList[numberOfNodes++]=element;
     }
 
+    /*THIS METHOD WILL ADD EDGES IN THE GRAPH*/
+    void addEdge(int start, int end){
+        adjMatrix[start][end]=1;
+        adjMatrix[end][start]=1;
+    }
 
 
 }
