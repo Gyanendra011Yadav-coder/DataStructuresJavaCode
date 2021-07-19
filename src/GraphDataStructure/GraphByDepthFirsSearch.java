@@ -1,5 +1,6 @@
 package GraphDataStructure;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class GraphByDepthFirsSearch {
@@ -19,5 +20,24 @@ public class GraphByDepthFirsSearch {
         vertexConnected: the vertex from which vertex s connected
          */
         adj[vertex].add(vertexConnected);
+    }
+
+    /*THIS FUNCTION WILL CREATE THE GRAPH AND WILL APPLY RECURSION */
+
+    /**
+     * this mmethod takes: input as bertex that shows that we are STARTING IT FROM VERTEX TO ADD
+     *
+     */
+    public void depthFirstSearchNodeNotSpecified() {
+        boolean[] visited = new boolean[vertex];
+        for (int i = 0; i < vertex; i++) {
+            if (visited[i]==false) {
+                //DFSUtil(i, visited);  //RECURSION
+            }
+        }
+    }
+
+
+
     }
 }
