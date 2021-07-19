@@ -11,6 +11,10 @@ public class BreathFirstSearch {
         adjMatrix=new int[MAX_SIZE][MAX_SIZE];
         numberOfNodes=0;
     }
+    /*THIS, METHOD WILL INSERT THE VALUES IN THE GRAPH*/
+    void addNode(graphNode element){
+        nodeList[numberOfNodes++]=element;
+    }
 
 
 
