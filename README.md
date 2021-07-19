@@ -1,2 +1,2 @@
 # DataStructuresJavaCode
-THIS IS THE WAY, I CODE.
+THIS IS MY WAY, TO CODE.
