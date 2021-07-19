@@ -15,8 +15,8 @@ public class BreathFirstSearch {
     }
 
     /*THIS, METHOD WILL INSERT THE VALUES IN THE GRAPH*/
-    public void addNode(graphNode element) {
-        nodeList[numberOfNodes++] = element;
+    public void addNode(int element) {
+        nodeList[numberOfNodes++] = new graphNode(element);
     }
 
     /*THIS METHOD WILL ADD EDGES IN THE GRAPH*/

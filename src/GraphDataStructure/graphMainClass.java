@@ -19,7 +19,7 @@ public class graphMainClass {
         bg.addEdge(4,5);
         bg.addEdge(4,6);
         bg.addEdge(5,7);
-
+        bg.breathForstSearch();
 
 
 

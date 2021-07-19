@@ -29,10 +29,11 @@ public class maxHepification {
         Scanner scannerObject = new Scanner(System.in);
         int size = scannerObject.nextInt();
         maxHepification heapObj = new maxHepification(size);
-        for (int i = 0; i <= size + 1; i++) {
+        for (int i = 1; i <= size ; i++) {
             int element = scannerObject.nextInt();
             heapObj.insert(element);
         }
+        System.out.println("THE ORIGINAL HEAP AS U ENTRED\n");
         heapObj.printHeap();
         heapObj.buildHeap();
         heapObj.printHeap();
