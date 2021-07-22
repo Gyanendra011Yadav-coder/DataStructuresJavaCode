@@ -56,7 +56,6 @@ public class GraphByDepthFirsSearch {
     /**
      * this is the main method of this:-    GRAPH BY DFS
      */
-
     public static void main(String[] args) {
         GraphByDepthFirsSearch gd = new GraphByDepthFirsSearch(4);
         gd.addEdge(0,1);
@@ -68,9 +67,6 @@ public class GraphByDepthFirsSearch {
         gd.depthFirstSearchNodeNotSpecified();
         System.out.println("NODE SPECIFIED:-");
         gd.depthFirstSearchNodeSpecified(2);
-
-
-
     }
 
 
