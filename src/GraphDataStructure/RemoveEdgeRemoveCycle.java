@@ -11,5 +11,8 @@ public class RemoveEdgeRemoveCycle {
     //INITALIZED THE VECTOR;- VECTORS ARE DATA TYOES SUCK LIKE AS AN ARRAY THEY HAVE THE PROPERTY
     // THAT THEY CAN SHRINK OR INCREASE THE SIZE ACCORDING TO THE NEED
     Vector<Integer> vector= new Vector<>(100001);
+    //array of type boolean
+    boolean []visited=new boolean[100001];
+    int connectedComponents=1;
 
 }
