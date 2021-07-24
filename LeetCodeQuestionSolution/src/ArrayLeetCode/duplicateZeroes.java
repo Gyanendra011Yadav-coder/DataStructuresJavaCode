@@ -16,4 +16,18 @@ package ArrayLeetCode;
  */
 
 public class duplicateZeroes {
+    public static void duplicateZeros(int[] arr) {
+        /*THIS, ARRAY WILL BE RUNNING FROM 0 TO THE LENGTH OF THE array*/
+        for (int i = 0; i < arr.length; i++) {
+            /*CHECKING WHEATHER ELEMENT IS EQUAL TO 0 OR NOT*/
+            if (arr[i] == 0) {
+                /*RUNNING IT FROM THE END, TO SHIFT THE ELEMENTS */
+                for (int j = arr.length-1; j>i; j--) {
+                   arr[j-1]=arr[j];     // WE ARE SWIPING THE ELMENT FROM BEFORE
+                }
+                i++;
+            }
+        }
+    }
+    /*HERE, ALSO THERE IS NO NEED TO SPECIFY THE MAIN CLASS */
 }
