@@ -14,6 +14,8 @@ package ArrayLeetCode;
 public class consecutiveOnes {
     class Solution {
         public static int findMaxConsecutiveOnes(int[] nums) {
+            /*count will be taking care of the number of ones present, continuous
+            * maxCount will be taking care of the number of ones, greater at any place*/
             int count=0 , maxCount=0;
             for(int i=0; i<nums.length ; i++){
                 if (nums[i]==1){
