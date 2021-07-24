@@ -8,11 +8,59 @@ import java.util.Vector;
  * graph to break all of its cycles.
  */
 public class RemoveEdgeRemoveCycle {
-    //INITALIZED THE VECTOR;- VECTORS ARE DATA TYOES SUCK LIKE AS AN ARRAY THEY HAVE THE PROPERTY
-    // THAT THEY CAN SHRINK OR INCREASE THE SIZE ACCORDING TO THE NEED
-    Vector<Integer> vector= new Vector<>(100001);
-    //array of type boolean
-    boolean []visited=new boolean[100001];
-    int connectedComponents=1;
+        @SuppressWarnings("unchecked")
+        static Vector<Integer> []vec = new Vector[100001];
+        static boolean []vis = new boolean[100001];
+        static int connectedComponent = 1;
+        static void dfs(int node)
+        {
+            vis[node] = true;
+            for(int x : vec[node])
+            {
+                if (!vis[x])
+                {
+                    connectedComponent++;
+                    dfs(x);
+                }
+            }
+        }
+        static void addEdge(int u, int v)
+        {
+            vec[u].add(v);
+            vec[v].add(u);
+        }
+        static void minEdgeRemoved(int vetices, int edges,
+                                   int Edges[][])
+        {
+            for(int i = 0; i <edges ; i++)
+            {
+                addEdge(Edges[i][0],
+                        Edges[i][1]);
+            }
+            int k = 0;
+            for(int i = 1; i <= vetices; i++)
+            {
+                if (!vis[i])
+                {
+                    connectedComponent = 1;
+                    dfs(i);
+                    k++;
+                }
+            }
 
-}
+            // Print the final count
+            System.out.print(vetices - edges + k + "\n");
+        }
+        public static void main(String[] args)
+        {
+            int N = 3, M = 2;
+
+            int Edges[][] = { { 1, 2 }, { 2, 3 } };
+
+            for(int i = 0; i < vec.length; i++)
+                vec[i] = new Vector<Integer>();
+            minEdgeRemoved(N, M, Edges);
+        }
+    }
+
+
