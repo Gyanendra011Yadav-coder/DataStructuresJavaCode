@@ -61,6 +61,16 @@ public class treeTraversingHeight {
             return rightHeight+1;
         }
     }
+    /*   NOW,WE WILL BE FINDING OUT THE SIZE OF TREE   */
+    public static int sizeOfTree(Node root){
+        if (root==null){
+             return 0;
+        }
+        int leftSize=sizeOfTree(root.leftChild);
+        int rightSize=sizeOfTree(root.rightChild);
+        int size= (leftSize+rightSize)+1;
+        return size;
+    }
 
 /*THIS,IS THE MAIN METHOD OF THE CLASS.*/
     public static void main(String[] args) {
@@ -73,6 +83,8 @@ public class treeTraversingHeight {
         root.rightChild.rightChild=new Node(7);
         System.out.println("THE HEIGHT OF THE TREE IS:");
         System.out.println(heightOfTree(root));
+        System.out.println("THE SIZE OF THE TREE IS:-");
+        System.out.println(sizeOfTree(root));
         System.out.println("IN-ORDER TRAVERSAL OF THE TREE:-");
 
         inOrder(root);
