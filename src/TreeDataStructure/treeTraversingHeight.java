@@ -66,10 +66,15 @@ public class treeTraversingHeight {
         if (root==null){
              return 0;
         }
-        int leftSize=sizeOfTree(root.leftChild);
-        int rightSize=sizeOfTree(root.rightChild);
-        int size= (leftSize+rightSize)+1;
-        return size;
+       //int leftSize=sizeOfTree(root.leftChild);
+       //int rightSize=sizeOfTree(root.rightChild);
+        //int size= (leftSize+rightSize)+1;
+        //return size;
+/***
+ * NOW, WE CAN DO THIS ONLY INA SINGLE LINE
+ */
+        return (sizeOfTree(root.leftChild)+sizeOfTree(root.rightChild)+1);
+
     }
 
 /*THIS,IS THE MAIN METHOD OF THE CLASS.*/
