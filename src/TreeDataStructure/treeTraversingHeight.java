@@ -11,14 +11,16 @@ public class treeTraversingHeight {
     }
     /*NODE OF THE TREE*/
     static Node root;
-
+/**
+ * TRAVERSING THE TREE TECHNIQUES
+ */
     /*TRAVERSING THE TREE USING INORDER APPROACH*/
     public static void inOrder (Node root){
         if (root==null){
             return;
         }
         inOrder(root.leftChild);
-        System.out.println(root.data);
+        System.out.print(root.data+",");
         inOrder(root.rightChild);
     }
 
@@ -27,7 +29,7 @@ public class treeTraversingHeight {
         if (root==null){
             return;
         }
-        System.out.println(root.data);
+        System.out.print(root.data+",");
         preOrder(root.leftChild);
         preOrder(root.rightChild);
     }
@@ -39,11 +41,28 @@ public class treeTraversingHeight {
         }else {
             postOrder(root.leftChild);
             preOrder(root.rightChild);
-            System.out.println(root.data);
+            System.out.print(root.data+",");
         }
     }
 
-/*THIS , IS THE MAIN METHOD OF THE CLASS.*/
+    /**
+     * NOW, WE WILL BE TRYING TO FIND OUT THE HEIGHT OF THE TREE.
+     * @return
+     */
+    public static int heightOfTree(Node root){
+        if (root== null){
+            return -1;
+        }
+        int leftHeight =heightOfTree(root.leftChild);
+        int rightHeight=heightOfTree(root.rightChild);
+        if (leftHeight>rightHeight) {
+            return leftHeight+1;
+        }else {
+            return rightHeight+1;
+        }
+    }
+
+/*THIS,IS THE MAIN METHOD OF THE CLASS.*/
     public static void main(String[] args) {
        root=new Node(1);
        root.leftChild=new Node(2);
@@ -51,16 +70,21 @@ public class treeTraversingHeight {
         root.leftChild.leftChild=new Node(4);
         root.leftChild.rightChild=new Node(5);
         root.rightChild.leftChild=new Node(6);
-        root.rightChild.leftChild=new Node(7);
+        root.rightChild.rightChild=new Node(7);
+        System.out.println("THE HEIGHT OF THE TREE IS:");
+        System.out.println(heightOfTree(root));
         System.out.println("IN-ORDER TRAVERSAL OF THE TREE:-");
-        System.out.println("\n");
+
         inOrder(root);
+        System.out.print("\n");
         System.out.println("PRE-ORER TRAVERSAL OF THE TREE:-");
-        System.out.println("\n");
+
         preOrder(root);
+        System.out.print("\n");
         System.out.println("POST ORDER TRAVERSAL OF THE TREE:-");
-        System.out.println("\n");
+
         postOrder(root);
+        System.out.print("\n");
 
     }
 
