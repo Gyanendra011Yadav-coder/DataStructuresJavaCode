@@ -31,6 +31,16 @@ public class binarySearchTree {
         return recurMinElementTree(node.leftChild);
     }
 
+    /**
+     * THIS, IS THE RECURSIVE APPROACH TO FIND OUT THE MAXIMUM ELMENT IN THE BINARY SERACH TREE
+     */
+    public static int maxElementTree(Node node){
+        if (node.rightChild==null){
+            return node.data;
+        }
+        return maxElementTree(node.rightChild);
+    }
+
     /*TRAVERSING, THE BINARY SEARCH TREE */
     public static void inOrderTraversal(Node node) {
         if (node == null) {
@@ -49,14 +59,16 @@ public class binarySearchTree {
         rootNode.leftChild.leftChild = new Node(1);
         rootNode.leftChild.rightChild = new Node(6);
         rootNode.rightChild.leftChild = new Node(9);
-        rootNode.rightChild.rightChild = new Node(4);
+        rootNode.rightChild.rightChild = new Node(12);
         System.out.println("TRAVERSAL OF THE BINARY TREE IS:-");
         inOrderTraversal(rootNode);
         System.out.println("\n");
         System.out.println("THE MINIMUM VALUE IN THE BINARY SERACH TREE IS:-");
         System.out.println(minNode(rootNode));
+        System.out.println("THIS, IS THE MINIMUM ELEMENT FIND USING RECURSION");
         System.out.println(recurMinElementTree(rootNode));
-
+        System.out.println("THE MAXIMUM ELEMENT IN THE TREE IS:=>");
+        System.out.println(maxElementTree(rootNode));
 
     }
 
