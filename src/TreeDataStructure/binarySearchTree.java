@@ -32,13 +32,31 @@ public class binarySearchTree {
     }
 
     /**
-     * THIS, IS THE RECURSIVE APPROACH TO FIND OUT THE MAXIMUM ELMENT IN THE BINARY SERACH TREE
+     * THIS, IS THE RECURSIVE APPROACH TO FIND OUT THE MAXIMUM ELEMENT,IN THE BINARY SERACH TREE
      */
     public static int maxElementTree(Node node){
         if (node.rightChild==null){
             return node.data;
         }
         return maxElementTree(node.rightChild);
+    }
+    /***
+     *
+     * THIS, IS THE RECURSIVE APPROACH TO FIND OUT?
+     * wheather, element is present in the tree or not?
+     */
+    public static void searchNode(int key, Node root) {
+         if (root==null){
+             System.out.println(key+",NOT FOUND IN THE TREE.");
+        }else if(root.data==key){
+            System.out.println(key+", is Present in the Tree.");
+        }else{
+            if (key<root.data){
+                searchNode(key,root.leftChild);
+            }else {
+                searchNode(key,root.rightChild);
+            }
+        }
     }
 
     /*TRAVERSING, THE BINARY SEARCH TREE */
@@ -69,6 +87,8 @@ public class binarySearchTree {
         System.out.println(recurMinElementTree(rootNode));
         System.out.println("THE MAXIMUM ELEMENT IN THE TREE IS:=>");
         System.out.println(maxElementTree(rootNode));
+        System.out.println("SERACHING THE VALUE IN THE TREE:-");
+        searchNode(100,rootNode);
 
     }
 
