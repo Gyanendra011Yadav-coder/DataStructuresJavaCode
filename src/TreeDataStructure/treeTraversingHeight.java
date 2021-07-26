@@ -1,9 +1,9 @@
 package TreeDataStructure;
-
+import java.util.LinkedList;
+import java.util.Queue;
 public class treeTraversingHeight {
     /*NODE OF THE TREE*/
     static Node root;
-
     /**
      * TRAVERSING THE TREE TECHNIQUES
      */
@@ -36,6 +36,40 @@ public class treeTraversingHeight {
             preOrder(root.rightChild);
             System.out.print(root.data + ",");
         }
+    }
+
+    /**
+     * @Level_Order_Travesal=> We Traverse The Tree Level Wise
+     * Steps For Level Order Traversal are:-
+     * 1) Enqueue the Node
+     * 2)Dequeue The Node
+     * 3)Print the Node Data
+     * 4)Enqueue the Child of the Node
+     *
+     */
+    /*NOW,WE WILL BE SEEING THE LEVEL ORDER TRAVERSAL FOR THE TREE*/
+    public static void levelOrderTraversal(Node root){
+        if(root==null){
+            return;
+        }
+        Queue<Node> q = new LinkedList();
+        //*STEP ONE WE ARE ENQUEUING AS I USED QUEUE USING LINKED LIST SO I USED ADD & REMOVE
+        q.add(root);
+        while(q.isEmpty()!=true) {
+            //SECOND STEP, FOR DEQUEUE USING LLINKED LIST SO, USING REMOVE METHOD
+            Node node = q.remove();
+            // STEP-03, JUST PRINTING THE DATA
+            System.out.println(node.data);
+            if (root.leftChild != null) {
+                q.add(root.leftChild);
+            }
+            if (root.rightChild != null) {
+                q.add(root.rightChild);
+            }
+        }
+
+        //STEP-04:- NOW, WE WILL BE JUST ADDING THE CHILD OF THE NODE TO THE QUEUE
+
     }
 
     /**
@@ -86,20 +120,19 @@ public class treeTraversingHeight {
         System.out.println("THE SIZE OF THE TREE IS:-");
         System.out.println(sizeOfTree(root));
         System.out.println("IN-ORDER TRAVERSAL OF THE TREE:-");
-
         inOrder(root);
         System.out.print("\n");
         System.out.println("PRE-ORER TRAVERSAL OF THE TREE:-");
-
         preOrder(root);
         System.out.print("\n");
         System.out.println("POST ORDER TRAVERSAL OF THE TREE:-");
-
         postOrder(root);
         System.out.print("\n");
-
+        System.out.println("LEVEL ORDER TRAVERSAL OF THE TREE:-");
+        levelOrderTraversal(root);
+        System.out.print("\n");
     }
-
+/*THIS, IS THE NODE CLASS */
     static class Node {
         int data;
         Node leftChild, rightChild;
@@ -109,6 +142,5 @@ public class treeTraversingHeight {
             leftChild = rightChild = null;
         }
     }
-
 }
 
