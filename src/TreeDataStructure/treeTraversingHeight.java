@@ -5,40 +5,6 @@ public class treeTraversingHeight {
     /*NODE OF THE TREE*/
     static Node root;
     /**
-     * TRAVERSING THE TREE TECHNIQUES
-     */
-    /*TRAVERSING THE TREE USING INORDER APPROACH*/
-    public static void inOrder(Node root) {
-        if (root == null) {
-            return;
-        }
-        inOrder(root.leftChild);
-        System.out.print(root.data + ",");
-        inOrder(root.rightChild);
-    }
-
-    /*TRAVERSE THE TREE USING PRE-ORDER APPROACH*/
-    public static void preOrder(Node root) {
-        if (root == null) {
-            return;
-        }
-        System.out.print(root.data + ",");
-        preOrder(root.leftChild);
-        preOrder(root.rightChild);
-    }
-
-    /*NOW,WE WILL BE TRAVERSING THE TREE USING THE POST ORDER APPROACH*/
-    public static void postOrder(Node root) {
-        if (root == null) {
-            return;
-        } else {
-            postOrder(root.leftChild);
-            preOrder(root.rightChild);
-            System.out.print(root.data + ",");
-        }
-    }
-
-    /**
      * @Level_Order_Travesal=> We Traverse The Tree Level Wise
      * Steps For Level Order Traversal are:-
      * 1) Enqueue the Node
@@ -59,19 +25,18 @@ public class treeTraversingHeight {
             //SECOND STEP, FOR DEQUEUE USING LLINKED LIST SO, USING REMOVE METHOD
             Node node = q.remove();
             // STEP-03, JUST PRINTING THE DATA
-            System.out.println(node.data);
-            if (root.leftChild != null) {
-                q.add(root.leftChild);
+            System.out.print(node.data+",");
+            //STEP-04:- NOW, WE WILL BE JUST ADDING THE CHILD OF THE NODE TO THE QUEUE
+            if (node.leftChild != null) {
+                q.add(node.leftChild);
             }
-            if (root.rightChild != null) {
-                q.add(root.rightChild);
+            if (node.rightChild != null) {
+                q.add(node.rightChild);
             }
+
         }
 
-        //STEP-04:- NOW, WE WILL BE JUST ADDING THE CHILD OF THE NODE TO THE QUEUE
-
     }
-
     /**
      * NOW, WE WILL BE TRYING TO FIND OUT THE HEIGHT OF THE TREE.
      *
@@ -140,6 +105,39 @@ public class treeTraversingHeight {
         Node(int data) {
             this.data = data;
             leftChild = rightChild = null;
+        }
+    }
+    /**
+     * TRAVERSING THE TREE TECHNIQUES
+     */
+    /*TRAVERSING THE TREE USING INORDER APPROACH*/
+    public static void inOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.leftChild);
+        System.out.print(root.data + ",");
+        inOrder(root.rightChild);
+    }
+
+    /*TRAVERSE THE TREE USING PRE-ORDER APPROACH*/
+    public static void preOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + ",");
+        preOrder(root.leftChild);
+        preOrder(root.rightChild);
+    }
+
+    /*NOW,WE WILL BE TRAVERSING THE TREE USING THE POST ORDER APPROACH*/
+    public static void postOrder(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            postOrder(root.leftChild);
+            preOrder(root.rightChild);
+            System.out.print(root.data + ",");
         }
     }
 }
