@@ -1,5 +1,17 @@
 package TreeDataStructure;
 import java.util.LinkedList;
+/******************
+  SPECIAL TYPE OF TREE:-
+        {6,3,7,-1,-1,9,5,-1,-1,8,4,-1,-1,-1,-1}
+                    6
+                   /\
+                  /  \
+                 3    7
+                /\   /\
+               N N  9  5
+              /\ /\
+             N N 8 4
+ */
 import java.util.Queue;
 public class treeTraversingHeight {
     /*NODE OF THE TREE*/

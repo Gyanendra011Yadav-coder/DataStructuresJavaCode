@@ -4,6 +4,26 @@ public class binarySearchTree {
     /*THE ROOT NODE OF THE TREE*/
     static Node rootNode;
 
+    /**
+     *
+     * THIS, IS THE METHOD OF INSERTING THE NODES IN THE BINARY SERACH TREE
+     */
+     void insert(int key){
+         rootNode= recurInsert(rootNode,key);
+    }
+     Node recurInsert(Node root, int value){
+        if (root==null){
+            root=new Node(value);
+            return root;
+        }
+        if (root.data>value){
+            root.leftChild=recurInsert(root.leftChild,value);
+        }
+        else
+            root.rightChild=recurInsert(root.rightChild,value);
+        return root;
+    }
+
     /*IN THIS METHOD, WE WILL BE FINDING THE MINIMUM ELEMENT FROM THE BINARY SEARCH TREE*/
     /*THIS, IS ITERATIVE WAY OF FINDING*/
     public static int minNode(Node node) {
@@ -24,11 +44,11 @@ public class binarySearchTree {
     /**
      * RECURSIVE APPROACH TO FIND MINIMUM ELEMENT
      */
-    public static int recurMinElementTree(Node node) {
+    public static int recurMinElementTree(Node node, int key) {
         if (node.leftChild == null) {
             return node.data;
         }
-        return recurMinElementTree(node.leftChild);
+        return recurMinElementTree(node.leftChild, key);
     }
 
     /**
@@ -72,20 +92,18 @@ public class binarySearchTree {
 
     /*THIS, IS THE MAIN METHOD OF THE TREE*/
     public static void main(String[] args) {
-        rootNode = new Node(8);
-        rootNode.leftChild = new Node(3);
-        rootNode.rightChild = new Node(10);
-        rootNode.leftChild.leftChild = new Node(1);
-        rootNode.leftChild.rightChild = new Node(6);
-        rootNode.rightChild.leftChild = new Node(9);
-        rootNode.rightChild.rightChild = new Node(12);
+        binarySearchTree tree = new binarySearchTree();
+        int []treeNode={50,25,15,75,30,70,85,10,23,46,84,90};
+        for (int nodeVaue:treeNode) {
+            tree.insert(nodeVaue);
+        }
         System.out.println("TRAVERSAL OF THE BINARY TREE IS:-");
         inOrderTraversal(rootNode);
         System.out.println("\n");
         System.out.println("THE MINIMUM VALUE IN THE BINARY SERACH TREE IS:-");
         System.out.println(minNode(rootNode));
         System.out.println("THIS, IS THE MINIMUM ELEMENT FIND USING RECURSION");
-        System.out.println(recurMinElementTree(rootNode));
+        System.out.println(recurMinElementTree(rootNode, 100));
         System.out.println("THE MAXIMUM ELEMENT IN THE TREE IS:=>");
         System.out.println(maxElementTree(rootNode));
         System.out.println("SERACHING THE VALUE IN THE TREE:-");
