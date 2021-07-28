@@ -94,6 +94,16 @@ public class binarySearchTree {
         }else if (root.data < delValue){
             root.rightChild=deleteNode(root.rightChild, delValue);
         }
+        //STEP-03:- NOW, WE WILL BE LOOKING FOR THE THIRD STEP,HERE WE WILL BE CHECKING IF THE
+        // NODE TO BE DELETE IS LEAF NODE OR IT HAS ONE CHILD OR IT HAS TWO CHILD
+        else{
+            if(root.leftChild==null){
+                return root.rightChild;
+            }else if (root.rightChild==null){
+                return root.leftChild;
+            }
+
+        }
         return root;
     }
 
