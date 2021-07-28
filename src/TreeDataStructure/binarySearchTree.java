@@ -101,6 +101,13 @@ public class binarySearchTree {
                 return root.rightChild;
             }else if (root.rightChild==null){
                 return root.leftChild;
+            }else{
+         // step-04:- NOW, WE WILL BE CHECKING IF THE NODE HAS TWO CHILDREN OR NOT
+            Node successorParent=root;
+            Node successorNode=root.rightChild; // WE ARE STARING IT FORM THE ROIGHT OF THE ROOT,BECAUSE WE KNOW THE SUCCESOR IS ALWAYS PRESENT IN THE RIGHT SUB-TREE OF THE BST.
+            while (successorNode.leftChild!=null){
+
+            }
             }
 
         }
