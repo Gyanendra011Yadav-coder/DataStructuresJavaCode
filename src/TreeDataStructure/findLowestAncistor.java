@@ -1,5 +1,8 @@
 package TreeDataStructure;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /****
  * IN THIS, WE WILL BE FINDING THE LOWEST COMMON ANCESTOR OF THE GIVEN NODES.
  * Ancestors
@@ -13,13 +16,64 @@ package TreeDataStructure;
  */
 
 public class findLowestAncistor {
-    class Node{
+    static class Node {
         int data;
         Node leftChild;
         Node rightChild;
-        Node(int data){
-            this.data=data;
-            leftChild=rightChild=null;
+
+        Node(int data) {
+            this.data = data;
+            leftChild = rightChild = null;
         }
+    }
+
+        static Node rootNode;
+
+
+        /***
+         *THE STEPS WE HAVE TO FOLLOW, IS:-
+         * 1) FIRST, WE CHJECK IF THE NODE IS NULL, IF YES THEN WE WILL RETURN IT
+         *2) SECOND, IF THE ROOT.DATA IS GREATER THAN THAN ROOTS DATA THAT IS PASSED TO CHECK. IF YES THEN WE WILL SIMPLY PASS LEFT OF THE TREE
+         * 3) THIRD, WE CHECK IF ROOT DATA IS LESSER THAN THE NODES VALUE THAT WE PASS RIGHT SUB TREE
+         */
+        public static int findLowestAncistor(Node root,int root1, int root2){
+            if (root == null)
+                return root.data;
+
+            if(root.data>root1 && root.data > root2)
+                findLowestAncistor(root.leftChild,root1,root2);
+            if (root.data<root1 && root.data<root2)
+                findLowestAncistor(root.rightChild,root1, root2);
+
+            return root.data;
+        }
+        public static void levelOrderTraversal(Node root){
+            if (root==null){
+                return;
+            }
+            Queue <Node> q = new LinkedList<>();
+            q.add(root);
+            while (q.isEmpty()!=true){
+                Node node=q.remove();
+                System.out.println(node.data);
+                if (node.leftChild!=null){
+                    q.add(node.leftChild);
+                }
+                if (node.rightChild != null){
+                    q.add(node.rightChild);
+                }
+            }
+        }
+
+        public static void main(String[] args) {
+        rootNode=new Node(20);
+        rootNode=new Node(8);
+        rootNode=new Node(22);
+        rootNode=new Node(4);
+        rootNode=new Node(12);
+        rootNode=new Node(10);
+        rootNode=new Node(14);
+        levelOrderTraversal(rootNode);
+
     }
 }
