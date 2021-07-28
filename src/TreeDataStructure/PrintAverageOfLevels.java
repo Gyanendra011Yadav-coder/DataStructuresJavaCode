@@ -23,7 +23,17 @@ public class PrintAverageOfLevels {
         q.add(root);
         while (!q.isEmpty()){
             Queue<Node> tempQueue=new LinkedList<Node>();
-
+            while (!q.isEmpty()){
+                Node tempNode=q.remove();
+                sum += tempNode.data;
+                count++;
+                if(tempNode.leftChild!=null){
+                    tempQueue.add(tempNode.leftChild);
+                }
+                if (tempNode.rightChild!=null){
+                    tempQueue.add(tempNode.rightChild);
+                }
+            }
         }
 
     }
