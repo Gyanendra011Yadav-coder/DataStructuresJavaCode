@@ -80,6 +80,13 @@ public class binarySearchTree {
         }
     }
 
+    /****
+     *IN, THIS METHOD WE WILL BE DELETING THE NODE OF HE TREE
+     */
+    public static Node deleteNode(Node root, int delValue){
+        return root;
+    }
+
     /*TRAVERSING, THE BINARY SEARCH TREE */
     public static void inOrderTraversal(Node node) {
         if (node == null) {
