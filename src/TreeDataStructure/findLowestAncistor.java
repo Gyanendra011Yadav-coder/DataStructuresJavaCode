@@ -36,16 +36,14 @@ public class findLowestAncistor {
          *2) SECOND, IF THE ROOT.DATA IS GREATER THAN THAN ROOTS DATA THAT IS PASSED TO CHECK. IF YES THEN WE WILL SIMPLY PASS LEFT OF THE TREE
          * 3) THIRD, WE CHECK IF ROOT DATA IS LESSER THAN THE NODES VALUE THAT WE PASS RIGHT SUB TREE
          */
-        public static int findLowestAncistor(Node root,int root1, int root2){
+        public static Node findLowestAncistor(Node root,int root1, int root2){
             if (root == null)
-                return root.data;
-
+                return null;
             if(root.data>root1 && root.data > root2)
-                findLowestAncistor(root.leftChild,root1,root2);
+                return findLowestAncistor(root.leftChild,root1,root2);
             if (root.data<root1 && root.data<root2)
-                findLowestAncistor(root.rightChild,root1, root2);
-
-            return root.data;
+                return findLowestAncistor(root.rightChild,root1, root2);
+            return root;
         }
         public static void levelOrderTraversal(Node root){
             if (root==null){
@@ -55,7 +53,7 @@ public class findLowestAncistor {
             q.add(root);
             while (q.isEmpty()!=true){
                 Node node=q.remove();
-                System.out.println(node.data);
+                System.out.print(node.data+" ");
                 if (node.leftChild!=null){
                     q.add(node.leftChild);
                 }
@@ -67,13 +65,17 @@ public class findLowestAncistor {
 
         public static void main(String[] args) {
         rootNode=new Node(20);
-        rootNode=new Node(8);
-        rootNode=new Node(22);
-        rootNode=new Node(4);
-        rootNode=new Node(12);
-        rootNode=new Node(10);
-        rootNode=new Node(14);
+        rootNode.leftChild=new Node(8);
+        rootNode.rightChild=new Node(22);
+        rootNode.leftChild.leftChild=new Node(4);
+        rootNode.leftChild.rightChild=new Node(12);
+        rootNode.leftChild.rightChild.leftChild=new Node(10);
+        rootNode.leftChild.rightChild.rightChild=new Node(14);
         levelOrderTraversal(rootNode);
+            System.out.println("THE LOWEST ANCISTOR IS:-");
+            Node tempNode=findLowestAncistor(rootNode,10,14);
+            System.out.println(tempNode.data);
+
 
     }
 }
