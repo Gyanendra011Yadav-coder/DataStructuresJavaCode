@@ -14,7 +14,14 @@ public class PrintAverageOfLevels {
         }
     }
     static Node root;
+    public static void levelOrder(Node root){
+        if(root==null){
+            return ;
+        }
+        Queue <Node> q = new LinkedList<Node>();
+        q.add(root);
 
+    }
 
     public static void main(String[] args) {
         root = new Node(50);
