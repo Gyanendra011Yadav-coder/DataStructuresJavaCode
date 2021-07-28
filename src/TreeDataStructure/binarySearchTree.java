@@ -88,6 +88,12 @@ public class binarySearchTree {
         if(root==null){
             return root;
         }
+        //STEP-02:- WE WILL BE NOW CHECKING, IF THE NODE TO BE DELETED IS GREATER THAN THAN THE ROOT OR NOT
+        else if(root.data>delValue){
+            root.leftChild=deleteNode(root.leftChild,delValue);
+        }else if (root.data < delValue){
+            root.rightChild=deleteNode(root.rightChild, delValue);
+        }
         return root;
     }
 
