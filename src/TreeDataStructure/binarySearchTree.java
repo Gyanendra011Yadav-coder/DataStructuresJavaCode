@@ -84,6 +84,10 @@ public class binarySearchTree {
      *IN, THIS METHOD WE WILL BE DELETING THE NODE OF HE TREE
      */
     public static Node deleteNode(Node root, int delValue){
+        //STEP-01:- WE WILL BW CHECKING WHEATHER THE NODE IS NULL OR NOT
+        if(root==null){
+            return root;
+        }
         return root;
     }
 
