@@ -106,8 +106,15 @@ public class binarySearchTree {
             Node successorParent=root;
             Node successorNode=root.rightChild; // WE ARE STARING IT FORM THE ROIGHT OF THE ROOT,BECAUSE WE KNOW THE SUCCESOR IS ALWAYS PRESENT IN THE RIGHT SUB-TREE OF THE BST.
             while (successorNode.leftChild!=null){
-
+                successorParent = successorNode;
+                successorNode= successorNode.leftChild;
             }
+            if(successorParent!= root){
+                successorParent.leftChild=successorNode.rightChild;
+            }else {
+                successorParent.rightChild=successorNode.rightChild;
+            }
+                root.data=successorNode.data;
             }
 
         }
