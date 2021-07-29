@@ -12,6 +12,11 @@ public class mirrorTreesCheck {
     }
     Node rootNodeTree1;
     Node rootNodeTree2;
-
+    /**********
+     * IN, THIS METHOD WE WILL BE CHECKING IF THE TWO TREES ARE MIRROF EACH OTHER OR NOT
+     */
+    public static boolean isMirrorTrees(Node node1, Node node2){
+        return false;
+    }
 
 }
