@@ -33,6 +33,10 @@ public class checkSumTree {
         }
 
     }
+
+    /***
+     *this, method will be performing the sum of the nodes of the tree
+     */
     public static long sum(Node root){
         if (root == null){
             return 0;
