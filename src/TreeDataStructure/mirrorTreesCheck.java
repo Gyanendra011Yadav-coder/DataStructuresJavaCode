@@ -16,21 +16,32 @@ public class mirrorTreesCheck {
      * IN, THIS METHOD WE WILL BE CHECKING IF THE TWO TREES ARE MIRROF EACH OTHER OR NOT
      */
     public static boolean isMirrorTrees(Node node1, Node node2){
-
-        return false;
+        if(node1==null && node2==null){
+            return true;
+        }
+        if (node1 == null || node2 == null) {
+            return false;
+        }
+        return ((node1.value==node2.value)&&
+                (isMirrorTrees(node1.left,node2.right)&&
+                        isMirrorTrees(node1.right, node2.left)));
     }
 
     /******
      * IN, THIS METHOD I WILL DOING INORDER TRAVERSAL OF THE TREE
+     * @return
      */
     public static void inOrder(Node root){
+
         if (root == null) {
-             return;
+            return ;
+        }else {
+            inOrder(root.left);
+           System.out.print(root.value+" ");
+            inOrder(root.right);
         }
-        inOrder(root.left);
-        System.out.println(root.value);
-        inOrder(root.right);
     }
+
 
     public static void main(String[] args) {
         rootNodeTree1 = new Node(2);
@@ -48,6 +59,7 @@ public class mirrorTreesCheck {
         rootNodeTree2.left.right=  new Node(6);
         rootNodeTree2.right.left = new Node(5);
         rootNodeTree2.right.right= new Node (4);
+
     }
 
 }
