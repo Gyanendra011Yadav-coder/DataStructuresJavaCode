@@ -10,5 +10,8 @@ public class mirrorTreesCheck {
             left=right=null;
         }
     }
+    Node rootNodeTree1;
+    Node rootNodeTree2;
+
 
 }
