@@ -2,46 +2,31 @@ package TreeDataStructure;
 
 
 public class checkSumTree {
-    static class Node {
-        long value;
-        Node left;
-        Node right;
-
-        Node(long data) {
-            this.value = data;
-            left = right = null;
-        }
-    }
-
     static Node root;
 
     /***.
      *intilized this clas in whuch we will be chekcing if the node that is passed is
      * is it, equal to the sum of there child or not
      */
-    public static boolean checkSumTree(Node node){
-        if(node==null || node.right == null && node.left == null){
+    public static boolean checkSumTree(Node node) {
+        if (node == null || node.right == null && node.left == null) {
             return true;
         }
-        long leftSubTreeSum=sum(node.left);
-        long rightSubTreeSum=sum(node.right);
-        if (node.value==leftSubTreeSum+rightSubTreeSum &&
-                checkSumTree(node.left)!=false && checkSumTree(node.right)!=false ){
-            return true;
-        }else {
-            return false;
-        }
+        long leftSubTreeSum = sum(node.left);
+        long rightSubTreeSum = sum(node.right);
+        return node.value == leftSubTreeSum + rightSubTreeSum &&
+                checkSumTree(node.left) && checkSumTree(node.right);
 
     }
 
     /***
      *this, method will be performing the sum of the nodes of the tree
      */
-    public static long sum(Node root){
-        if (root == null){
+    public static long sum(Node root) {
+        if (root == null) {
             return 0;
         }
-        return ((root.value)+ sum(root.left) + sum(root.right));
+        return ((root.value) + sum(root.left) + sum(root.right));
     }
 
     public static void inOrder(Node root) {
@@ -67,6 +52,17 @@ public class checkSumTree {
             System.out.println("True");
         } else {
             System.out.println("False");
+        }
+    }
+
+    static class Node {
+        long value;
+        Node left;
+        Node right;
+
+        Node(long data) {
+            this.value = data;
+            left = right = null;
         }
     }
 }
