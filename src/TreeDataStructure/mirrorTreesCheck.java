@@ -20,6 +20,18 @@ public class mirrorTreesCheck {
         return false;
     }
 
+    /******
+     * IN, THIS METHOD I WILL DOING INORDER TRAVERSAL OF THE TREE
+     */
+    public static void inOrder(Node root){
+        if (root == null) {
+             return;
+        }
+        inOrder(root.left);
+        System.out.println(root.value);
+        inOrder(root.right);
+    }
+
     public static void main(String[] args) {
         rootNodeTree1 = new Node(2);
         rootNodeTree1.left= new Node(1);
