@@ -1,13 +1,22 @@
 package TreeDataStructure;
 
 public class zigZagTraversalTree {
-    static Node rootNode;
+    static Node rootNode;  //THIS, IS THE ROOT NODE OF THE TREE
     static class Node{
         int data;
         Node left;
         Node right;
         Node(int data){
             this.data=data;
+        }
+    }
+
+    /*********
+     *NOW, WE WILL BE CREATING THE METHOD TO PERFORM THE ZIG-ZAG TRAVERSAL OF THE TREE
+     */
+    public static void zigZagTraversal(Node node){
+        if (node == null) {
+            return;
         }
     }
 
