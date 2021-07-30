@@ -1,5 +1,7 @@
 package TreeDataStructure;
 
+import java.util.Stack;
+
 public class zigZagTraversalTree {
     static Node rootNode;  //THIS, IS THE ROOT NODE OF THE TREE
     static class Node{
@@ -18,7 +20,13 @@ public class zigZagTraversalTree {
         if (node == null) {
             return;
         }
+        Stack <Node> current = new Stack();
+        Stack <Node> currentChild=new Stack();
+        boolean isLeftTORight=true;
+
     }
+
+
 
     public static void main(String[] args) {
         rootNode=new Node(2);
