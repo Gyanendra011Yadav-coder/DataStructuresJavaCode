@@ -40,6 +40,20 @@ public class boundaryTraversalTree {
             leftSide(node.right);
         }
     }
-
+/*****
+ * IN, THS METHOD WE WILL BE PRINTING THE RIGht-SUB-TREE NODES FROM BOTTOM TO TOP FASHION
+ */
+        public static void rightSide(Node node){
+            if(node == null){
+                return;
+            }
+            if (node.right != null){
+                rightSide(node.right);
+                System.out.println(node.value);
+            }else if (node.left != null) {
+                rightSide(node.left);
+                System.out.println(node.left);
+            }
+        }
 
 }
