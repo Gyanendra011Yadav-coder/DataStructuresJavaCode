@@ -1,7 +1,7 @@
 package TreeDataStructure;
 
 public class boundaryTraversalTree {
-    Node rootNode;
+    static Node rootNode;
     static class Node{
         int value;
         Node left;
@@ -60,7 +60,7 @@ public class boundaryTraversalTree {
     /****
      * IN, THIS METHOD WE WILL BE
      */
-    public static void sideTraversal(Node node ){
+    public static void boundaryTraversal(Node node ){
         if(node==null){
             return;
         }
@@ -69,6 +69,7 @@ public class boundaryTraversalTree {
          * A FASHION OF TOP TO BOTTOM APPROACH AND,
          * THEN WE PRINT THE LEAVES NODE AND THE RIGHT NODE FROM THE BOTTOM TO THE TOP
          */
+        System.out.println(node.value);
         leftSide(node.left);
         isLeave(node.left);
         isLeave(node.right);
@@ -79,7 +80,14 @@ public class boundaryTraversalTree {
      * NOW,WE WILL BE CREATING THE MAIN METHOD OF THE TREE
      */
     public static void main(String[] args) {
-
+        rootNode=new Node(2);
+        rootNode.left=new Node(3);
+        rootNode.right=new Node(1);
+        rootNode.left.left=new Node(8);
+        rootNode.left.right=new Node(6);
+        rootNode.right.left=new Node(5);
+        rootNode.right.right=new Node(4);
+        boundaryTraversal(rootNode);
     }
 
 
