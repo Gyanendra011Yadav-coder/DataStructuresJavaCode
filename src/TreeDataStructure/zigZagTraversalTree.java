@@ -23,7 +23,7 @@ public class zigZagTraversalTree {
         Stack <Node> current = new Stack();
         Stack <Node> currentChild=new Stack();
         boolean isLeftTORight=true;
-
+        current.push(node);
     }
 
 
