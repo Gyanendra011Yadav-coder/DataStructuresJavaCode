@@ -25,4 +25,21 @@ public class boundaryTraversalTree {
         isLeave(node.right);  // THIS, WILL BE CHECKING THE RIGHT SUB TREE
     }
 
+    /*****
+     * IN, THIS METHOD WE WILL BE PRINTING THE LEFT SUB-TREE'S LEFT SIDE NODES FROM TOP-BOTTOM
+     */
+    public static void leftSide(Node node){
+        if(node == null){
+            return;
+        }
+        if(node.left!=null){
+            System.out.println(node.value);
+            leftSide(node.left);
+        }else if (node.right != null){
+            System.out.println(node.value);
+            leftSide(node.right);
+        }
+    }
+
+
 }
