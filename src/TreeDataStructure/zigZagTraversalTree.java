@@ -1,6 +1,7 @@
 package TreeDataStructure;
 
 public class zigZagTraversalTree {
+
     class Node{
         int data;
         Node leftChild;
@@ -8,6 +9,10 @@ public class zigZagTraversalTree {
         Node(int data){
             this.data=data;
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 
 
