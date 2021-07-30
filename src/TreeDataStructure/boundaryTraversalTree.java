@@ -73,6 +73,12 @@ public class boundaryTraversalTree {
         isLeave(node.left);
         isLeave(node.right);
         rightSide(node.right);
+    }
+
+    /***
+     * NOW,WE WILL BE CREATING THE MAIN METHOD OF THE TREE
+     */
+    public static void main(String[] args) {
 
     }
 
