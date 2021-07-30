@@ -1,6 +1,7 @@
 package TreeDataStructure;
 
 public class boundaryTraversalTree {
+    Node rootNode;
     static class Node{
         int value;
         Node left;
@@ -52,8 +53,28 @@ public class boundaryTraversalTree {
                 System.out.println(node.value);
             }else if (node.left != null) {
                 rightSide(node.left);
-                System.out.println(node.left);
+                System.out.println(node.value);
             }
         }
+
+    /****
+     * IN, THIS METHOD WE WILL BE
+     */
+    public static void sideTraversal(Node node ){
+        if(node==null){
+            return;
+        }
+        /*******
+         * SO, FOR THE BOUNDARY TRAVERSAL FIRST WE NEED TO PRINT THE LEFT NODE OF THE LEFT SUB-TREE IN
+         * A FASHION OF TOP TO BOTTOM APPROACH AND,
+         * THEN WE PRINT THE LEAVES NODE AND THE RIGHT NODE FROM THE BOTTOM TO THE TOP
+         */
+        leftSide(node.left);
+        isLeave(node.left);
+        isLeave(node.right);
+        rightSide(node.right);
+
+    }
+
 
 }
