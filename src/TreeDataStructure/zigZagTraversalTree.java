@@ -24,6 +24,11 @@ public class zigZagTraversalTree {
         Stack <Node> currentChild=new Stack();
         boolean isLeftTORight=true;
         current.push(node);
+        while(current.isEmpty()!=true){
+            Node temp = current.pop();
+            System.out.println(temp.data);
+
+        }
     }
 
 
