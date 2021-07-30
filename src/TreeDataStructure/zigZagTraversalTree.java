@@ -1,7 +1,7 @@
 package TreeDataStructure;
 
 public class zigZagTraversalTree {
-
+    Node rootNode;
     class Node{
         int data;
         Node leftChild;
