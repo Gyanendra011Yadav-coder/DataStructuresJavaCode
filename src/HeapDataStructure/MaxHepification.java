@@ -34,15 +34,30 @@ public class MaxHepification {
         if (isLeaf(i)) {
             return;
         }
+        int leftChild=2*i;
+        int rightChild=(2*i)+1;
+        if (rightChild<=size){   // in this conditon, i'm checking if the right node exists or not
+            if (heap[i]>=heap[leftChild] && heap[i]>=heap[rightChild]){
+                return;
+            }
+        else{   //if, the right child does not exist, then we will check only for the left child
+            if (heap[i] >= heap[leftChild]) {
+                return;
+            }
+        }
+
+        }
     }
 
-    private boolean isLeaf(int positionOfTheNode) {
+    /******
+     *
+     * */
+    public boolean isLeaf(int positionOfTheNode) {
  // HENCE, OUR LEAVE EXISTS,BETWEEN (SIZE/2)+1 TO SIZE
         if (positionOfTheNode>(size)/2 && positionOfTheNode<size){
             return true;
         }else{
             return false;
-
         }
     }
 
