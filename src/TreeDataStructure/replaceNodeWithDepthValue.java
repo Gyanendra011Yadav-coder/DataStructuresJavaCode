@@ -1,7 +1,7 @@
 package TreeDataStructure;
 
 public class replaceNodeWithDepthValue {
-    static Node rootNode;
+
     static class Node {
         Node leftChild;
         Node rightChild;
@@ -12,7 +12,17 @@ public class replaceNodeWithDepthValue {
         }
     }
 
-    /********
+    /*****
+     * IN,THIS METHOD WE WILL BE REPLACING THE NODE WITH IT'S DEPTH VALUE
+     */
+    public static void replaceNodeWithDepth(Node root,int level){
+        if (root == null) {
+            return;
+        }
+
+    }
+
+    /**
      *IN, THIS METHOD WE WILL DOING THE INORDER TRAVERSAL OF THE TREE
      */
     public static void inOrderTraversal(Node node){
@@ -32,4 +42,6 @@ public class replaceNodeWithDepthValue {
         rootNode.leftChild.rightChild = new Node(4);
         inOrderTraversal(rootNode);
     }
+
+    static Node rootNode;
 }
