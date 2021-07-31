@@ -45,6 +45,20 @@ public class MaxHepification {
                 return;
             }
         }
+        //NOW, WE WILL BE CHECKING IF THE VALUE OF THE LEFT AND RIGHT CHILD IS GREATER THAN THE NODE THEN WE WILL SWAP
+        int largestChild;
+        if (leftChild<=size && heap[leftChild]>heap[i]){
+            largestChild=leftChild;  // we are storing the left as we found left is greater
+        }else{
+            largestChild=i;
+        }
+        //AGAIN, CHECKING IT FOR THE RIGHT CHILD OF THE NODE, IF IT IS GREATER THAN TIT'S PARENT OR NOT
+        if (rightChild<=size && heap[rightChild]>heap[i]){
+            largestChild = rightChild;
+        }else{
+            largestChild=i;
+        }
+
 
         }
     }
