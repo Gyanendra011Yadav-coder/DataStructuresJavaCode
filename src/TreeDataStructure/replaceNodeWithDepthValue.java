@@ -19,6 +19,8 @@ public class replaceNodeWithDepthValue {
         if (root == null) {
             return;
         }
+        root.data=level;
+
 
     }
 
