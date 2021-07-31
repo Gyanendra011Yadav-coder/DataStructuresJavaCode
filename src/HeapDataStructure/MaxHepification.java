@@ -10,6 +10,12 @@ public class MaxHepification {
         heap=new int[size];
         heap[0] = Integer.MAX_VALUE;
     }
-    
+    /******
+     * IN, THIS METHOD WE WILL BE ADDING THE NODES IN THE HEAP
+     */
+    public void insert(int data){
+        heap[++size] = data;
+    }
+
 
 }
