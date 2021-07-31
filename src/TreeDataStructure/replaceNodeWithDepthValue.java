@@ -20,7 +20,8 @@ public class replaceNodeWithDepthValue {
             return;
         }
         root.data=level;
-
+        replaceNodeWithDepth(root.leftChild, level+1);
+        replaceNodeWithDepth(root.rightChild, level + 1);
 
     }
 
