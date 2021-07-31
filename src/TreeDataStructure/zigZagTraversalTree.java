@@ -41,12 +41,14 @@ public class zigZagTraversalTree {
                     currentChild.push(temp.left);
                 }
             }
-
+            if (current.isEmpty()==true){
+                isLeftTORight = !isLeftTORight;
+                Stack<Node> tempStack=current;
+                current=currentChild;
+                currentChild = tempStack;
+            }
         }
     }
-
-
-
     public static void main(String[] args) {
         rootNode=new Node(2);
         rootNode.left=new Node(3);
@@ -55,6 +57,7 @@ public class zigZagTraversalTree {
         rootNode.left.right=new Node(6);
         rootNode.right.left=new Node(5);
         rootNode.right.right=new Node(4);
+        zigZagTraversal(rootNode);
     }
 
 
