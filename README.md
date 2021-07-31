@@ -1,2 +1,2 @@
-# DataStructuresJavaCode
-THIS IS MY WAY, TO CODE.
+#DataStructuresAndAlgorithmsJavaCode
+THIS IS MY WAY,FOR CODING.
