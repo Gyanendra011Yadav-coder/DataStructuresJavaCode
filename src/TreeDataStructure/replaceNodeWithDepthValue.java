@@ -33,7 +33,7 @@ public class replaceNodeWithDepthValue {
             return;
         }
         inOrderTraversal(node.leftChild);
-        System.out.println(node.data);
+        System.out.print(node.data+" ");
         inOrderTraversal(node.rightChild);
     }
 
@@ -43,7 +43,13 @@ public class replaceNodeWithDepthValue {
         rootNode.rightChild = new Node(5);
         rootNode.leftChild.leftChild=new Node(1);
         rootNode.leftChild.rightChild = new Node(4);
+        System.out.println("THE NODES OF THE TREE BEFORE CHNAGING THE VALUE:-");
         inOrderTraversal(rootNode);
+        System.out.println();
+        System.out.println("THE VALUE OF THE NODE OF THE TREE AFTER CHNAGING THE VALUE:-");
+        replaceNodeWithDepth(rootNode,0);
+        inOrderTraversal(rootNode);
+
     }
 
     static Node rootNode;
