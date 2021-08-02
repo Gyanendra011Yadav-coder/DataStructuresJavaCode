@@ -4,7 +4,7 @@ public class MaxHepification {
     int []heap; // This, is the heap Array that will be storing the nodes of the tree
     int maxHeapSize;   // this will be storing the total Length of the heap
     int size;         // this will storing the no of nodes inserted in the heap
-    MaxHepification(int size){
+    MaxHepification(int size){  //constructor of the class
         maxHeapSize = size;
         size=0;
         heap=new int[maxHeapSize+1];
@@ -60,6 +60,9 @@ public class MaxHepification {
         }
     }
 
+    /******
+     *THIS, METHOD WILL BE SWAPING THE VALUES
+     */
     private void swap(int largestChild,int i){
         int temp=heap[largestChild];
         heap[largestChild]=heap[i];
@@ -67,7 +70,7 @@ public class MaxHepification {
     }
 
     /******
-     *
+     *THIS,METHOD WILL BE CHECKING IF THE THE CURRENT NODE IS A LEAF OR NOT
      * */
     public boolean isLeaf(int positionOfTheNode) {
  // HENCE, OUR LEAVE EXISTS,BETWEEN (SIZE/2)+1 TO SIZE
