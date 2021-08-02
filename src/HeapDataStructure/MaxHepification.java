@@ -7,7 +7,7 @@ public class MaxHepification {
     MaxHepification(int size){
         maxHeapSize = size;
         size=0;
-        heap=new int[size];
+        heap=new int[maxHeapSize+1];
         heap[0] = Integer.MAX_VALUE;
     }
     /******
@@ -15,6 +15,11 @@ public class MaxHepification {
      */
     public void insert(int data){
         heap[++size] = data;
+        int index=size;
+        while(index>1 && heap[index/2]>heap[index]){
+            swap(index,index/2);
+            index=index/2;
+        }
     }
     /*****
      * In, this method we will be Converting the heap to Max_Heap
@@ -22,7 +27,7 @@ public class MaxHepification {
     public void build_Heap(){
         int lastNonLeaveNode= (int) Math.floor(size/2.0); // BY, USING THS WE ARE FINDING THE LAST NON-LEAVE NODES
 // THIS,LOOP WILL BE ITERATING FROM THE LAST NON-LEAVE NODE TO 1ST NON-LEAVE NODE
-        for (int i =lastNonLeaveNode; i>1 ; i--) {
+        for (int i =lastNonLeaveNode; i>=1 ; i--) {
             max_Heap(heap,i);
         }
     }
@@ -36,31 +41,29 @@ public class MaxHepification {
         }
         int leftChild=2*i;
         int rightChild=(2*i)+1;
-        if (rightChild<=size){   // in this conditon, i'm checking if the right node exists or not
-            if (heap[i]>=heap[leftChild] && heap[i]>=heap[rightChild]){
-                return;
-            }
-        else{   //if, the right child does not exist, then we will check only for the left child
-            if (heap[i] >= heap[leftChild]) {
-                return;
-            }
+       if(leftChild<maxHeapSize && heap[i]<heap[leftChild]){
+           if(heap[leftChild]>heap[rightChild]){
+               swap(i,leftChild);
+               max_Heap(heap,leftChild);
+           }else{
+               swap(i, rightChild);
+               max_Heap(heap, rightChild);
+           }
+       }if(rightChild<maxHeapSize && heap[i]<heap[rightChild]){
+           if (heap[leftChild]>heap[rightChild]){
+               swap(i, leftChild);
+               max_Heap(heap,leftChild);
+           }else{
+               swap(i, rightChild);
+               max_Heap(heap, rightChild);
+           }
         }
-        //NOW, WE WILL BE CHECKING IF THE VALUE OF THE LEFT AND RIGHT CHILD IS GREATER THAN THE NODE THEN WE WILL SWAP
-        int largestChild;
-        if (leftChild<=size && heap[leftChild]>heap[i]){
-            largestChild=leftChild;  // we are storing the left as we found left is greater
-        }else{
-            largestChild=i;
-        }
-        //AGAIN, CHECKING IT FOR THE RIGHT CHILD OF THE NODE, IF IT IS GREATER THAN TIT'S PARENT OR NOT
-        if (rightChild<=size && heap[rightChild]>heap[i]){
-            largestChild = rightChild;
-        }else{
-            largestChild=i;
-        }
+    }
 
-
-        }
+    private void swap(int largestChild,int i){
+        int temp=heap[largestChild];
+        heap[largestChild]=heap[i];
+        heap[i]=temp;
     }
 
     /******
@@ -72,6 +75,14 @@ public class MaxHepification {
             return true;
         }else{
             return false;
+        }
+    }
+    /****
+     * in THI, METHOD WILL BE PRINTING THE HEAPS
+     */
+    public void printHeap(){
+        for (int i = 1; i<=size ; i++) {
+            System.out.print(heap[i]+" ");
         }
     }
 
