@@ -91,6 +91,10 @@ public class MaxHepification {
      * THIS, METHOD WILL BE REMOVING THE LARGEST ELEMENT OF THE HEAP
      */
     public void remove_Max_Element(){
+        if (size<=0){
+            return;
+        }
+
 
     }
 
