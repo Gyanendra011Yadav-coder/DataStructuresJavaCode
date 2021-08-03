@@ -95,7 +95,7 @@ public class MaxHepification {
             return;
         }
         int largestElement=heap[size];
-
+        heap[1]=heap[size];
 
 
     }
