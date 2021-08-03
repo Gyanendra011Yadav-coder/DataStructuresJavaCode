@@ -105,6 +105,13 @@ public class MaxHepification {
         return max;
     }
 
+    /***
+     * IN,METHOD WE WILL BE CHNAGING THE VALUE OF ANY NODE
+     */
+    public void changeTheValue(int[]heap, int positionToChange, int value){
+
+    }
+
     /******
      *THIS, METHOD WILL BE SWAPING THE VALUES
      */
