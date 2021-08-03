@@ -90,14 +90,14 @@ public class MaxHepification {
     /****
      * THIS, METHOD WILL BE REMOVING THE LARGEST ELEMENT OF THE HEAP
      */
-    public void remove_Max_Element(){
+    public int remove_Max_Element(){
         if (size<=0){
-            return;
+            return -1;
         }
         int largestElement=heap[size];
         heap[1]=heap[size];
-
-
+        size--;
+        return largestElement;
     }
 
     /******
