@@ -13,9 +13,14 @@ public class MainClass {
         System.out.println("HEAP BEFORE BUILD:-");
         max.printHeap();
         max.build_Heap();
-        System.out.println("THE HEAP AFTER BUILD");
         System.out.println("\n");
-        max.build_Heap();
+        System.out.println("THE HEAP AFTER BUILD");
+        max.printHeap();
+        System.out.println("\n");
+        System.out.println("LARGEST ELEMENT OF THE HEAP IS:-");
+        System.out.println(max.remove_Max_Element());
+        max.printHeap();
+
 
     }
 }
