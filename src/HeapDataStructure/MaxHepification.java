@@ -112,7 +112,11 @@ public class MaxHepification {
         if (positionOfKeyChange<=0){
             return;
         }
-
+        heap[positionOfKeyChange]=valueToChangeWith;
+        while (valueToChangeWith>1 && heap[positionOfKeyChange/2]<heap[positionOfKeyChange]){
+            swap(positionOfKeyChange/2,positionOfKeyChange);
+            positionOfKeyChange=positionOfKeyChange/2;
+        }
     }
 
     /******
