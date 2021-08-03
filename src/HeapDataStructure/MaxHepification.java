@@ -108,7 +108,10 @@ public class MaxHepification {
     /***
      * IN,METHOD WE WILL BE CHNAGING THE VALUE OF ANY NODE
      */
-    public void changeTheValue(int[]heap, int positionToChange, int value){
+    public void changeTheValue(int[]heap, int positionOfKeyChange, int valueToChangeWith){
+        if (positionOfKeyChange<=0){
+            return;
+        }
 
     }
 
