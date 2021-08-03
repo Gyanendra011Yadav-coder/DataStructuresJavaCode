@@ -3,6 +3,9 @@ package Recursion;
 import java.util.Scanner;
 
 public class printPattern {
+    public void printPatterns(int N){
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N=sc.nextInt();
@@ -12,7 +15,6 @@ public class printPattern {
             //N-=5;
             N=N-5;
             System.out.print(N+" ");
-
         }
         while(N!=temp){
             N=N+5;
