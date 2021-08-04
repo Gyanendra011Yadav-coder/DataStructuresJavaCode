@@ -31,6 +31,13 @@ public class minHepification {
         if (isLeaf(i)){
             return;
         }
+        int leftChild=2*i;
+        int rightChild=2*i+1;
+        if (rightChild<=sizeOfMinHeap){
+            if (minHeapArray[i]>minHeapArray[leftChild]){
+
+            }
+        }
     }
 
     /***
