@@ -2,9 +2,11 @@ package HeapDataStructure;
 
 public class minHepification {
     int []minHeapArray;
-    int sizeOfMinHeapAnInt;
-    int maxSizeMinHeapAnInt;
-    minHepification(){
-
+    int sizeOfMinHeap;
+    int maxSizeMinHeap;
+    minHepification(int size){
+        this.sizeOfMinHeap=0;
+        this.maxSizeMinHeap=size;
+        minHeapArray = new int[size];
     }
 }
