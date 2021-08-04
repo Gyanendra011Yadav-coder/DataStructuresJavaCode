@@ -33,11 +33,22 @@ public class minHepification {
         }
     }
 
+    /***
+     * THIS,METHOD WILL BE CHECKING IF THE PASSED INDEX KEY IS LEAF OR  NOT
+     */
     private boolean isLeaf(int i) {
         if (i>(sizeOfMinHeap/2) && i<sizeOfMinHeap){
             return true;
         }
         return false;
+    }
+    /***
+     * THIS,METHOD WILL BE USED FOR SWAPPING
+     */
+    public void swap(int num1, int num2){
+        int temp=num1;
+        num1= num2;
+        num2=temp;
     }
 
 
