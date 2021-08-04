@@ -28,7 +28,16 @@ public class minHepification {
     }
 
     public void minHeapification(int[] minHeapArray, int i) {
+        if (isLeaf(i)){
+            return;
+        }
+    }
 
+    private boolean isLeaf(int i) {
+        if (i>(sizeOfMinHeap/2) && i<sizeOfMinHeap){
+            return true;
+        }
+        return false;
     }
 
 
