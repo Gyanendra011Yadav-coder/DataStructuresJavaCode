@@ -17,4 +17,19 @@ public class minHepification {
         minHeapArray[++sizeOfMinHeap]=element;
     }
 
+    /***
+     * THIS,METHOD WILL HELP IN CREATING THE MIN HEAP
+     */
+    public void buildMinHeap(){
+        int lastNonLeafMin=(int)Math.floor(sizeOfMinHeap/2);
+        for (int i = lastNonLeafMin; i>=1 ; i--) {
+            minHeapification(minHeapArray, i);
+        }
+    }
+
+    public void minHeapification(int[] minHeapArray, int i) {
+
+    }
+
+
 }
