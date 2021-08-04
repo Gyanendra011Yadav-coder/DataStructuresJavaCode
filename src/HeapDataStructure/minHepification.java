@@ -35,7 +35,12 @@ public class minHepification {
         int rightChild=2*i+1;
         if (rightChild<=sizeOfMinHeap){
             if (minHeapArray[i]>minHeapArray[leftChild]){
-
+                if (minHeapArray[leftChild]<minHeapArray[rightChild]){
+                    swap(leftChild,i);
+                    minHeapification(minHeapArray,rightChild);
+                }else{
+                    swap(i,rightChild);
+                }
             }
         }
     }
