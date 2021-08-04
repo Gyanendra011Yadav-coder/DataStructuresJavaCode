@@ -9,4 +9,12 @@ public class minHepification {
         this.maxSizeMinHeap=size;
         minHeapArray = new int[size];
     }
+
+    /***
+     * THIS, METHOD WILL INSERT THE NODES IN THE TREE
+     */
+    public void insertMinHeap(int element){
+        minHeapArray[++sizeOfMinHeap]=element;
+    }
+
 }
