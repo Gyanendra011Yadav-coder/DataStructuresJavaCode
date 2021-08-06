@@ -28,8 +28,16 @@ public class minHeapification {
             for (int i = 1; i <= sizeOfHeap; i++) {
                 min.insert(sc.nextInt());
             }
+       //     min.buildHep();
+         //   System.out.print("\n");
+            System.out.println("min-heappification");
             min.printHeap();
+            System.out.print("\n");
+            System.out.print("min element:-"+" ");
             System.out.println(min.extract_MinElement());
+           // min.buildHep();
+            System.out.println("heap after insertion:-");
+            min.printHeap();
             testCases--;
         }
     }
@@ -86,11 +94,7 @@ public class minHeapification {
      */
 
     public boolean isLeaf(int i) {
-        if (i > (size / 2) && i <= size) {
-            return true;
-        } else {
-            return false;
-        }
+        return i >(size / 2) && i <= size;
     }
 
 
@@ -141,12 +145,12 @@ public class minHeapification {
         }
         int smallest;
         if (leftChild <= size && heap[leftChild] < heap[i]) {
-            smallest = i;
+            smallest =leftChild;
         } else {
-            smallest = leftChild;
+            smallest = i;
         }
         if (rightChild <= size && heap[rightChild] < heap[smallest]) {
-            smallest = smallest;
+            smallest = rightChild;
         }
         if (i != smallest) {
             swap(i, smallest);

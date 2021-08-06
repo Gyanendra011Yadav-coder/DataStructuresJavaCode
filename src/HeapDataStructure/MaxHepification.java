@@ -1,5 +1,7 @@
 package HeapDataStructure;
 
+import java.util.Scanner;
+
 public class MaxHepification {
     int[] heap; // This, is the heap Array that will be storing the nodes of the tree
     int maxHeapSize;   // this will be storing the total Length of the heap
@@ -10,6 +12,23 @@ public class MaxHepification {
         size = 0;
         heap = new int[this.maxHeapSize + 1];
         heap[0] = Integer.MAX_VALUE;  // HERE, WE ARE MAKING THE VALUE AT THE INDEX 0, AS WE DO NOT USE 0 INDEX IN THE HEAPS
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int testCases = sc.nextInt();
+        while (testCases != 0) {
+            int sizeOfHeap = sc.nextInt();
+            MaxHepification max = new MaxHepification(sizeOfHeap);
+            for (int i = 1; i <= sizeOfHeap; i++) {
+                max.insert(sc.nextInt());
+            }
+            max.build_Heap();
+            max.printHeap();
+            System.out.println("\n");
+            System.out.println(max.remove_Max_Element());
+            max.printHeap();
+            testCases--;
+        }
     }
 
     /******
@@ -45,7 +64,7 @@ public class MaxHepification {
         }
         int leftChild = 2 * i;
         int rightChild = (2 * i) + 1;
-        /*
+
         if (rightChild<=size ){
             if(heap[leftChild]<=heap[i] && heap[rightChild] <=heap[i]){
                 return;
@@ -69,8 +88,9 @@ public class MaxHepification {
             swap(i,largest);
         }
         max_Heap(heap, largest);
-        */
-        if (leftChild < maxHeapSize && heap[i] < heap[leftChild]) {
+
+        /*
+        if (leftChild < maxHeapSize && heap[i] > heap[leftChild]) {
             if (heap[leftChild] > heap[rightChild]) {
                 swap(i, leftChild);
                 max_Heap(heap, leftChild);
@@ -79,7 +99,7 @@ public class MaxHepification {
                 max_Heap(heap, rightChild);
             }
         }
-        if (rightChild < maxHeapSize && heap[i] < heap[rightChild]) {
+        if (rightChild < maxHeapSize && heap[i]>heap[rightChild]) {
             if (heap[leftChild] > heap[rightChild]) {
                 swap(i, leftChild);
                 max_Heap(heap, leftChild);
@@ -88,6 +108,8 @@ public class MaxHepification {
                 max_Heap(heap, rightChild);
             }
         }
+
+         */
 
     }
 
