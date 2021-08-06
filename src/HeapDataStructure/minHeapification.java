@@ -86,7 +86,7 @@ public class minHeapification {
      */
 
     public boolean isLeaf(int i) {
-        if (i > size / 2 && i < size) {
+        if (i > (size / 2) && i <= size) {
             return true;
         } else {
             return false;
