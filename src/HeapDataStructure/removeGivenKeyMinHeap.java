@@ -1,5 +1,7 @@
 package HeapDataStructure;
 
+import java.util.Scanner;
+
 public class removeGivenKeyMinHeap {
     int []heap;
     int size;
@@ -22,6 +24,16 @@ public class removeGivenKeyMinHeap {
         int temp=i;
         i=index;
         index=temp;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size= sc.nextInt();
+        removeGivenKeyMinHeap rem = new removeGivenKeyMinHeap(size);
+        for (int i =1;i<=size;i++){
+            rem.insertKey(sc.nextInt());
+        }
+
     }
 
 }
