@@ -10,6 +10,8 @@ public class removeGivenKeyMinHeap {
         heap=new int[size];
         size=0;
         maxSize = size;
+        heap[0]=Integer.MAX_VALUE;
+
     }
     public void insertKey(int data){
         heap[++size] = data;
@@ -25,6 +27,7 @@ public class removeGivenKeyMinHeap {
         i=index;
         index=temp;
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
