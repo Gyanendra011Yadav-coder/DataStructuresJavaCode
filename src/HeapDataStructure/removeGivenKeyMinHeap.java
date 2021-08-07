@@ -9,6 +9,20 @@ public class removeGivenKeyMinHeap {
         size=0;
         maxSize = size;
     }
+    public void insertKey(int data){
+        heap[++size] = data;
+        int index=size;
+        while (index>1 && heap[index/2]>heap[index]) {
+            swap(index/2, index);
+            index=index/2;
+        }
+    }
+
+    private void swap(int i, int index) {
+        int temp=i;
+        i=index;
+        index=temp;
+    }
 
 }
 
