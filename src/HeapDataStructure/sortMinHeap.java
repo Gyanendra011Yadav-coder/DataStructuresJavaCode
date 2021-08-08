@@ -1,4 +1,5 @@
 package HeapDataStructure;
+
 import java.util.Scanner;
 
 public class sortMinHeap {
@@ -6,6 +7,7 @@ public class sortMinHeap {
         int[] heap;
         int maxHeapSize;
         int size;
+
         //constructor of the class
         Main(int size) {
             this.maxHeapSize = size;
@@ -51,24 +53,20 @@ public class sortMinHeap {
             }
         }
 
-         /* -----------------------------------------------------------
+        /* -----------------------------------------------------------
          *Method,To SORT THE HEAP IN DESCENING ORDER
          * -----------------------------------------------------------
          */
 
-        public void sortHeapDes(){
-            for (int i =size; i>=1 ; i--) {
-                for (int j = 1; j <i ; j++) {
-                    if (heap[i]>heap[j]){
+        public void sortHeapDes() {
+            for (int i = size; i >= 1; i--) {
+                for (int j = 1; j < i; j++) {
+                    if (heap[i] > heap[j]) {
                         swap(i, j);
                     }
                 }
             }
         }
-
-
-
-
 
 
         /***
@@ -83,7 +81,6 @@ public class sortMinHeap {
         }
 
 
-
         /***
          * -----------------------------------------------------------
          *Method,To Print Heap.
@@ -96,9 +93,6 @@ public class sortMinHeap {
         }
 
     }
-
-
-
 
 
 }
