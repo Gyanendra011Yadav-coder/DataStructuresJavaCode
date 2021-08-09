@@ -93,6 +93,10 @@ public class maximumNumberOfBooks {
             size=0;
             maxSize = size;
         }
+        public void maxBook(int []heap, int maxRupees){
+
+
+        }
         public static void main(String args[]) throws IOException {
 
 
