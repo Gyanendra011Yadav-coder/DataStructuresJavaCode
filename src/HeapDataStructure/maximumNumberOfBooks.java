@@ -1,5 +1,7 @@
 package HeapDataStructure;
 
+import java.io.IOException;
+
 /***
  * ---------------------------------------------------------------
  * Maximum Books
@@ -82,4 +84,12 @@ package HeapDataStructure;
  */
 
 public class maximumNumberOfBooks {
+    public class Main {
+        public static void main(String args[]) throws IOException {
+
+
+
+        }
+    }
+
 }
