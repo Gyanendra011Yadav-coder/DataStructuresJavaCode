@@ -85,23 +85,37 @@ import java.io.IOException;
 
 public class maximumNumberOfBooks {
     public class Main {
-        int []heap;
+        int[] heap;
         int size;
         int maxSize;
-        Main(int size){
-            heap = new int[size];
-            size=0;
+
+        Main(int size) {
+            heap = new int[size + 1];
+            size = 0;
             maxSize = size;
         }
-        public void maxBook(int []heap, int maxRupees){
 
 
+        public int maxBook(int[] heap, int maxRupees) {
+            int sum = 0;
+            int count = 0;
+            for (int i = 1; i <= size; i++) {
+                if (heap[i] > maxRupees) {
+                    continue;
+                } else {
+                    if (sum < 70) {
+                        sum += heap[i];
+                        count++;
+                    }
+                }
+            }
+            return count;
         }
-        public static void main(String args[]) throws IOException {
+            public static void main (String args[]) throws IOException {
 
 
-
+            }
         }
+
     }
 
-}
