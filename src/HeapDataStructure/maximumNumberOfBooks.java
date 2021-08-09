@@ -95,6 +95,9 @@ public class maximumNumberOfBooks {
             maxSize = size;
         }
 
+        public void insert(int data){
+            heap[++size]=data;
+        }
 
         public int maxBook(int[] heap, int maxRupees) {
             int sum = 0;
