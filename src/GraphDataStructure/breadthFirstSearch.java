@@ -1,5 +1,4 @@
 package GraphDataStructure;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -41,7 +40,16 @@ public class breadthFirstSearch {
    //   THIS,STATEMENT WE WILL ADD WHEN IT IS UN-DIRECTED GRAPH.
            adjMatrix[end][start]=1;
        }
+       /**
+        * this method wil be used to print the Nodes of  the graph.
+        */
+       public void printNode(int index){
+           System.out.println(nodeList[index].data);
+       }
    }
+
+
+
 
 
 }
