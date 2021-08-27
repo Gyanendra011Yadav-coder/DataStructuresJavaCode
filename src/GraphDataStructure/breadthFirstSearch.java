@@ -25,6 +25,22 @@ public class breadthFirstSearch {
             nodeList = new Node[max_Length];
             adjMatrix=new int[max_Length][max_Length];
        }
+
+       /***
+        *  THIS,METHOD WILL BE ADDING THE NODES IN THE NODELIST.
+        */
+       public void insertNodeGraph(int element){
+           nodeList[++noNodesInserted]=new Node(element);
+       }
+
+       /**
+        * THIS,METHOD WILL BE ADDING THE EDGES B/W THE VERTICES
+        */
+       public void addEdge(int start, int end){
+           adjMatrix[start][end]=1;
+   //   THIS,STATEMENT WE WILL ADD WHEN IT IS UN-DIRECTED GRAPH.
+           adjMatrix[end][start]=1;
+       }
    }
 
 
