@@ -31,6 +31,24 @@ public void addEdge(int start, int end) {
     adjMatrix[end][start]=1;
 }
 
+//METHOD TO PRINT THE NODES OF THE GRAPH
+    public void printNodes(int index){
+      System.out.println(nodeList[index].data+" ");
+ }
+
+ //method to check if the node is visited or not
+    public  int isVisited(int index){
+        for (int i = 0; i <noNodesInserted ; i++) {
+            if (adjMatrix[i][index]==1 && nodeList[i].visited==false){
+                return i;
+            }
+
+        }
+        return -1;
+ }
+
+
+
 
 }
 
