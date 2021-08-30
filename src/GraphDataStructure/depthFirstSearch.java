@@ -42,10 +42,19 @@ public void addEdge(int start, int end) {
             if (adjMatrix[i][index]==1 && nodeList[i].visited==false){
                 return i;
             }
-
         }
         return -1;
  }
+
+ //Main method that will be used to Print DFS
+    public void dfs(int n){
+      nodeList[n].visited=true;
+      printNodes(n);
+      int node1;
+      if((node1=isVisited(n))!=-1){
+          dfs(node1);
+        }
+    }
 
 
 
