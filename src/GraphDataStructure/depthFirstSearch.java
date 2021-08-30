@@ -25,7 +25,11 @@ public class depthFirstSearch {
     }
 
     //method to add edges
-
+public void addEdge(int start, int end) {
+    adjMatrix[start][end]=1;
+    //if,BI-DIRECTIONAL GRAPH IS GIVEN THEN WE WILL ADD THIS LINE
+    adjMatrix[end][start]=1;
+}
 
 
 }
