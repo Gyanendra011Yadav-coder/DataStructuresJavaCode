@@ -16,4 +16,16 @@ class totalComponents {
         adjArrayList.get(start).add(end);
         adjArrayList.get(end).get(start);
     }
+
+
+    //method to visit whole nodes and if any node is not visited this mehtod will made it visited.
+    public void markVisited(int n, boolean []visited){
+        visited[n]=true;
+        for (int each : adjArrayList.get(n)){
+            if (visited[each]!=true) {
+                markVisited(n,visited);
+            }
+        }
+    }
+
 }
