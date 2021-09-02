@@ -11,4 +11,9 @@ class totalComponents {
             adjArrayList.add(i,new ArrayList<>());
         }
     }
+    //method to add edges between the Nodes.
+    public void addEdges(int start, int end){
+        adjArrayList.get(start).add(end);
+        adjArrayList.get(end).get(start);
+    }
 }
