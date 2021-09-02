@@ -1,14 +1,14 @@
 package GraphDataStructure;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 class totalComponents {
-     int vertex;
-     LinkedList<Integer> adj[];
-     totalComponents(int size){
-         vertex=size;
-         for (int i = 0; i <size ; i++) {
-            adj[i] = new LinkedList<Integer>();
-         }
-     }
+    int vertex;
+    ArrayList <ArrayList<Integer>> adjArrayList;
+    totalComponents(int size){
+        vertex=size;
+        for (int i = 0; i <size; i++) {
+            adjArrayList.add(i,new ArrayList<>());
+        }
+    }
 }
