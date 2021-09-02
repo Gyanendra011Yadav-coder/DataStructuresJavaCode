@@ -40,5 +40,10 @@ class totalComponents {
             }
         }
     }
+    //main method of  the class
+
+    public static void  main(String[]args){
+
+    }
 
 }
