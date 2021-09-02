@@ -6,6 +6,7 @@ class totalComponents {
     int vertex;
     ArrayList <ArrayList<Integer>> adjArrayList;
     totalComponents(int size){
+        int max_Size=size;
         vertex=size;
         for (int i = 0; i <size; i++) {
             adjArrayList.add(i,new ArrayList<>());
@@ -17,6 +18,18 @@ class totalComponents {
         adjArrayList.get(end).get(start);
     }
 
+    //METHOD TO PERFORM DFS
+    public int traverseWholeNodes(){
+        int countConnectedComp=0;
+        boolean []visited = new boolean[vertex];
+        for (int i = 0; i <vertex ; i++) {
+            if (visited[i]!=true){
+                countConnectedComp++;
+                markVisited(i,visited);
+            }
+        }
+        return countConnectedComp;
+    }
 
     //method to visit whole nodes and if any node is not visited this mehtod will made it visited.
     public void markVisited(int n, boolean []visited){
