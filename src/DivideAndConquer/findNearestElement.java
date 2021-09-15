@@ -17,6 +17,11 @@ public class findNearestElement {
                 return min(array[mid-1],array[mid],elementCompare );
             }
         }
+        else{
+            if(array[mid+1]>elementCompare){
+                return min(array[mid+1],array[mid],elementCompare);
+            }
+        }
         return 0;
     }
 
