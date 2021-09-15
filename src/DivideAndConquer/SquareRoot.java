@@ -26,5 +26,7 @@ public class SquareRoot {
     public static void main(String []args){
         Scanner sc= new Scanner(System.in);
         int numberFindSquareRoot = sc.nextInt();
+        int result=findSquareRoot(numberFindSquareRoot);
+        System.out.println("The Square Root Of The"+numberFindSquareRoot+",is:"+(result));
     }
 }
