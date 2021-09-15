@@ -8,7 +8,9 @@ public class SquareRoot {
         int index=1;
         while(index<number/2){
             if(index * index == number){
-
+                return index;
+            }else{
+                continue;
             }
         }
         return 0;
