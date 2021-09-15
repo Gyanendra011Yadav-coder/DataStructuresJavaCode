@@ -5,12 +5,19 @@ import java.util.Scanner;
 public class SquareRoot {
 
     public static int findSquareRoot(int number){
+        if (number== 0) {
+            return 0;
+        }
+        if (number==1){
+            return 1;
+        }
         int index=1;
         while(index<number/2){
             if(index * index == number){
                 return index;
+
             }else{
-                continue;
+                index++;
             }
         }
         return 0;
