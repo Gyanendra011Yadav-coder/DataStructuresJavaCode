@@ -1,9 +1,24 @@
 package DivideAndConquer;
 
-import java.util.Scanner;
-
 public class SquareRoot {
 
+//this is the optimised approach, that we wil be using to Find,Square root Using, Binary Search ny dividiing it
+
+    public static int findSquareRoot(int number){
+        int start=0;
+        int end=number;
+        int mid=number/2;
+        if(mid*mid ==number){
+            return mid;
+        }
+        return 0;
+    }
+}
+
+
+
+
+    /*
     public static int findSquareRoot(int number){
         if (number== 0) {
             return 0;
@@ -30,3 +45,5 @@ public class SquareRoot {
         System.out.println("The Square Root Of The"+numberFindSquareRoot+",is:"+(result));
     }
 }
+
+     */
