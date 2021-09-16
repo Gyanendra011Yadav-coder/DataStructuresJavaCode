@@ -4,15 +4,24 @@ public class SquareRoot {
 
 //this is the optimised approach, that we wil be using to Find,Square root Using, Binary Search ny dividiing it
 
-    public static int findSquareRoot(int number){
-        int start=0;
-        int end=number;
-        int mid=number/2;
-        if(mid*mid ==number){
-            return mid;
+    public static int findSquareRoot(int number) {
+        int begin = 0;
+        int end = number;
+        long answer;
+        while (begin < end) {
+            int mid = number / 2;
+            if (number == 0 || number == 1) {
+                return number;
+            } else if (mid * mid == number) {
+                return mid;
+            } else if (mid * mid < number) {
+                end = mid-1;
+                mid = begin+end / 2;
+            }
         }
         return 0;
     }
+
 }
 
 
