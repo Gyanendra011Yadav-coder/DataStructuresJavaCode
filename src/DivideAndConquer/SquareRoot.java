@@ -5,7 +5,7 @@ public class SquareRoot {
 //this is the optimised approach, that we wil be using to Find,Square root Using, Binary Search ny dividiing it
 
     public static int findSquareRoot(int number) {
-        int begin = 0;
+        int begin = 1;
         int end = number;
         long answer;
         while (begin < end) {
@@ -15,8 +15,10 @@ public class SquareRoot {
             } else if (mid * mid == number) {
                 return mid;
             } else if (mid * mid < number) {
-                end = mid-1;
-                mid = begin+end / 2;
+                answer=mid;
+                begin=mid+1;
+            }else{
+                end=mid+1;
             }
         }
         return 0;
