@@ -6,17 +6,19 @@ public class SquareRoot {
 
 //this is the optimised approach, that we wil be using to Find,Square root Using, Binary Search ny dividiing it
 
-    public static long findSquareRoot(int number) {
-        int begin = 1;
-        int end = number;
+    public static long findSquareRoot(long number) {
+        if (number == 0 || number == 1) {
+            return number;
+        }
+        long begin = 1;
+        long end = number/2;
         long answer=0;
-        while (begin < end) {
-            int mid = number / 2;
-            if (number == 0 || number == 1) {
-                return number;
-            } else if (mid * mid == number) {
+        while (begin <= end) {
+            long mid = ((begin+end )/ 2);
+            if (mid * mid == number) {
                 return mid;
-            } else if (mid * mid < number) {
+            }
+             if (mid * mid < number) {
                 answer=mid;
                 begin=mid+1;
             }else{
@@ -28,8 +30,8 @@ public class SquareRoot {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number=sc.nextInt();
-        float result=  findSquareRoot(number);
+        long number=sc.nextLong();
+        long result=  findSquareRoot(number);
         System.out.println(result);
     }
 
