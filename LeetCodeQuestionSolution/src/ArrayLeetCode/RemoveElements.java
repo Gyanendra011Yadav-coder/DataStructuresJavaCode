@@ -15,7 +15,15 @@ package ArrayLeetCode;
  */
 
 public class RemoveElements {
-    \
+    public static int returnNonRepeat(int []array, int elementToRemove){
+        int lengthArray=array.length-1;
+        int tempLength=lengthArray;
+        for (int i = 0; i <lengthArray; i++) {
+            if (array[i] ==elementToRemove ){
+                
+            }
+        }
+    }
 
 
 }
