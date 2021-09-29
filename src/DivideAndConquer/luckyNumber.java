@@ -7,4 +7,11 @@ public class luckyNumber {
          long mid= (low+high)/2;
 
     }
+    public static long gcd(long a , long b){
+        if(b==0) {
+            return a;
+        }else{
+            return gcd(a, a%b);
+        }
+    }
 }
