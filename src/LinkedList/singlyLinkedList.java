@@ -1,5 +1,7 @@
 package LinkedList;
 
+import org.w3c.dom.NodeList;
+
 public class singlyLinkedList {
     private ListNode head;
 
@@ -55,7 +57,16 @@ public class singlyLinkedList {
         }
         current.next=newNode;
     }
-
+    //method to delete the First Node From the SinglyLinkedLisyt
+    public ListNode deleteFirstNode(int value){
+        if(head==null){
+            return null;
+        }
+        ListNode temp=head;
+        head=head.next;
+        temp.next=null;
+        return temp;
+    }
     public static void main(String[] args) {
         singlyLinkedList sll = new singlyLinkedList();
         sll.head = new ListNode(8);
