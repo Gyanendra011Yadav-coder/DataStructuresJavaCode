@@ -69,6 +69,9 @@ public class singlyLinkedList {
     ///Deletion Of The Node At The Last.
 
     public ListNode deletionnAtEnd(){
+        if (head==null || head.next==null){
+            return head;
+        }
         ListNode temp =head;
         ListNode previous = null;
         while(temp.next!=null){
