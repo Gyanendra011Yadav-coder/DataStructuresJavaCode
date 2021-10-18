@@ -1,7 +1,5 @@
 package LinkedList;
 
-import org.w3c.dom.NodeList;
-
 public class singlyLinkedList {
     private ListNode head;
 
@@ -67,6 +65,20 @@ public class singlyLinkedList {
         temp.next=null;
         return temp;
     }
+
+    ///Deletion Of The Node At The Last.
+
+    public ListNode deletionnAtEnd(){
+        ListNode temp =head;
+        ListNode previous = null;
+        while(temp.next!=null){
+            previous=temp;
+            temp=temp.next;
+        }
+        previous.next=null;
+        return previous;
+    }
+
     public static void main(String[] args) {
         singlyLinkedList sll = new singlyLinkedList();
         sll.head = new ListNode(8);
