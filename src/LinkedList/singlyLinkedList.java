@@ -82,6 +82,23 @@ public class singlyLinkedList {
         return previous;
     }
 
+
+    //Adding the Node at The Specific Position
+    public void insert(int data, int position){
+        ListNode newNode= new ListNode(data);
+        if(position==1){
+            head.next=head;
+            head=newNode;
+        }
+        ListNode previous=head;
+        int count=1;
+        while(count<position-1){
+            previous=previous.next;
+        }
+        ListNode current=previous.next;
+        previous.next=newNode;
+        newNode.next=current;
+    }
     public static void main(String[] args) {
         singlyLinkedList sll = new singlyLinkedList();
         sll.head = new ListNode(8);
