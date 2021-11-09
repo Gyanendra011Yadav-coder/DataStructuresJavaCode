@@ -39,4 +39,16 @@ public class doublyLinkedList {
         }
     }
 
+    //Method to add Node at The End
+    public void inserAtEnd(int value){
+        NodeList newNode = new NodeList(value);
+        if(isEmpty()==0){
+            head=tail=newNode;
+        }else{
+           tail.next=newNode;
+           newNode.previous=tail;
+           tail=newNode;
+        }
+    }
+
 }
