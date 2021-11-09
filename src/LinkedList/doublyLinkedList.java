@@ -17,6 +17,13 @@ public class doublyLinkedList {
             previous=null;
         }
     }
-
+    // Method To Check If The List Is Empty
+    public int  isEmpty(){
+        if (head==null){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
 
 }
