@@ -26,4 +26,16 @@ public class doublyLinkedList {
         }
     }
 
+    //Method to add The Nodes at The Beginning Of The Linked List.
+    public void insertAtBegin(int value){
+        NodeList newNode= new NodeList(value);
+        if(isEmpty()==0){
+            head=tail=newNode;
+        }else {
+            newNode.previous=head.previous;
+            newNode.next=head;
+            head=newNode;
+        }
+    }
+
 }
