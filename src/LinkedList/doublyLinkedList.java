@@ -34,6 +34,7 @@ public class doublyLinkedList {
         }else {
             newNode.previous=head.previous;
             newNode.next=head;
+            head.previous=newNode;
             head=newNode;
         }
     }
