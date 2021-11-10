@@ -1,6 +1,5 @@
 package LinkedList;
 
-import TreeDataStructure.binarySearchTree;
 
 public class doublyLinkedList {
     NodeList head; // This will be Denoting to the Head of The Node.
@@ -82,7 +81,11 @@ public class doublyLinkedList {
     }
 
     public static void main(String[] args) {
-
+        doublyLinkedList dll = new doublyLinkedList();
+        dll.insertAtBegin(1);
+        dll.inserAtEnd(2);
+        dll.printForwardDirection();
+        dll.printNodeBackward();
     }
 
 
