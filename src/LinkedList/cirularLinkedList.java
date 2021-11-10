@@ -5,7 +5,7 @@ import TreeDataStructure.binarySearchTree;
 public class cirularLinkedList {
     NodeList last;
     int length;
-    class NodeList{
+    public static class NodeList{
         NodeList next;
         int data;
         public NodeList(int data){
@@ -61,6 +61,13 @@ public class cirularLinkedList {
 
     public static void main(String[] args) {
         cirularLinkedList cll = new cirularLinkedList();
-
+        NodeList first= new NodeList(1);
+        NodeList second= new NodeList(2);
+        NodeList third= new NodeList(3);
+        NodeList fourth= new NodeList(4);
+        first.next=second;
+        second.next=third;
+        third.next=fourth;
+        fourth.next=first;
     }
 }
