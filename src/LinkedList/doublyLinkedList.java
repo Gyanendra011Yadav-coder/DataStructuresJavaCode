@@ -1,5 +1,7 @@
 package LinkedList;
 
+import TreeDataStructure.binarySearchTree;
+
 public class doublyLinkedList {
     NodeList head; // This will be Denoting to the Head of The Node.
     NodeList tail;//This wil be Pointing to the Tail of The Node.
@@ -50,5 +52,20 @@ public class doublyLinkedList {
            tail=newNode;
         }
     }
+
+    //Method to print the Node in Forward Direction
+    public void printForwardDirection(){
+        if(isEmpty()==0){
+            System.out.println("null");
+        }else{
+            NodeList temp=head;
+            while (temp!=null){
+                System.out.println(temp.data+"->");
+                temp=temp.next;
+            }
+            System.out.println("null");
+        }
+    }
+
 
 }
