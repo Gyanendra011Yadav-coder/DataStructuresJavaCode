@@ -35,10 +35,32 @@ public class cirularLinkedList {
         NodeList newNode = new NodeList(value);
         if (last==null){
             last=newNode;
+            newNode.next=last;
         }else{
             newNode.next=last.next;
         }
         last.next=newNode;
         length++;
+    }
+
+    //method to add the NewNode at the end of the LL
+    public void addEnd(int value){
+        NodeList newNode= new NodeList(value);
+        if (last==null){
+            last=newNode;
+            newNode.next=last;
+        }else{
+            newNode.next=last.next;
+            last.next=newNode;
+            last=newNode;
+        }
+        length++;
+    }
+
+    //main method of the class
+
+    public static void main(String[] args) {
+        cirularLinkedList cll = new cirularLinkedList();
+
     }
 }
