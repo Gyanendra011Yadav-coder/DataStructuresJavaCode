@@ -67,5 +67,19 @@ public class doublyLinkedList {
         }
     }
 
+    //Method to Print the Node in Backward Direction
+    public void printNodeBackward(){
+        if (isEmpty()==0){
+            System.out.println("null");
+        }else{
+            NodeList temp=tail;
+            while(temp!=null){
+                System.out.println(temp.data+"->");
+                temp=temp.previous;
+            }
+            System.out.println("null");
+        }
+    }
+
 
 }
