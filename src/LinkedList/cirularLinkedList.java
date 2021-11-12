@@ -69,5 +69,6 @@ public class cirularLinkedList {
         second.next=third;
         third.next=fourth;
         fourth.next=first;
+        cll.display();
     }
 }
