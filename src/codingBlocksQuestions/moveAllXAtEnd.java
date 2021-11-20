@@ -9,19 +9,25 @@ import java.util.Scanner;
  */
 
 public class moveAllXAtEnd {
-
-
-
-
     public static void main(String[] args) {
         Scanner scannerObject = new Scanner(System.in);
         String str=scannerObject.nextLine();
 
         MoveX(str,0);
     }
-
+//Method To MoveX At The End.
     private static void MoveX(String str, int startingIndex) {
         int lenString=str.length();
+        if (startingIndex>=lenString){
+            return;
+        }
+        if (str.charAt(startingIndex)=='x'){
+            int temp=startingIndex;
+            while(temp!=lenString){
 
+            }
+        }else{
+            MoveX(str, startingIndex);
+        }
     }
 }
