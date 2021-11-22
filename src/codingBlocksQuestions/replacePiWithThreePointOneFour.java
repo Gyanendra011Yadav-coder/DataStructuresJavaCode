@@ -10,8 +10,12 @@ public class replacePiWithThreePointOneFour {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        System.out.println(replace(str));
+        int testCase = sc.nextInt();
+        while (testCase!=0) {
+            String str = sc.nextLine();
+            System.out.println(replace(str));
+            testCase--;
+        }
     }
 
     private static String replace(String str) {
