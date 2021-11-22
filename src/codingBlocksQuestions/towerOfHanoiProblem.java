@@ -1,5 +1,7 @@
 package codingBlocksQuestions;
 
+import java.util.Scanner;
+
 /**
  * Google Tower of Hanoi.
  *
@@ -15,4 +17,22 @@ package codingBlocksQuestions;
  */
 
 public class towerOfHanoiProblem {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int numberOfRings=sc.nextInt();
+        char source ='A';
+        char helper ='B';
+        char destination='C';
+        towerOfHanoi(numberOfRings,source,helper,destination);
+    }
+
+    private static void towerOfHanoi(int numberOfDisks, char source, char helper, char destination){
+        if (numberOfDisks==1){
+            System.out.println("Move"+numberOfDisks+"th Disk From"+source+",to "+destination);
+            return;
+        }
+        towerOfHanoi(numberOfDisks-1,source,destination,helper);
+        System.out.println("Move"+numberOfDisks+"th Disk From"+source+",to "+destination);
+        towerOfHanoi(numberOfDisks-1,helper,source,destination);
+    }
 }
