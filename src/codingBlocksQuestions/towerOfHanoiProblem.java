@@ -14,25 +14,27 @@ import java.util.Scanner;
  * b. Write a recursive function which returns number of steps required to solve the tower of Hanoi problem for N discs.
  *
  * Let T1 be the Source Tower, T2 be the Destination Tower and T3 be the Auxillary Tower.
+ *
+ * Required O/P in the Format of :-Move 1th disc from T1 to T3
  */
 
 public class towerOfHanoiProblem {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int numberOfRings=sc.nextInt();
-        char source ='A';
-        char helper ='B';
-        char destination='C';
+        char source ='1';
+        char helper ='2';
+        char destination='3';
         towerOfHanoi(numberOfRings,source,helper,destination);
     }
 
     private static void towerOfHanoi(int numberOfDisks, char source, char helper, char destination){
         if (numberOfDisks==1){
-            System.out.println("Move"+numberOfDisks+"th Disk From"+source+",to "+destination);
+            System.out.println("Move"+" "+numberOfDisks+"th disk from"+" T"+source+" to"+" T"+destination);
             return;
         }
         towerOfHanoi(numberOfDisks-1,source,destination,helper);
-        System.out.println("Move"+numberOfDisks+"th Disk From"+source+",to "+destination);
+        System.out.println("Move"+" "+numberOfDisks+"th disk from"+" T"+source+" to"+" T"+destination);
         towerOfHanoi(numberOfDisks-1,helper,source,destination);
     }
 }
