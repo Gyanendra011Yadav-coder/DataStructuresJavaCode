@@ -11,15 +11,16 @@ public class replacePiWithThreePointOneFour {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int testCase = sc.nextInt();
+        System.out.println(testCase);
         while (testCase!=0) {
-            String str = sc.nextLine();
+            String str = sc.next();
             System.out.println(replace(str));
             testCase--;
         }
     }
 
     private static String replace(String str) {
-        String resultantSring = " ";
+        String resultantSring = "";
         int lenString= str.length();
         for (int i = 0; i <lenString; i++) {
             if (i + 1 < lenString && str.charAt(i) == 'p' && str.charAt(i + 1) == 'i') {
