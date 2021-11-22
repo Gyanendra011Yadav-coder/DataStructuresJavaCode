@@ -20,7 +20,13 @@ public class moveAllXAtEnd {
         int lenString=str.length();
         char startWord=str.charAt(startingIndex);
         if (str.charAt(startingIndex) != 'x') {
-
+            System.out.println(str.charAt(startingIndex));
+        }else{
+            MoveX(str,startingIndex+1);
         }
+        if (startWord=='x'){
+            System.out.println(startWord);
+        }
+        return;
     }
 }
