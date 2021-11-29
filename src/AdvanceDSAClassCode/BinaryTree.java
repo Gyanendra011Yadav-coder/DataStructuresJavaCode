@@ -37,6 +37,20 @@ public class BinaryTree {
         inOrderTraversal(node.rightChild);
     }
 
+    //Post-Order Traversal
+
+    /**
+     * Left->Right->Root
+     */
+    private void postOrderTraversal(TreeNode node){
+        if(node==null){
+            return;
+        }
+        postOrderTraversal(node.leftChild);
+        postOrderTraversal(node.rightChild);
+        System.out.println(node.data);
+    }
+
     public static void main(String[] args) {
         BinaryTree binaryTreeObject = new BinaryTree();
 
