@@ -11,10 +11,17 @@ public class BinaryTree {
         }
     }
 //Traversal Of The Tree
+
+    /**
+     *Root->Left->Right
+     */
     private void preOrderTraversal(TreeNode node){
         if(node==null){
             return;
         }
+        System.out.println(node.data);
+        preOrderTraversal(node.leftChild);
+        preOrderTraversal(node.rightChild);
     }
 
     public static void main(String[] args) {
