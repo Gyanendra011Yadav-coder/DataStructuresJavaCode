@@ -10,7 +10,10 @@ public class BinaryTree {
             this.data=data;
         }
     }
+//Traversal Of The Tree
+    private void preOrderTraversal(){
 
+    }
 
     public static void main(String[] args) {
         BinaryTree binaryTreeObject = new BinaryTree();
