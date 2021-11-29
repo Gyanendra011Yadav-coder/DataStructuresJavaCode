@@ -10,4 +10,10 @@ public class BinaryTree {
             this.data=data;
         }
     }
+
+
+    public static void main(String[] args) {
+        BinaryTree binaryTreeObject = new BinaryTree();
+
+    }
 }
