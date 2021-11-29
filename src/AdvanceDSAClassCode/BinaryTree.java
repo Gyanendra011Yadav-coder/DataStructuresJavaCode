@@ -11,8 +11,10 @@ public class BinaryTree {
         }
     }
 //Traversal Of The Tree
-    private void preOrderTraversal(){
-
+    private void preOrderTraversal(TreeNode node){
+        if(node==null){
+            return;
+        }
     }
 
     public static void main(String[] args) {
