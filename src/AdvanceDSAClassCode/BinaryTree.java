@@ -7,7 +7,7 @@ public class BinaryTree {
         private TreeNode rightChild;
         private int data;
         TreeNode(int data){
-            
+            this.data=data;
         }
     }
 }
