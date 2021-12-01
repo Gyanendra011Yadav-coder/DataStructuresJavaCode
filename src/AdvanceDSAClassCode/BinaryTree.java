@@ -54,5 +54,7 @@ public class BinaryTree {
     public static void main(String[] args) {
         BinaryTree binaryTreeObject = new BinaryTree();
 
+        //calling The Inorder Traversal
+        binaryTreeObject.inOrderTraversal(binaryTreeObject.root);
     }
 }
