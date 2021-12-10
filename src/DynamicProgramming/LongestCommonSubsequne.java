@@ -27,7 +27,7 @@ public class LongestCommonSubsequne {
      */
 
     /***
-     * This, is the  Dyanmic PRogramming Code to Find Out the LCS
+     * This, is the  Dyanmic PRogramming Code to Find Out LCS of two Strings
      */
 
     public static void main(String[] args) {
