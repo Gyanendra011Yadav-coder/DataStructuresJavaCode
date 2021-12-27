@@ -43,13 +43,14 @@ public class ReverseLinkedList {
             ListNode tempHead=new ListNode(0);
             //Connecting it with LL
             tempHead.next=head;
-
+//creating another Temporary Node to Reach before Left Portion
             ListNode temp=tempHead;
             int iterate=0;
             while(iterate<left-1){
                 temp=temp.next;
                 iterate++;
             }
+//creating another temporary Node.
             ListNode curr=temp.next;
             while(left<right){
                 ListNode nextNode=curr.next;
