@@ -9,8 +9,7 @@ import java.util.Comparator;
  */
 
 class fractionalKnapack {
-        private static double getMaxValue(int[] wt, int[] val,
-                                          int capacity)
+        private static double getMaxValue(int[] wt, int[] val,int capacity)
         {
             ItemValue[] iVal = new ItemValue[wt.length];
             for (int i = 0; i < wt.length; i++) {
