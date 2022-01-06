@@ -1,7 +1,7 @@
 package stackPrograms;
 
 /**
- * @author lenovo
+ * @author Gyanendra Yadav
  * @created 07/01/2022- 12:03 AM
  * @project DataStructuresJavaCode
  */
@@ -12,8 +12,15 @@ public class rainWaterTrapping {
     }
 
     private static int findRainWaterTrapping(int[] heightOfBuildings) {
-
+//this variable will store the Number of Buildings there
         int numberOfBuildings=heightOfBuildings.length;
+ //Maximum height of the Buildings from left
+        int []leftBuildings=new int[numberOfBuildings];
+ // Maximum Height Of Buildings from right
+        int []rightBuildings= new int[numberOfBuildings];
+
+
+
 
 
     }
