@@ -12,8 +12,12 @@ import java.util.Stack;
 public class redundantBracket {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str=sc.nextLine();
-        System.out.println(countRedundantBraces(str));
+        int testCase=sc.nextInt();
+        while (testCase!=0) {
+            String str = sc.nextLine();
+            System.out.println(countRedundantBraces(str));
+            testCase--;
+        }
     }
 
     private static int countRedundantBraces(String str) {
@@ -21,8 +25,6 @@ public class redundantBracket {
         int length=str.length();
         //Creating Stack
         Stack<Character> st= new Stack<>();
-
-
         //Array to store Characters of String
         char []character=str.toCharArray();
         //Applying for each loop
@@ -42,6 +44,5 @@ public class redundantBracket {
         }
         return countRedundantBraces;
     }
-
 }
 
