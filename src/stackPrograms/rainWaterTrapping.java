@@ -18,6 +18,12 @@ public class rainWaterTrapping {
         int []leftBuildings=new int[numberOfBuildings];
  // Maximum Height Of Buildings from right
         int []rightBuildings= new int[numberOfBuildings];
+// Storing the value at the first index of the leftBuildings Array
+        leftBuildings[0]=heightOfBuildings[0];
+// Now, we will count the maximum number of Heights of the Buildings at the left side
+        for (int i = 1; i<numberOfBuildings ; i++) {
+            leftBuildings[i]=Math.max(leftBuildings[i-1],heightOfBuildings[i]);
+        }
 
 
 
