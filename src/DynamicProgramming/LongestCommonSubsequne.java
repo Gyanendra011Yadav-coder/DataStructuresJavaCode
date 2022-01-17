@@ -1,9 +1,39 @@
 package DynamicProgramming;
 
-import java.util.*;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class LongestCommonSubsequne {
+    public static void main(String[] args) {
+        String s1 = "pmjghexybyrgzczy";
+        String s2 = "hafcdqbgncrcbihkd";
+        //initilazing dp to reduce the execution time of our program
+        int [][]dp= new int [s1.length()][s2.length()];
+        //filling the dp with -1, because there is no variables
+        for(int []array:dp){
+            Arrays.fill(array,-1);
+        }
+        System.out.println(lcs(s1,s2,0,0,dp));
+    }
+
+    public static int lcs(String str1, String str2, int str1Pointer , int str2Pointer, int [][]dp ){
+        if(str1Pointer==str1.length()| str2Pointer==str2.length()){
+            return 0;
+        }
+        if(dp[str1Pointer][str2Pointer]!=-1){
+            return dp[str1Pointer][str2Pointer];
+        }
+        int answer=0;
+        if(str1.charAt(str1Pointer)==str2.charAt(str2Pointer)){
+            answer=1+lcs(str1,str2,str1Pointer+1,str2Pointer+1,dp);
+        }else{
+            int ans2=lcs(str1,str2, str1Pointer+1, str2Pointer,dp);
+            int ans3=lcs(str1,str2,str1Pointer, str2Pointer+1,dp);
+            answer=Math.max(ans2,ans3);
+        }
+        return dp[str1Pointer][str2Pointer]=answer;
+
+    }
+
     /*
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,6 +60,7 @@ public class LongestCommonSubsequne {
      * This, is the  Dyanmic PRogramming Code to Find Out LCS of two Strings
      */
 
+    /**
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str1=sc.next();
@@ -55,4 +86,5 @@ public class LongestCommonSubsequne {
         }
         return dp[len1][len2]=Math.max(LongestCommonSubsequne(str1, str2, len1, len2-1,dp),LongestCommonSubsequne(str1, str2, len1-1, len2,dp));
     }
+     **/
 }
