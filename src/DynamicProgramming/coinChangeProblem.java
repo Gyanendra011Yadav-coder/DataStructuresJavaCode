@@ -1,10 +1,13 @@
 package DynamicProgramming;
 
 /**
- * @author lenovo
+ * @author Gyanendra Yadav
  * @created 14/01/2022- 9:11 PM
  * @project DataStructuresJavaCode
  */
+
+import java.util.Arrays;
+
 /***
 public class coinChangeProblem {
     //this is the main method of the class
@@ -42,28 +45,33 @@ public class coinChangeProblem {
 // Solution Using Dynamic Programming
 class coinChangeProblem{
     public static void main(String[] args) {
-        int []coins={1,2,3};
-        int amountToChange=10;
-        int index=0;
+        int []coins={2};
+        int amountToChange=3;
         int [][]dynamicProgramming= new int[amountToChange+1][coins.length];
-        System.out.println(numberOfCoinsRequired(coins,amountToChange, index));
+        for(int []arr: dynamicProgramming){
+            Arrays.fill(arr,-1);
+        }
+        System.out.println(numberOfCoinsRequired(coins,amountToChange, 0, dynamicProgramming));
     }
 
-    private static int numberOfCoinsRequired(int[] coins, int amountToChange, int index) {
-        if(amountToChange==0){
+    private static int numberOfCoinsRequired(int[] coins, int amount, int index, int [][]dp) {
+        if (amount == 0) {
             return 1;
         }
-        if(index>=coins.length){
+        if (index == coins.length) {
             return 0;
         }
-        int include=0,exclude=0;
-        if(amountToChange>=coins[index]){
-            include=numberOfCoinsRequired(coins,amountToChange-coins[index],index);
-        }else{
-            exclude=numberOfCoinsRequired(coins,amountToChange, index+1);
 
+        if (dp[amount][index] != -1) {
+            return dp[amount][index];
         }
+        int inc = 0;
+        int exc = 0;
 
-        return Math.max(include,exclude);
+        if (amount >= coins[index]) {
+            inc = numberOfCoinsRequired(coins, amount - coins[index], index, dp);
+        }
+        exc = numberOfCoinsRequired(coins, amount, index + 1, dp);
+        return dp[amount][index] = inc + exc;
     }
 }
