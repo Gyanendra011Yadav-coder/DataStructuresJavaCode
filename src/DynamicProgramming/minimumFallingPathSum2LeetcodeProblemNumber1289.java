@@ -1,5 +1,7 @@
 package DynamicProgramming;
 
+import java.util.Arrays;
+
 /**
  * @author Gyanendra Yadav
  * @created 19/01/2022- 1:44 AM
@@ -20,6 +22,9 @@ public class minimumFallingPathSum2LeetcodeProblemNumber1289 {
         int [][]grid= {{7}};
         int overallAnswer=Integer.MAX_VALUE;
         int [][]dp= new int [grid.length][grid[0].length];
+        for(int []array : dp){
+            Arrays.fill(array,Integer.MAX_VALUE);
+        }
         for (int i = 0; i <grid.length ; i++) {
             int tempAns=findMinimumPathSum(grid,0,i,dp );
             overallAnswer=Math.min(overallAnswer,tempAns);
@@ -32,6 +37,9 @@ public class minimumFallingPathSum2LeetcodeProblemNumber1289 {
         if(currentRow==grid.length-1){
             return grid[currentRow][currentColumn];
         }
+        if(dynamicProgramming[currentRow][currentColumn]!=Integer.MAX_VALUE){
+            return dynamicProgramming[currentRow][currentColumn];
+        }
        int answer=Integer.MAX_VALUE;
         for (int i = 0; i<grid[0].length; i++) {
             if(i!=currentColumn){
@@ -39,6 +47,6 @@ public class minimumFallingPathSum2LeetcodeProblemNumber1289 {
                 answer=Math.min(answer,tempAnswer);
             }
         }
-        return answer+grid[currentRow][currentColumn];
+        return dynamicProgramming[currentRow][currentColumn]=answer+grid[currentRow][currentColumn];
     }
 }
