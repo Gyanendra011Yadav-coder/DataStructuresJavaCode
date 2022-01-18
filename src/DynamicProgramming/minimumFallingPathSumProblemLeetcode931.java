@@ -18,10 +18,22 @@ public class minimumFallingPathSumProblemLeetcode931 {
     }
 
     private static int findMinimumNumberPath(int[][] grid, int currentRow, int currentColumn){
+        //this is the base that will deal if column gets out then it will Max_Value
         if(currentColumn>=grid[0].length){
             return Integer.MAX_VALUE;
         }
-        if(currentRow)
+        //this will return if pointer reaches at the end of the row then it will return the value of the last row
+        if(currentRow==grid.length-1){
+            return grid[currentColumn][currentColumn];
+        }
+        //Now, we will move according to the conditions provided in questions that are
+        /***
+         * (row + 1, col - 1),
+         * (row + 1, col), and
+         * (row + 1, col + 1).
+         */
+
+
         return 0;
     }
 
