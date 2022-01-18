@@ -45,7 +45,7 @@ class coinChangeProblem{
         int []coins={1,2,3};
         int amountToChange=10;
         int index=0;
-        int [][]dynamicProgramming= new int[coins.length][amountToChange+1];
+        int [][]dynamicProgramming= new int[amountToChange+1][coins.length];
         System.out.println(numberOfCoinsRequired(coins,amountToChange, index));
     }
 
