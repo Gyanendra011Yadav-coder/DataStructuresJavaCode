@@ -50,8 +50,20 @@ class coinChangeProblem{
     }
 
     private static int numberOfCoinsRequired(int[] coins, int amountToChange, int index) {
+        if(amountToChange==0){
+            return 1;
+        }
+        if(index>=coins.length){
+            return 0;
+        }
+        int include=0,exclude=0;
+        if(amountToChange>=coins[index]){
+            include=numberOfCoinsRequired(coins,amountToChange-coins[index],index);
+        }else{
+            exclude=numberOfCoinsRequired(coins,amountToChange, index+1);
 
+        }
 
-        return 0;
+        return Math.max(include,exclude);
     }
 }
