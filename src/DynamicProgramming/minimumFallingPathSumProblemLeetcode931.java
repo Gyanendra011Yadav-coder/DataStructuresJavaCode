@@ -19,7 +19,7 @@ public class minimumFallingPathSumProblemLeetcode931 {
 
     private static int findMinimumNumberPath(int[][] grid, int currentRow, int currentColumn){
         //this is the base that will deal if column gets out then it will Max_Value
-        if(currentColumn>=grid[0].length){
+        if(currentColumn<0 || currentColumn>=grid[0].length){
             return Integer.MAX_VALUE;
         }
         //this will return if pointer reaches at the end of the row then it will return the value of the last row
@@ -32,9 +32,10 @@ public class minimumFallingPathSumProblemLeetcode931 {
          * (row + 1, col), and
          * (row + 1, col + 1).
          */
-
-
-        return 0;
+        int ans2=findMinimumNumberPath(grid, currentRow+1, currentColumn-1);
+        int ans3=findMinimumNumberPath(grid,currentRow+1, currentColumn);
+        int ans4=findMinimumNumberPath(grid,currentRow+1, currentColumn+1);
+        return Math.min(ans4,Math.min(ans2,ans3))+grid[currentRow][currentColumn];
     }
 
 
