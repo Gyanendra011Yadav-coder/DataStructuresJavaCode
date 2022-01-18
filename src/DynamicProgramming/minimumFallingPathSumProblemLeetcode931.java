@@ -14,7 +14,15 @@ package DynamicProgramming;
 public class minimumFallingPathSumProblemLeetcode931 {
     public static void main(String[] args) {
         int [][]grid= {{2,1,3},{6,5,4},{7,8,9}};
+        System.out.println(findMinimumNumberPath(grid,0,0));
+    }
 
+    private static int findMinimumNumberPath(int[][] grid, int currentRow, int currentColumn){
+        if(currentColumn>=grid[0].length){
+            return Integer.MAX_VALUE;
+        }
+        if(currentRow)
+        return 0;
     }
 
 
