@@ -14,7 +14,15 @@ package DynamicProgramming;
 public class minimumFallingPathSumProblemLeetcode931 {
     public static void main(String[] args) {
         int [][]grid= {{2,1,3},{6,5,4},{7,8,9}};
-        System.out.println(findMinimumNumberPath(grid,0,0));
+        //this variable will be helping the to find out the Final Answer
+        int overallAnswer=Integer.MAX_VALUE;
+        //this loop will be one by one passing all the values of Row[0]
+        for (int i = 0; i < grid.length; i++) {
+                int temporaryAnswer=findMinimumNumberPath(grid,0,i);
+                overallAnswer=Math.min(overallAnswer,temporaryAnswer);
+        }
+        //Returning the Final Output
+        System.out.println(overallAnswer);
     }
 
     private static int findMinimumNumberPath(int[][] grid, int currentRow, int currentColumn){
@@ -24,7 +32,7 @@ public class minimumFallingPathSumProblemLeetcode931 {
         }
         //this will return if pointer reaches at the end of the row then it will return the value of the last row
         if(currentRow==grid.length-1){
-            return grid[currentColumn][currentColumn];
+            return grid[currentRow][currentColumn];
         }
         //Now, we will move according to the conditions provided in questions that are
         /***
@@ -35,6 +43,7 @@ public class minimumFallingPathSumProblemLeetcode931 {
         int ans2=findMinimumNumberPath(grid, currentRow+1, currentColumn-1);
         int ans3=findMinimumNumberPath(grid,currentRow+1, currentColumn);
         int ans4=findMinimumNumberPath(grid,currentRow+1, currentColumn+1);
+        //this will be returning the minimum number of value out of all the three rows
         return Math.min(ans4,Math.min(ans2,ans3))+grid[currentRow][currentColumn];
     }
 
