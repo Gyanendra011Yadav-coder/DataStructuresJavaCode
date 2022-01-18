@@ -11,8 +11,6 @@ public class questionNoThirdBuyAndSellStockOptimizedApproch3 {
         int[] stockAnalysis = {3,1,4,8,7,2,5};
         System.out.println(findMaxProfitSellingStockApproachSecond(stockAnalysis));
     }
-
-
         //Approach, Having Time Complexity Of o(n) and space Complexity of o(1)
         private static int findMaxProfitSellingStockApproachSecond(int[] prices){
             int minTillNow=prices[0];

@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class minimumPathSumLeetcodeQuestion64 {
     public static void main(String[] args) {
-        int [][]gridArray={{ 1, 3, 1 }, { 1, 5, 1 }, { 4, 2, 1 }};
+        int [][]gridArray={{ 1,2,3 }, { 4, 5, 6 }};
 
         int [][]dp= new int[gridArray.length][gridArray[0].length];
         for(int []array:dp){
@@ -20,6 +20,7 @@ public class minimumPathSumLeetcodeQuestion64 {
 
     private static int findMinimumPathSum(int[][] grid, int cr, int cc,int [][]dp) {
 
+
         if (cc >= grid[0].length || cr >= grid.length) {
             return Integer.MAX_VALUE;
         }
@@ -27,13 +28,13 @@ public class minimumPathSumLeetcodeQuestion64 {
             return grid[cr][cc];
 
         }
-        //applying dp
-        if(dp[cr][cc]!=-1){
-            return grid[cr][cc];
+        if (dp[cr][cc] != -1) {
+            return dp[cr][cc];
         }
 
-        int right = findMinimumPathSum(grid, cr, cc + 1,dp);
-        int down = findMinimumPathSum(grid, cr + 1, cc,dp);
-        return  dp[cr][cc]=Math.min(right, down) + grid[cr][cc];
-    }
+        int right = findMinimumPathSum(grid, cr, cc + 1, dp);
+        int down = findMinimumPathSum(grid, cr + 1, cc, dp);
+        return dp[cr][cc] = (Math.min(right, down) + grid[cr][cc]);
+
+        }
 }
