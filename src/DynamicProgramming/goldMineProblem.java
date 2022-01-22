@@ -18,8 +18,13 @@ public class goldMineProblem {
                 mine[i][j]=scannerObject.nextInt();
             }
         }
+        System.out.println(maximumGoldDig(mine, 0,0));
 
+    }
 
+    private static int maximumGoldDig(int[][] mine, int i, int j) {
+
+        return 0;
     }
 
 }
