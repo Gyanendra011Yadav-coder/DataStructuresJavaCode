@@ -23,6 +23,14 @@ public class goldMineProblem {
     }
 
     private static int maximumGoldDig(int[][] mine, int i, int j) {
+        //Base case that will handle Rows case
+        if (i>=mine.length || i<0 || j>=mine[0].length){
+            return 0;
+        }
+        //Base-Case 2nd that will handle the case of Column
+        if(j==mine[0].length-1){
+            return mine[i][j];
+        }
 
         return 0;
     }
