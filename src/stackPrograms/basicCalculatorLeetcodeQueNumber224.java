@@ -30,6 +30,7 @@ public class basicCalculatorLeetcodeQueNumber224 {
                 i--;
                 value*=sign;
                 sum+=value;
+                sign=+1;
 
             }
             //Second condition says if we will get opening braces then
