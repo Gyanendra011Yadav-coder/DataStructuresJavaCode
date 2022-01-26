@@ -9,10 +9,11 @@ import java.util.Stack;
  */
 public class basicCalculatorLeetcodeQueNumber224 {
     public static void main(String[] args) {
-
+        String str=" 2-1 + 2 ";
+        System.out.println(calculate(str));
     }
 
-    public int calculate(String s) {
+    private static int calculate(String s) {
         int sum=0;
         int sign=+1;
         Stack<Integer> stack = new Stack<>();
