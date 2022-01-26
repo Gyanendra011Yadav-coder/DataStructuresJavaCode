@@ -7,6 +7,7 @@ package DynamicProgramming;
  */
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /***
 public class coinChangeProblem {
@@ -45,8 +46,13 @@ public class coinChangeProblem {
 // Solution Using Dynamic Programming
 class coinChangeProblem{
     public static void main(String[] args) {
-        int []coins={2};
-        int amountToChange=3;
+        Scanner sc= new Scanner(System.in);
+        int amountToChange=sc.nextInt();
+        int numberOfCoins=sc.nextInt();
+        int []coins=new int[numberOfCoins];
+        for (int i = 0; i <numberOfCoins ; i++) {
+            coins[i]= sc.nextInt();
+        }
         int [][]dynamicProgramming= new int[amountToChange+1][coins.length];
         for(int []arr: dynamicProgramming){
             Arrays.fill(arr,-1);

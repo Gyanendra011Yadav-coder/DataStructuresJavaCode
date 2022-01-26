@@ -9,8 +9,12 @@ import java.util.List;
  */
 public class triangleProblemLeetcode120 {
     public static void main(String[] args) {
+      /*
         List<List<Integer>> triangle= {{2},{3,4},{6,5,7}};
+        int [][]dp= new int[triangle.size()][];
         System.out.println(minimumTotalTriangle(triangle,0,0));
+
+       */
     }
     public static int minimumTotalTriangle(List<List<Integer>> triangle, int currentRow, int currentColumn){
         if(currentRow==triangle.size()-1){
