@@ -19,5 +19,10 @@ public class findDistinctElementFromKSizeWindow {
             //this is checking if the defined number is present then it will increase it's count else we will add it and increase it's count
             map.put(array[i],map.getOrDefault(array[i],0)+1);
         }
+        System.out.println(map.size());
+        //this loop will be running from the size of the Window untill end of the array
+        for (int i = k; i <array.length ; i++) {
+
+        }
     }
 }
