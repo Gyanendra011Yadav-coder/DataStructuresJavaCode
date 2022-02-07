@@ -22,7 +22,7 @@ public class chocalateDistribution {
         }
         int min_Diff=Integer.MAX_VALUE;
         for (int i = 0; i <numberOfChocaltesPack ; i++) {
-            min_Diff=Math.min((chocalte(i+numberOfBoys-1)-chocalte(i)),min_Diff);
+            min_Diff=Math.min(min_Diff,chocalte[i+numberOfBoys-1]-chocalte[i]);
         }
         return min_Diff;
     }
