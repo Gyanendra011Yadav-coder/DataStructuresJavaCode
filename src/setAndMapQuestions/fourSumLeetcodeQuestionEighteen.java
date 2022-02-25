@@ -17,7 +17,7 @@ public class fourSumLeetcodeQuestionEighteen {
                 continue;
             }
             int val1 = num[i];
-            List<List<Integer>> subResult = threeSum(num, target - val1, i);
+            List<List<Integer>> subResult = threeSum(num, target - val1, i+1);
             for (List<Integer> list : subResult) {
                 list.add(val1);
                 resultList.add(list);
@@ -31,10 +31,18 @@ public class fourSumLeetcodeQuestionEighteen {
         if(num.length<3){
             return resultList;
         }
-        for(int i=0; i<=num.length-3;i++){
-            List<List<Integer>> subResult= new ArrayList<>();
-
+        for(int i=startingIndex; i<=num.length-3;i++){
+            int val1=num[i];
+            List<List<Integer>> subResult= twoSum(num,target-val1,i+1);
+            for(List <Integer> list:subResult){
+                list.add(val1);
+                resultList.add(list);
+            }
         }
+        return resultList;
+    }
+
+    private static List<List<Integer>> twoSum(int[] num, int i, int i1) {
     }
 
     public static void main(String[] args) {
