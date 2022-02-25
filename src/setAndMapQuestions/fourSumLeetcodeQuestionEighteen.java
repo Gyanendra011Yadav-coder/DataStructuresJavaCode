@@ -21,15 +21,9 @@ public class fourSumLeetcodeQuestionEighteen {
         //Travesing the whole array's element one by one
         for (int i = 0; i < num.length; i++) {
             // again checking the base condition
-
-
              if (i != 0 && num[i] == num[i - 1]) {
                 continue;
             }
-
-
-
-
             //Storing the first value, so that we can look for others
             int val1 = num[i];
             // Now, we will be findiing the threeSum in the array and the target we will be less than the firstIndex value of the array
@@ -54,9 +48,6 @@ public class fourSumLeetcodeQuestionEighteen {
             if (i != startingIndex && num[i] == num[i - 1]) {
                 continue;
             }
-
-
-
             int val1 = num[i];
             List<List<Integer>> subResult = twoSum(num, i + 1, num.length - 1, target - val1);
             for (List<Integer> list : subResult) {
@@ -66,7 +57,6 @@ public class fourSumLeetcodeQuestionEighteen {
         }
         return resultList;
     }
-
     public static List<List<Integer>> twoSum(int[] num, int startingIndex, int endingIndex, int target) {
         int leftIndex = startingIndex, rightIndex = endingIndex;
         List<List<Integer>> resultList = new ArrayList<>();
