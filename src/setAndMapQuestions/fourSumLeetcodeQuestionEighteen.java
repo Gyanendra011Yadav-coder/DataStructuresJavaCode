@@ -23,11 +23,11 @@ public class fourSumLeetcodeQuestionEighteen {
             // again checking the base condition
 
 
-            /* if (i != 0 && num[i] == num[i - 1]) {
+             if (i != 0 && num[i] == num[i - 1]) {
                 continue;
             }
 
-            */
+
 
 
             //Storing the first value, so that we can look for others
@@ -50,12 +50,12 @@ public class fourSumLeetcodeQuestionEighteen {
         }
         for (int i = startingIndex; i <= num.length - 3; i++) {
 
-            /*
+
             if (i != startingIndex && num[i] == num[i - 1]) {
                 continue;
             }
 
-             */
+
 
             int val1 = num[i];
             List<List<Integer>> subResult = twoSum(num, i + 1, num.length - 1, target - val1);
@@ -76,15 +76,15 @@ public class fourSumLeetcodeQuestionEighteen {
         }
 
         while (leftIndex < rightIndex) {
-            /*
+
             if (leftIndex != startingIndex && num[leftIndex] == num[leftIndex - 1]) {
                 leftIndex++;
                 continue;
             }
-             */
+
 
             int sum = num[leftIndex] + num[rightIndex];
-            if (sum <=target) {
+            if (sum ==target) {
                 List<Integer> subResult = new ArrayList<>();
                 subResult.add(num[leftIndex]);
                 subResult.add(num[rightIndex]);
