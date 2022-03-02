@@ -2,6 +2,7 @@ package TreeDataStructure;
 
 import com.sun.source.tree.Tree;
 
+import java.net.Inet4Address;
 import java.util.*;
 import java.util.zip.InflaterInputStream;
 
@@ -130,14 +131,14 @@ public class binaryTreeImplementation {
         }
         return result;
     }
-// print left view of the tree
+/**Print left view of the tree*/
     public void leftView(TreeNode root){
         ArrayList <Integer> list= new ArrayList<>();
         printLeftViewUtill(root,list,0);
 
 
     }
-    /**this method will be used by Left View**/
+    /*this method will be used by Left View**/
     public void printLeftViewUtill(TreeNode root, ArrayList<Integer>list, int level){
         if(root==null){
             return;
@@ -156,7 +157,7 @@ public class binaryTreeImplementation {
 
 
     }
-    /**this method will be used by Left View**/
+    /*this method will be used by Left View**/
     public void printRightViewUtill(TreeNode root, ArrayList<Integer>list, int level){
         if(root==null){
             return;
@@ -165,6 +166,39 @@ public class binaryTreeImplementation {
 
         printLeftViewUtill(root.left,list,level+1);
         printLeftViewUtill(root.right,list,level+1);
+    }
+    /**Method,that will print the Top-View of the Tree*/
+    public ArrayList<Integer> topViewTree(TreeNode root){
+        Queue <Pair> queue= new LinkedList<>();
+        //Using TreeMap here, because We need to Print the Nodes in Ascending Order
+        Map<Integer,Integer> map = new TreeMap<>();
+        queue.add(new Pair(0,root));
+        while(!queue.isEmpty()){
+            Pair currentNode=queue.poll();
+            if(!map.containsKey(currentNode.horizontalDistance)){
+                map.put(currentNode.horizontalDistance,currentNode.root.val);
+            }
+            if(currentNode.root.left!=null){
+                queue.add(new Pair(currentNode.horizontalDistance-1,currentNode.root.left));
+            }
+            if(currentNode.root.right!=null){
+                queue.add(new Pair(currentNode.horizontalDistance+1,currentNode.root.right));
+            }
+        }
+        ArrayList<Integer> list= new ArrayList<>();
+        for(Map.Entry<Integer,Integer>ma:map.entrySet()){
+            list.add(ma.getValue());
+        }
+        return list;
+    }
+    // This,Pair Class will be Used By Top-View
+    class Pair{
+        int horizontalDistance;
+        TreeNode root;
+        Pair(int data, TreeNode root){
+            this.horizontalDistance=data;
+            this.root=root;
+        }
     }
 }
 
