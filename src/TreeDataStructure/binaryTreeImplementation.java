@@ -98,6 +98,24 @@ public class binaryTreeImplementation {
         System.out.println(rootNode.leftChild.data);
     }
 
+    //Now, we will be adding the code to Travrese the Tree Level-wise
+    public List<List<Integer>> levelOrder(treeNode root) {
+        List<List<Integer>> result= new ArrayList<>();
+        if(root==null){
+            return result;
+        }
+        treeNode temp=root;
+        //Using Queue to Traverse the Tree
+        Queue <treeNode> queue = new LinkedList<>();
+        queue.add(temp);
+        while(!queue.isEmpty()){
+            temp=queue.poll();
+            queue.remove();
+
+        }
+
+    }
+
 
 }
 
