@@ -1,8 +1,6 @@
 package TreeDataStructure;
 
-import java.util.LinkedList;
-import java.util.Objects;
-import java.util.Queue;
+import java.util.*;
 
 public class binaryTreeImplementation {
 
@@ -44,6 +42,56 @@ public class binaryTreeImplementation {
                 q.add(tempNode.leftChild);
             }
         }
+    }
+
+    //Method to Delete Node From The Binary Tree
+    public boolean deleteNodeTree(int value){
+        if(rootNode==null){
+            return false;
+        }
+
+        return false;
+    }
+
+    //Traversal of the Tree
+
+    /**
+     *We know Inorder Traversal is done Using-> Left->RootNode->RightNode
+     */
+    public List<Integer> inOrderTraversalTree(treeNode root){
+        List <Integer> traverseNodes= new ArrayList<>();
+        if(root ==null){
+            return traverseNodes;
+        }
+        inOrderTraversalTree(root.leftChild);
+        traverseNodes.add(root.leftChild.data);
+        inOrderTraversalTree(root.rightChild);
+
+        return traverseNodes;
+    }
+    /**
+     *We know PreOrder Traversal is done Using: Root->LeftNode->RightNode
+     */
+    public void preOrderTraversal(treeNode rootNode){
+        if(rootNode==null){
+            return;
+        }
+        System.out.println(rootNode.leftChild.data);
+        preOrderTraversal(rootNode.leftChild);
+        preOrderTraversal(rootNode.rightChild);
+    }
+
+
+    /**
+     *We know PostOrder-Traversal is done Using: LeftNode->RightNode->Root
+     */
+    public void postOrderTraversal(treeNode rootNode){
+        if(rootNode==null){
+            return;
+        }
+        preOrderTraversal(rootNode.leftChild);
+        preOrderTraversal(rootNode.rightChild);
+        System.out.println(rootNode.leftChild.data);
     }
 
 
