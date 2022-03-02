@@ -4,49 +4,52 @@ import java.util.*;
 
 public class binaryTreeImplementation {
 
-    public class treeNode{
+    public class treeNode {
         int data;
         treeNode leftChild;
         treeNode rightChild;
-        public treeNode(int value){
-            data=value;
-            leftChild=null;
-            rightChild=null;
+
+        public treeNode(int value) {
+            data = value;
+            leftChild = null;
+            rightChild = null;
         }
     }
-    treeNode rootNode=null;
+
+    treeNode rootNode = null;
+
     //Insettion in Binary Tree
-    public void insert(int data){
-        treeNode newNode= new treeNode(data);
-        if(rootNode==null){
-            rootNode=newNode;
+    public void insert(int data) {
+        treeNode newNode = new treeNode(data);
+        if (rootNode == null) {
+            rootNode = newNode;
         }
         //This Code Will be traversing the tree
         Queue<treeNode> q = new LinkedList<>();
-        treeNode tempNode=rootNode;
+        treeNode tempNode = rootNode;
         q.add(tempNode);
-        while(!q.isEmpty()){
-            tempNode=q.poll();
+        while (!q.isEmpty()) {
+            tempNode = q.poll();
             q.remove();
-            if(tempNode.leftChild==null){
-                tempNode.leftChild=new treeNode(data);
+            if (tempNode.leftChild == null) {
+                tempNode.leftChild = new treeNode(data);
                 break;
-            }else{
+            } else {
                 q.add(tempNode.leftChild);
             }
             //this coondition will be checking if the right child of the node is null then create new tree Node at that location else add the rightNode of tree in the queue
-            if(tempNode.rightChild==null){
-                tempNode.rightChild=new treeNode(data);
+            if (tempNode.rightChild == null) {
+                tempNode.rightChild = new treeNode(data);
                 break;
-            }else{
+            } else {
                 q.add(tempNode.leftChild);
             }
         }
     }
 
     //Method to Delete Node From The Binary Tree
-    public boolean deleteNodeTree(int value){
-        if(rootNode==null){
+    public boolean deleteNodeTree(int value) {
+        if (rootNode == null) {
             return false;
         }
 
@@ -56,11 +59,11 @@ public class binaryTreeImplementation {
     //Traversal of the Tree
 
     /**
-     *We know Inorder Traversal is done Using-> Left->RootNode->RightNode
+     * We know Inorder Traversal is done Using-> Left->RootNode->RightNode
      */
-    public List<Integer> inOrderTraversalTree(treeNode root){
-        List <Integer> traverseNodes= new ArrayList<>();
-        if(root ==null){
+    public List<Integer> inOrderTraversalTree(treeNode root) {
+        List<Integer> traverseNodes = new ArrayList<>();
+        if (root == null) {
             return traverseNodes;
         }
         inOrderTraversalTree(root.leftChild);
@@ -69,11 +72,12 @@ public class binaryTreeImplementation {
 
         return traverseNodes;
     }
+
     /**
-     *We know PreOrder Traversal is done Using: Root->LeftNode->RightNode
+     * We know PreOrder Traversal is done Using: Root->LeftNode->RightNode
      */
-    public void preOrderTraversal(treeNode rootNode){
-        if(rootNode==null){
+    public void preOrderTraversal(treeNode rootNode) {
+        if (rootNode == null) {
             return;
         }
         System.out.println(rootNode.leftChild.data);
@@ -83,10 +87,10 @@ public class binaryTreeImplementation {
 
 
     /**
-     *We know PostOrder-Traversal is done Using: LeftNode->RightNode->Root
+     * We know PostOrder-Traversal is done Using: LeftNode->RightNode->Root
      */
-    public void postOrderTraversal(treeNode rootNode){
-        if(rootNode==null){
+    public void postOrderTraversal(treeNode rootNode) {
+        if (rootNode == null) {
             return;
         }
         preOrderTraversal(rootNode.leftChild);
