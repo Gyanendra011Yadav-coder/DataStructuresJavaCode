@@ -50,8 +50,4 @@ public class reversePairsLeetcodeQuestioNoFourNineThree {
         }
         return count;
     }
-
-    public static void main(String[] args) {
-
-    }
 }

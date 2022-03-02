@@ -1,5 +1,7 @@
 package TreeDataStructure;
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 import java.util.zip.InflaterInputStream;
 
@@ -128,7 +130,24 @@ public class binaryTreeImplementation {
         }
         return result;
     }
+// print left view of the tree
+    public void leftView(TreeNode root){
+        ArrayList <Integer> list= new ArrayList<>();
+        printLeftViewUtill(root,list,0);
 
+
+    }
+    /**this method will be used by Left View**/
+    public void printLeftViewUtill(TreeNode root, ArrayList<Integer>list, int level){
+        if(root==null){
+            return;
+        }
+        if(list.get(level)==null){
+            list.add(root.val);
+        }
+        printLeftViewUtill(root.left,list,level+1);
+        printLeftViewUtill(root.right,list,level+1);
+    }
 
 }
 
