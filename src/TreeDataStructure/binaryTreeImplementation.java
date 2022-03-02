@@ -149,5 +149,22 @@ public class binaryTreeImplementation {
         printLeftViewUtill(root.right,list,level+1);
     }
 
+    /**Method, to print right view of the tree*/
+    public void rightView(TreeNode root){
+        ArrayList <Integer> list= new ArrayList<>();
+        printRightViewUtill(root,list,0);
+
+
+    }
+    /**this method will be used by Left View**/
+    public void printRightViewUtill(TreeNode root, ArrayList<Integer>list, int level){
+        if(root==null){
+            return;
+        }
+            list.set(level,root.val);
+
+        printLeftViewUtill(root.left,list,level+1);
+        printLeftViewUtill(root.right,list,level+1);
+    }
 }
 
