@@ -19,7 +19,7 @@ public class implementationOfBST {
     private void insert(int data){
         root=insertUtil(root,data);
     }
-
+    //this method will be used to insert the newNodes in BST
     private TreeNode insertUtil(TreeNode root, int data) {
         TreeNode newNode= new TreeNode(data);
         if(root==null){
@@ -37,5 +37,14 @@ public class implementationOfBST {
             insertUtil(root.right,data);
         }
         return root;
+    }
+    //Method to print the tree
+    private void printNodesBST(TreeNode root){
+        if(root==null){
+            return;
+        }
+        System.out.println(root.val);
+        printNodesBST(root.left);
+        printNodesBST(root.right);
     }
 }
