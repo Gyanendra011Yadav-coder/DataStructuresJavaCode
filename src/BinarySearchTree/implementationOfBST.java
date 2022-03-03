@@ -85,4 +85,19 @@ public class implementationOfBST {
         }
     return root;
     }
+
+
+    /**This, Method will be used for seraching in Tree*/
+    private boolean serachInBST(TreeNode root,int valueToDelete){
+        if(root==null){
+            return false;
+        }else if(root.val==valueToDelete){
+            return true;
+        }else if(root.val>valueToDelete){
+            return serachInBST(root.left,valueToDelete);
+        }else if(root.val<valueToDelete){
+            return serachInBST(root.right,valueToDelete);
+        }
+        return false;
+    }
 }
