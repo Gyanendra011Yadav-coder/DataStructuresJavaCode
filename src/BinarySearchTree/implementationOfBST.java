@@ -52,4 +52,24 @@ public class implementationOfBST {
         printNodesBST(root.left);
         printNodesBST(root.right);
     }
+
+    /**This method will be deleting the Node from BST*/
+    private TreeNode deleteNode(TreeNode root, int valueToDelete){
+        if(root==null){
+            return root;
+        }
+        if(root.val>valueToDelete){
+            root.left=deleteNode(root.left,valueToDelete);
+        }
+        else if(root.val<valueToDelete){
+            root.right=deleteNode(root.right,valueToDelete);
+        }else{
+            if(root.left==null){
+                return root.right;
+            }else if(root.right==null){
+                return root.left;
+            }
+        }
+
+    }
 }
