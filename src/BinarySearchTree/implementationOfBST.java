@@ -68,8 +68,21 @@ public class implementationOfBST {
                 return root.right;
             }else if(root.right==null){
                 return root.left;
+            }else{
+                TreeNode successorParent=root;
+                TreeNode successor=root.right;
+                while(successor.left!=null){
+                    successorParent=successor;
+                    successor=successor.left;
+                }
+                if(successorParent!=root){
+                    successorParent.left=successor.right;
+                }else{
+                    successorParent.right=successor.right;
+                }
+                root.val=successor.val;
             }
         }
-
+    return root;
     }
 }
