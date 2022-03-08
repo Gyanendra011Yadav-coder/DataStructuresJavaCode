@@ -27,7 +27,7 @@ public class countNumberOfIslands {
 
 
     private static void dfs(char[][] grid, int rowNO, int colNo, boolean[][] visited){
-        if(rowNO<0 || colNo<0 || rowNO>grid.length || colNo>grid[0].length || visited[rowNO][colNo] || grid[rowNO][colNo]=='0'){
+        if(rowNO<0 || colNo<0 || rowNO>=grid.length || colNo>=grid[0].length || visited[rowNO][colNo] || grid[rowNO][colNo]=='0'){
             return;
         }
         visited[rowNO][colNo]=true;
