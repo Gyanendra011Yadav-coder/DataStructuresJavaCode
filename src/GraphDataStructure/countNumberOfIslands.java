@@ -9,13 +9,16 @@ public class countNumberOfIslands {
         int col=grid[0].length;
         //intilizing the variable that will count number of islands
         int countIslands=0;
-        //Boolean array that will keep track of
+        //Boolean array that will keep track of nodes that we have visited in the graph
         boolean [][]visited=new boolean[row][col];
+        //Taversing it
         for (int i = 0; i <row ; i++) {
             for (int j = 0; j <col ; j++) {
                 if(!visited[i][j] && (grid[i][j] == '1')){
+                    //calling th DSA function to count
                     dfs(grid,i,j,visited);
                     countIslands++;
+
                 }
             }
         }
