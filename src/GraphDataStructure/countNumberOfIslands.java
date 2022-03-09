@@ -13,7 +13,7 @@ public class countNumberOfIslands {
         boolean [][]visited=new boolean[row][col];
         //Taversing it
         for (int i = 0; i <row ; i++) {
-            for (int j = 0; j <col ; j++) {
+            for (int j = 0; j <col ; j++) { 
                 if(!visited[i][j] && (grid[i][j] == '1')){
                     //calling th DSA function to count
                     dfs(grid,i,j,visited);
