@@ -16,11 +16,11 @@ public class alternatePositiveAndNegativeNumbers {
         }
         //pointers will be taking care of removing element from positive , negative in arr
         int positivePointer=0, negativePointer=0, ansFillPointer=0;
-        while(positivePointer<positive.size() && negativePointer<negative.size()){
             arr[ansFillPointer]=positive.get(positivePointer);
             ansFillPointer++;
-            positivePointer++;
-            //adding negative
+            positivePointer++;        while(positivePointer<positive.size() && negativePointer<negative.size()){
+
+                //adding negative
             arr[ansFillPointer]=positive.get(negativePointer);
             ansFillPointer++;
             negativePointer++;
