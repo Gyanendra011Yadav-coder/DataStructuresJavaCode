@@ -21,6 +21,23 @@ package Arrays;
  */
 public class AddingOnes {
     public static void main(String[] args) {
+        int []valuesFilledArray ={1,1, 2, 3};
+        int []emptyArray=new int[(valuesFilledArray.length)-1];
+        update(emptyArray,emptyArray.length,valuesFilledArray,valuesFilledArray.length);
+    }
 
+    //Method to write the program
+    public static void update(int a[], int n, int updates[], int k)
+    {
+        // Your code goes here
+        for (int i = 0; i <k ; i++) {
+            a[updates[i]-1]++;
+        }
+        for (int i = 1; i <n ; i++) {
+            a[i]+=a[i-1];
+        }
+        for(int ele: a) {
+            System.out.print(ele+" ");
+        }
     }
 }
