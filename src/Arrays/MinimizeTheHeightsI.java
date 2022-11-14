@@ -7,7 +7,7 @@ import java.util.Arrays;
  * on 2022-11-13,Nov,2022
  * in Project: DataStructuresJavaCode
  */
-public class MinimizeTheHeights {
+public class MinimizeTheHeightsI {
     public static void main(String[] args) {
 //        int K = 2, N = 4;
 //        int Arr[] = {1, 5, 8, 10};
