@@ -58,7 +58,7 @@ class coinChangeProblem{
             Arrays.fill(arr,-1);
         }
         System.out.println(numberOfCoinsRequired(coins,amountToChange, 0, dynamicProgramming));
-    }
+    } 
 
     private static int numberOfCoinsRequired(int[] coins, int amount, int index, int [][]dp) {
         if (amount == 0) {
