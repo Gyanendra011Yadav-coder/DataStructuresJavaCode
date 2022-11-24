@@ -11,12 +11,12 @@ import java.util.Scanner;
  */
 public class KadanesAlgorithm {
     //Main Method of the class
-//    public static void main(String[] args) {
-//        int []array={3,-1,-2};
-//        for (int i = 0; i < array.length; i++) {
-//            System.out.print(findMinSum(array, array.length,i, array.length));
-//        }
-//    }
+    public static void main(String[] args) {
+        int []array={3,-1,-2};
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(findMinSum(array, array.length,i, array.length));
+        }
+    }
 
     //method to find Minimum sum of subarray
     static int findMinSum(int[] array, int length, int startIndex, int endIndex) {
@@ -35,21 +35,21 @@ public class KadanesAlgorithm {
         return overallMinVal;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int testCase = scanner.nextInt();
-        while(testCase!=0){
-            int length = scanner.nextInt();
-            int []array=new int[length];
-            for(int i = 0; i < length; i++){
-                array[i] = scanner.nextInt();
-            }
-            for (int i = 0; i < array.length; i++) {
-                System.out.print(findMinSum(array, array.length,i, array.length)+" "); // Providing Space area so that output must be with space separated values
-            }
-            System.out.println(); // This will change the  to the next line for the further testCases
-            testCase--;
-        }
-    }
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int testCase = scanner.nextInt();
+//        while(testCase!=0){
+//            int length = scanner.nextInt();
+//            int []array=new int[length];
+//            for(int i = 0; i < length; i++){
+//                array[i] = scanner.nextInt();
+//            }
+//            for (int i = 0; i < array.length; i++) {
+//                System.out.print(findMinSum(array, array.length,i, array.length)+" "); // Providing Space area so that output must be with space separated values
+//            }
+//            System.out.println(); // This will change the  to the next line for the further testCases
+//            testCase--;
+//        }
+//    }
 
     }
