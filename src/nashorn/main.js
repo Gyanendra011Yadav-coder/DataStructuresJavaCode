@@ -1,3 +1,5 @@
+load('lib.js');
+
 const num1 = 5;
 const num2 = 3;
 
