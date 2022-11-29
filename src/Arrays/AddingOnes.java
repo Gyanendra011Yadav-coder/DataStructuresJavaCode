@@ -31,7 +31,7 @@ public class AddingOnes {
     {
         // Your code goes here
         for (int i = 0; i <k ; i++) {
-            a[updates[i]-1]++;
+            a[updates[i]-1]++;  //updating previous index value e.g. i=0 ::: a[1-1]=0 :: a[0]++=> makes it 1 || in second i=1 :: update[1]=>1 So, a[1-1]=a[0]=>1 will increase it to 2 and so on
         }
         for (int i = 1; i <n ; i++) {
             a[i]+=a[i-1];
