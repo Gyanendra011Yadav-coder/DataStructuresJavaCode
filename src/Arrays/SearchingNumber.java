@@ -12,26 +12,35 @@ import java.util.Map;
 public class SearchingNumber {
 
     public static void main(String[]args){
-        int N = 5, K = 16;
+        int N = 5, K = 98;
         int Arr[] = {9, 7, 2, 16, 4};
-        System.out.println(search(Arr, Arr.length,K));
+        int Arr2[]={1 ,22 ,57 ,47 ,34 ,18,66};
+        System.out.println(search(Arr2,Arr2.length,K));
+//        System.out.println(search(Arr, Arr.length,K));
     }
 
 
     public static int search(int arr[], int n, int k) {
         // code here
-        int result=0;
+        int result=-1;
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+//        for (int i = 0; i <n ; i++) {
+//            if(!map.containsValue(arr[i])){
+//                map.put(arr[i],i);
+//            }else {
+//                continue;
+//            }
+//        }
+//        if(map.containsKey(k)){
+//            result=map.get(k);
+//        }
+
         for (int i = 0; i <n ; i++) {
-            if(!map.containsValue(arr[i])){
-                map.put(arr[i],i);
-            }else {
-                continue;
+            if(arr[i]==k){
+                result=i;
+                break;
             }
         }
-        if(map.containsKey(k)){
-            result=map.get(k);
-        }
-        return result;
+        return result+1;
     }
 }

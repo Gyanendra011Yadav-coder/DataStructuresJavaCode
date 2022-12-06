@@ -1,4 +1,4 @@
-package LeetcodeQuestions;
+package LeetcodeQuestions.Qustions;
 import java.util.PriorityQueue;
 import java.util.Queue;
 

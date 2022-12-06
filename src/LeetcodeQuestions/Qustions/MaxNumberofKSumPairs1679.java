@@ -1,4 +1,4 @@
-package LeetcodeQuestions;
+package LeetcodeQuestions.Qustions;
 
 public class MaxNumberofKSumPairs1679 {
     public int maxOperations(int[] nums, int k) {

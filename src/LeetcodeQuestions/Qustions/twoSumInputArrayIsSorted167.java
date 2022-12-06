@@ -1,4 +1,4 @@
-package LeetcodeQuestions;
+package LeetcodeQuestions.Qustions;
 
 public class twoSumInputArrayIsSorted167 {
     public int[] twoSum(int[] numbers, int target) {

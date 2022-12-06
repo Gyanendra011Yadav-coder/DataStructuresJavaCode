@@ -1,4 +1,4 @@
-package LinkedListLeetode;
+package LinkedList.LinkedListLeetode;
 
 /**
  * @author lenovo

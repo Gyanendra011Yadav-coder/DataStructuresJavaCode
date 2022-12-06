@@ -1,4 +1,4 @@
-package LeetcodeQuestions;
+package LeetcodeQuestions.Qustions;
 
 public class shortestUnsortedContinuousSubarray581 {
 
