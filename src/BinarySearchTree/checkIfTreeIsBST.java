@@ -2,12 +2,12 @@ package BinarySearchTree;
 
 public class checkIfTreeIsBST {
     private class TreeNode {
-        int val;
+        int data;
         TreeNode left;
         TreeNode right;
 
         public TreeNode(int data) {
-            this.val = data;
+            this.data = data;
             left = right = null;
         }
     }
@@ -32,7 +32,7 @@ public class checkIfTreeIsBST {
                 return false;
             }
             //if previous node's value is greater than current node that means it is not following sorting. So, returnign false
-            if (prev != null && prev.val >= root.val) {
+            if (prev != null && prev.data >= root.data) {
                 return false;
             }
             //and if prev node value < current node then we will update the prev node with cuurent node
@@ -40,5 +40,32 @@ public class checkIfTreeIsBST {
             isBSTUtil(root.right);
         }
         return true;
+    }
+
+    boolean isBST(TreeNode root)
+    {
+        // code here.
+        if(root==null) {
+            return true;
+        }
+
+            if(root.left!=null && root.left.data>root.data){
+                return false;
+            }
+
+            if(root.right!=null && root.right.data<root.data){
+                return false;
+            }
+
+            //Recursive Call-1
+            boolean isLeftBST=isBST(root.left);
+            //Recursive Call-2
+            boolean isRightBST=isBST(root.right);
+
+            if(isLeftBST==true && isRightBST==true)
+               return true;
+            else
+                return false;
+
     }
 }
