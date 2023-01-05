@@ -29,9 +29,8 @@ public class MinimumElementBST {
         root.right.right = new LowestCommonAncistor.Node(7);
         root.right.right = new LowestCommonAncistor.Node(8);
 
-        LowestCommonAncistor.BST bstClassObject=new LowestCommonAncistor.BST();
-        LowestCommonAncistor.Node rootResult=bstClassObject.LCA(root,7,8);
-        System.out.println("Root Result: " + rootResult.data);
+
+        System.out.println("Root Result: " );
     }
 
 
