@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Stack;
+
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-01-16,Jan,2023
@@ -17,4 +19,42 @@ package Arrays;
  *
  */
 public class NextGreaterElement {
+    public static void main(String[] args) {
+        long arr[] = {6,8,0,1,3};
+        long[] resultantArr=nextLargerElement(arr, arr.length);
+        for (long val: resultantArr) {
+            System.out.println(val);
+        }
+    }
+
+    public static long[] nextLargerElementOptmized(long[] arr, int n) {
+        long[] result = new long[n];
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = n - 1; i >= 0; i--) {
+            while (!stack.empty() && arr[stack.peek()] <= arr[i]) {
+                stack.pop();
+            }
+            result[i] = stack.empty() ? -1 : arr[stack.peek()];
+            stack.push(i);
+        }
+        return result;
+    }
+
+    public static long[] nextLargerElement(long[] arr, int n) {
+        // Your code here
+        long[] result = new long[n];
+
+        for (int i = 0; i <n ; i++) {
+            long greaterElement=-1;
+            for (int j = i+1; j <n ; j++) {
+                if(arr[j]>arr[i]){
+                    greaterElement=arr[j];
+                    break;
+                }
+            }
+            result[i]=greaterElement;
+        }
+        return result;
+    }
 }
