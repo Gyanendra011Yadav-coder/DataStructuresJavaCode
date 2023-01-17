@@ -9,7 +9,9 @@ import java.util.logging.Logger;
  */
 public class MaximumGCDSiblings {
 
+    //Using Logger, Ignore if you don't know Dorectly Use SOUT irrespective of Logger
     public static final Logger LOGGER = Logger.getLogger(MaximumGCDSiblings.class.getName());
+    //Node class to create binary Tree
     static class Node {
         int data;
         Node left;
@@ -20,6 +22,7 @@ public class MaximumGCDSiblings {
         }
     }
 
+    //Main Method
     public static void main(String[] args) {
         Node root=new Node(4);
         root.left=new Node(5);
@@ -32,9 +35,11 @@ public class MaximumGCDSiblings {
         LOGGER.info("Return value from maxGCD = {} "+ maxGCD(root));
     }
 
+    //wil store temporary greater value
     static int maxGCDVal = 0;
     static int overallMax = 0;
 
+    //method that will be called to find the MaxGCD
     public static int maxGCD(Node root) {
         if(root == null) return 0;
         if(root.left == null && root.right == null) return root.data;
@@ -67,6 +72,7 @@ public class MaximumGCDSiblings {
         }
     }
 
+    //Method to calculate GCD of Sibling Nodes
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
