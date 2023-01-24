@@ -72,7 +72,7 @@ public class MaximumGCDSiblings {
         }
     }
 
-    //Method to calculate GCD of Sibling Nodes
+    //Method to calculate GV
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
