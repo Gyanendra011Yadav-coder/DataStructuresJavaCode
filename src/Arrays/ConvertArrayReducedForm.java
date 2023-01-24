@@ -14,11 +14,12 @@ public class ConvertArrayReducedForm {
         int arr[] = {10, 40, 20};
         convert(arr, arr.length);
 
-        for(int ele:arr) {
-            System.out.print(ele+" ");
+        for (int ele : arr) {
+            System.out.print(ele + " ");
         }
 
     }
+
     //Method to convert
     static void convert(int[] arr, int n) {
         //Making the duplicate copy the code
@@ -33,18 +34,18 @@ For example, int[] duplicateArray = Arrays.copyOf(arr, arr.length);
 
 This will create a new copy of the original array, so sorting the duplicateArray will not affect the original array.
          */
-        int[] duplicateArray =  Arrays.copyOf(arr, arr.length);;
+        int[] duplicateArray = Arrays.copyOf(arr, arr.length);
+        ;
 
         //Sorting the array
         Arrays.sort(duplicateArray);
-        for (int i = 0; i < arr.length ; i++) {
-            arr[i]=findIndex(duplicateArray, arr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = findIndex(duplicateArray, arr[i]);
         }
     }
 
     // Function to find the index of an element
-    public static int findIndex(int arr[], int t)
-    {
+    public static int findIndex(int arr[], int t) {
         int index = Arrays.binarySearch(arr, t);
         return (index < 0) ? -1 : index;
     }
