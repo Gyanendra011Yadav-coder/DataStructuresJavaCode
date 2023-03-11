@@ -17,27 +17,51 @@ public class CommonElements {
         int [] C = {3, 4, 15, 20, 30, 70, 80, 120};
         System.out.println(commonElements(A, B, C, A.length, B.length, C.length));
     }
-    public static ArrayList<Integer> commonElements(int A[], int B[], int C[], int n1, int n2, int n3)
-    {
-        ArrayList<Integer> duplicates = new ArrayList<Integer>(); // will be using this to store the duplicate values in the arrays
-        int cmnEle=0; //variable to store tempValue to compare in other arrays
+//    public static ArrayList<Integer> commonElements(int A[], int B[], int C[], int n1, int n2, int n3)
+//    {
+//        ArrayList<Integer> duplicates = new ArrayList<Integer>(); // will be using this to store the duplicate values in the arrays
+//        int cmnEle = 0; //variable to store tempValue to compare in other arrays
+//
+//        for (int i = 0; i < n1; i++) {
+//            cmnEle = A[i];
+//            int finalCmnEle = cmnEle;
+//            if (IntStream.of(B).anyMatch(x -> x == finalCmnEle)) {
+//                int finalCmnEle1 = cmnEle;
+//                if (IntStream.of(C).anyMatch(x -> x == finalCmnEle1)) {
+//                    duplicates.add(cmnEle);
+//                }
+//            }
+//        }
+//        return duplicates;
+//    }
+public static ArrayList<Integer> commonElements(int A[], int B[], int C[], int n1, int n2, int n3)
+{
+    ArrayList<Integer> duplicates = new ArrayList<Integer>(); // will be using this to store the duplicate values in the arrays
+    int cmnEle = 0; //variable to store tempValue to compare in other arrays
 
-        for (int i = 0; i <n1 ; i++) {
-            cmnEle=A[i];
-            for (int j = 0; j <n2; j++) {
-                int finalCmnEle = cmnEle;
-                if(IntStream.of(B).anyMatch(x -> x == finalCmnEle)){
-                    for (int k = 0; k <n3 ; k++) {
-                        int finalCmnEle1 = cmnEle;
-                        if(IntStream.of(C).anyMatch(x -> x == finalCmnEle1)){
-                            duplicates.add(cmnEle);
-                        }
-                    }
+
+    for (int i = 0; i < n1; i++) {
+        cmnEle = A[i];
+        if(!(duplicates.contains(cmnEle))) {
+            if (containsCommonElement(B, cmnEle)) {
+                if (containsCommonElement(C, cmnEle)) {
+                    duplicates.add(cmnEle);
                 }
             }
         }
-        return duplicates;
     }
+    return duplicates;
+}
+
+    public static boolean containsCommonElement(int[] arrayToCheckIn, int valToCheck) {
+        for (int i = 0; i < arrayToCheckIn.length; i++) {
+                if (arrayToCheckIn[i] == valToCheck) {
+                    return true;
+                }
+            }
+        return false;
+    }
+
 
     static int maxInThree(int n1, int n2, int n3){
         int max =0;
