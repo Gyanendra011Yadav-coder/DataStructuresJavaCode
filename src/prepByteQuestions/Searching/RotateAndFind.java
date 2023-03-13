@@ -1,5 +1,8 @@
 package prepByteQuestions.Searching;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-03-12,Mar,2023
@@ -26,4 +29,27 @@ package prepByteQuestions.Searching;
  */
 public class RotateAndFind {
 
+    public static void main(String args[]) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        int testCases= scanner.nextInt();
+        while (testCases!=0){
+            int arrSize= scanner.nextInt();
+            int[] array=new int[arrSize];
+            for (int i = 0; i <arrSize ; i++) {
+                array[i] = scanner.nextInt();
+            }
+            int searchValue= scanner.nextInt();
+            System.out.println(findIndexOfX (array,array.length,searchValue));
+            testCases--;
+        }
+    }
+
+    private static int findIndexOfX(int []array, int lengthArr, int serachVal){
+        for (int i = 0; i <lengthArr ; i++) {
+            if(array[i] == serachVal){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
