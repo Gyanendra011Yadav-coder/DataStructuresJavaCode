@@ -40,27 +40,42 @@ public class BooksLeft {
     }
 
     private static int findBooksLeftShelf(int numOfBooks, int[] books, int maxLimitReadPages) {
-        int booksLeft = 0;
+        int booksRead = 0;
 
         if (books[0] < maxLimitReadPages) {
             for (int i = 0; i < numOfBooks; i++) {
-                if (books[i] > maxLimitReadPages) {
-                    return booksLeft;
+                if (books[i]>=maxLimitReadPages) {
+                    return numOfBooks- booksRead;
                 } else {
-                    booksLeft++;
+                    booksRead++;
                 }
             }
-        } else {
-            for (int i = numOfBooks - 1; i >= 0; i--) {
+        } else if(books[numOfBooks-1] < maxLimitReadPages){
+            for (int i=  numOfBooks - 1; i >= 0; i--) {
                 {
-                    if (books[i] > maxLimitReadPages) {
-                        return booksLeft;
+                    if (books[i] >= maxLimitReadPages) {
+                        return numOfBooks- booksRead;
                     } else {
-                        booksLeft++;
+                        booksRead++;
                     }
                 }
             }
         }
-        return booksLeft;
+        return booksRead;
+    }
+
+    private static int findBooksLeftShelf2(int numOfBooks, int[] books, int maxLimitReadPages) {
+        int booksRead = 0;
+
+            for (int i=  numOfBooks - 1; i >= 0; i--) {
+                {
+                    if (books[i] >= maxLimitReadPages) {
+                        return numOfBooks- booksRead;
+                    } else {
+                        booksRead++;
+                    }
+                }
+            }
+        return booksRead;
     }
 }
