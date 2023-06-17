@@ -1,0 +1,81 @@
+    private Integer txnDate;
+	private Long gameId;
+	private Long tableId;
+	private Integer configId;
+	private Integer userId;
+	private Double rakeAmt;
+	private String ipAddress;
+	private String deviceId;
+	private String platform;
+	private Double rakePercent;
+	private Double wagerAmt;
+	private Double cappingAmt;
+	private Double orginalRakeAmt;
+	private Double orginalWagerAmt;
+	private String gameState;
+	private String state;
+	private String country;
+	private String city;
+	private String club;
+	private Integer nid;
+	private String regInfo;
+	private String winningInfo;
+	private String month;
+	private Integer year;
+
+
+
+//MTT
+    private Integer id;
+	private Integer txnDate;
+	private Integer configId;
+	private Integer userId;
+	private Double rakeAmt;//tourney_fee,,sng_fee
+	private Double tourneyFee;
+	private Double sngFee;
+	private String ipAddress;
+	private String deviceId;
+	private String platform;
+	private Double rakePercent;//real_amt,ticket_amt
+	private Double realAmt;
+	private Double ticketAmt;
+	private String state;
+	private String country;
+	private String city;
+	private String club;
+	private Integer nid;
+	private String regInfo;
+	private String winningInfo;
+	private String month;
+	private Integer year;
+
+
+	//Bean Value
+	 private Integer txnDate;
+        private long userId;
+        private long gameId;
+        private long tableId;
+        private long configId;
+        private double rakeAmt;
+        private double tourneyFee;
+        private double sngFee;
+        private String ipAddress;
+        private String deviceId;
+        private String platform;
+        private double rakePercent;
+        private double wagerAmt;
+        private double realAmt;
+        private double ticketAmt;
+        private double cappingAmt; //capping_amt
+        private double orgRakeAmt; //original_rake_amt
+        private double orgWagerAmt; //original_wager_amt
+        private String gameState;
+        private String state;
+        private String country;
+        private String city;
+        private String club;
+        private int networkId;
+        private String winningInfo;
+        private String regInfo;
+        private String month;
+        private Integer year;

@@ -18,7 +18,7 @@ public class ReversePolishNotation {
     private double evalRPN(String[] token){
         String operations="*/+-";
 
-
+        return 0.0;
 
     }
 }
