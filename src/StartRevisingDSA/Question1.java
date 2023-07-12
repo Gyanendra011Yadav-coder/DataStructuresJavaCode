@@ -72,13 +72,13 @@ public class Question1 {
     }
 
     //Now, looking for the third approach that will be reversing the array in two parts and then at last reversing the array whole
-    private static int[] solution3(int[] arr, int moveNTime){
-        if(moveNTime> arr.length){
-            moveNTime=moveNTime%arr.length; //This is because when we reverse the array for array's length time we will get the same array
+    private static int[] solution3(int[] arr, int key){
+        if(key > arr.length){
+            key = key %arr.length; //This is because when we reverse the array for array's length time we will get the same array
         }
 
         //the length of the first part is:
-        int lenFirstPart=arr.length-moveNTime;
+        int lenFirstPart=arr.length- key;
         reverseArray(arr, 0,lenFirstPart-1); //reversing the first part
         reverseArray(arr, lenFirstPart,arr.length-1); // reversing the second part
         reverseArray(arr, 0, arr.length-1);  // reversing the whole array
@@ -95,5 +95,56 @@ public class Question1 {
             startIndex++;
             endIndex--;
         }
+    }
+
+
+    public class Solution {
+        public static int search(int arr[], int key) {
+            int start = 0, end = arr.length - 1;
+
+            while (start <= end) {
+
+                int mid = (start + end) / 2;
+
+                if (arr[mid] == key) {
+
+                    return mid;
+
+                }
+
+                if (arr[start] <= arr[mid]) {          //finding sorted array
+
+                    if (arr[start] <= key && key <= arr[mid]) {
+
+                        end = mid - 1;
+
+                    } else {
+
+                        start = mid + 1;
+
+                    }
+
+
+                } else {
+
+                    if (arr[mid] <= key && key <= arr[end]) {
+
+                        start = mid + 1;
+
+                    } else {
+
+                        end = mid - 1;
+
+                    }
+
+                }
+
+
+            }
+
+            return -1;
+
+        }
+
     }
 }
