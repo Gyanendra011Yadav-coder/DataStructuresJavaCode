@@ -29,6 +29,8 @@ public class SumInfiniteArray {
         for (int i = 1; i < n; i++) {
             prefix_sum[i] = prefix_sum[i-1] + arr[i];
         }
+
+
         long sum = 0;
         for (List<Long> query : queries) {
             int L = (int) (query.get(0) - 1);
@@ -80,6 +82,58 @@ public class SumInfiniteArray {
     }
 
     public static List<Integer> sumInRanges(int[] arr, int n, List<List<Long>> queries, int q) {
+        List<Integer> result=new ArrayList<>();
+        int givenArrSum = 0;
+        //Need to calculate the sum of the given Array
+        for (int i = 0; i < n; i++) {
+            givenArrSum+=arr[i];
+        }
 
+        for (List<Long> query:queries) {
+                //First we will fetch indexies of the queries
+            int leftIndex= (int) (query.get(0)-1);
+            int rightIndex= (int) (query.get(1)-1);
+
+            //This variable will holding values of all the Indexes need to be covered
+            int totalIndexNeedToCover= (rightIndex-leftIndex+1);
+
+            int indexToCover=totalIndexNeedToCover/n;
+            givenArrSum*=indexToCover;
+
+            int remainingIndexe=totalIndexNeedToCover%n;
+
+            for (int i = 0; i <remainingIndexe ; i++) {
+                givenArrSum+=arr[i];
+            }
+        }
+        return result;
+    }
+
+
+
+    public long sum_upto_i(List<Long> prefix, long i, long n) {
+        int mod = 1000000007;
+        long repeat = (i / n) % mod;
+        long sum = (repeat * prefix.get((int)n)) % mod;
+        sum = (sum + prefix.get((int)(i % n))) % mod;
+        return sum;
+    }
+
+    public List<Integer> sumInRanges(List<Integer> arr, int n, List<List<Long>> queries, int q) {
+        int mod = 1000000007;
+        List<Long> prefix_sum = new ArrayList<>(n+1);
+        prefix_sum.add(0L);
+        for (int i = 1; i <= n; i++) {
+            prefix_sum.add((arr.get(i-1) + prefix_sum.get(i-1)) % mod);
+        }
+        List<Integer> result = new ArrayList<>();
+        for (int j = 0; j < q; j++) {
+            long l = queries.get(j).get(0);
+            long r = queries.get(j).get(1);
+            long left_sum = sum_upto_i(prefix_sum, l-1, n);
+            long right_sum = sum_upto_i(prefix_sum, r, n);
+            result.add((int)((right_sum - left_sum + mod) % mod));
+        }
+        return result;
     }
 }
