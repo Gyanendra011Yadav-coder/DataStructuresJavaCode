@@ -1,0 +1,11 @@
+
+t
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(·¥ÓØøÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýÍÁðùÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(ýÍÁðùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Òˆ‚Ñ
+E
+java:S1197"*Move the array designators [] to the type.( Ú³Ôýÿÿÿÿ
+E
+java:S1197,"*Move the array designators [] to the type.(£¼Ê¤ùÿÿÿÿ

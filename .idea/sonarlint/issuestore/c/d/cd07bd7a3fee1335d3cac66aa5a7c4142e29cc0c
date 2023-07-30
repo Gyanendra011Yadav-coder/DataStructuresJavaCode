@@ -1,0 +1,12 @@
+
+7
+java:S1643"Use a StringBuilder instead.(ñ÷è˛˛ˇˇˇˇ
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(—÷ŸÉ˝ˇˇˇˇ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(ÿìÄ
+T
+java:S1155">Use isEmpty() to check whether the collection is empty or not.( Ò„π
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(œÜú—˚ˇˇˇˇ
+T
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(‰€üñ

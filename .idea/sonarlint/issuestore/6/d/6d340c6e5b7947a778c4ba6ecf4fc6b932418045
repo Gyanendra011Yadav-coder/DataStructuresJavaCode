@@ -1,0 +1,17 @@
+
+o
+java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓŒÖ¯
+o
+java:S2293j"YReplace the type specification in this constructor call with the diamond operator ("<>").(Àëâı
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(›‚Œûÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(Îñˆüÿÿÿÿ
+=
+java:S1125N"'Remove the unnecessary boolean literal.(«Üˆû
+V
+java:S1128";Remove this unused import 'BinarySearchTree.InsertNodeBST'.(‚Ø„Ôûÿÿÿÿ
+X
+java:S1128"BRemove this unused import 'BinarySearchTree.KthLargestElementBST'.(ÒØ‡…
+C
+java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ
+M
+java:S1128"2Remove this unused import 'java.util.Spliterator'.(òÀì¿ùÿÿÿÿ

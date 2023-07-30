@@ -1,0 +1,14 @@
+
+X
+java:S2184"BCast one of the operands of this division operation to a "double".(Ï±´ß
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(²Á€œüÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(²Á€œüÿÿÿÿ
+?
+java:S1197"*Move the array designators [] to the type.(½Áž0
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Çõ´Íýÿÿÿÿ
+F
+java:S1481"+Remove this unused "result" local variable.(Ó°¬Ñøÿÿÿÿ
+<
+java:S2185"&Remove this silly call to "Math.floor"(Ï±´ß

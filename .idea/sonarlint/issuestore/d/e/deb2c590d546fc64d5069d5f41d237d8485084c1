@@ -1,0 +1,16 @@
+
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßÀš¦øÿÿÿÿ
+†
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä€‰
+_
+java:S2583."DChange this condition so that it does not always evaluate to "false"(·Š•ğüÿÿÿÿ
+@
+java:S1197"*Move the array designators [] to the type.(úáïû
+S	java:S106"9Replace this use of System.out or System.err by a logger.(†ä¸Öùÿÿÿÿ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ä€‰
+C
+java:S1481"(Remove this unused "set" local variable.(¡ÌË­üÿÿÿÿ
+M
+java:S1128"2Remove this unused import 'java.net.Inet4Address'.(ê…ÉÃúÿÿÿÿ

@@ -1,0 +1,19 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½³–Ô8û¤®™„1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡’Úøÿÿÿÿ8ü¤®™„1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡’Úøÿÿÿÿ8ş¤®™„1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡’Úøÿÿÿÿ8ÿ¤®™„1
+G
+java:S1197"*Move the array designators [] to the type.(½³–Ô8…¥®™„1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(€Ûºÿÿÿÿÿ8‡¥®™„1
+Q
+java:S1172"/Remove these unused method parameters "A", "M".(‡’Úøÿÿÿÿ8Œ¥®™„1
+N
+java:S1481",Remove this unused "currMax" local variable.(øàÎšşÿÿÿÿ8¥®™„1
+E	java:S108")Either remove or fill this block of code.(ŸøŞÖ8¥®™„1
+@
+java:S1128"Remove this duplicated import.(î–˜Éüÿÿÿÿ8¥®™„1
+@
+java:S1128"Remove this duplicated import.(î–˜Éüÿÿÿÿ8‘¥®™„1
+N
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹8’¥®™„1
