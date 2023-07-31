@@ -15,17 +15,14 @@ public class EncodeMessage {
 
     public static String encode(String message) {
         // Write your code here.
-        StringBuilder finalStr= new StringBuilder();
+        StringBuilder finalStr = new StringBuilder();
         int count = 1;
-        for (int i = 0 ; i < message.length() ; i++) {
-            if(message.charAt(i) == message.charAt(i-1)){
+        for (int i = 0; i < message.length(); i++) {
+            if (message.charAt(i) == message.charAt(i - 1)) {
                 count++;
             }
 
         }
-
-//        finalStr.append(message.charAt(finalStr.length()-1));
-//        finalStr.append(count);
         return finalStr.toString();
     }
 }
