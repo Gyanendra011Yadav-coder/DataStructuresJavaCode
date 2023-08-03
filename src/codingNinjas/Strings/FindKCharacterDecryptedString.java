@@ -1,7 +1,7 @@
 package codingNinjas.Strings;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created By:  Gyanendra_Yadav
@@ -9,39 +9,39 @@ import java.util.Map;
  * in Project: DataStructuresJavaCode
  */
 public class FindKCharacterDecryptedString {
+    public static char kThCharaterOfDecryptedString(String s, long k) {
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            long len = 0;
+            StringBuilder temp = new StringBuilder();
+            while (i < n && s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+                temp.append(s.charAt(i));
+                len++;
+                i++;
+            }
+            StringBuilder num = new StringBuilder();
+            while (i < n && s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+                num.append(s.charAt(i));
+                i++;
+            }
+            long t = len * Long.parseLong(num.toString());
+            if (t < k) {
+                k -= t;
+            } else {
+                k %= len;
+                int ind = (int) ((k - 1 + len) % len);
+                return temp.charAt(ind);
+            }
+            i--;
+        }
+        return 'a';
+    }
 
     public static void main(String[] args) {
-
+        String s = "a2b3cd3";
+        long k = 8;
+        char result = kThCharaterOfDecryptedString(s, k);
+        System.out.println("K'th character of the decrypted string: " + result); // Output: K'th character of the decrypted string: c
     }
 
-    public static char kThCharaterOfDecryptedString(String s, Long k)
-    {
-        int findCharAt= Math.toIntExact((k));
-        String result=decodeString(s);
-        return result.charAt(findCharAt);
-    }
-
-    public static String decodeString(String str){
-        String strResult="";
-        Character repeatChar;
-        Map<Character, Integer> map=new HashMap<>();
-
-
-
-        for (int i = 0; i < str.length(); i++) {
-            if(!Character.isDigit(str.charAt(i))){
-                repeatChar=str.charAt(i);
-            }
-        }
-        return strResult;
-    }
-
-    private static boolean isNumber(String str) {
-        for (char c : str.toCharArray()) {
-            if (!Character.isDigit(c)) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
