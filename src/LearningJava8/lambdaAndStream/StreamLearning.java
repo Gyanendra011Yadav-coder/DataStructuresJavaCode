@@ -1,4 +1,4 @@
-package lambdaAndStream;
+package LearningJava8.lambdaAndStream;
 
 import java.util.List;
 import java.util.stream.Collectors;

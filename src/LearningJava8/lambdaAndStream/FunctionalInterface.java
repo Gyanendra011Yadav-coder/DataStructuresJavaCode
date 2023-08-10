@@ -1,4 +1,4 @@
-package lambdaAndStream;
+package LearningJava8.lambdaAndStream;
 
 /**
  * Created By:  Gyanendra_Yadav
