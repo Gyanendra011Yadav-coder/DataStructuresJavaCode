@@ -25,23 +25,23 @@ Figure 2
 Figure 2.
 Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).*/
 public class FixLeafTrail {
-    class MyClara extends Clara {
-        /**
-         * In the 'run()' method, you can write your program for Clara.
-         */
-        void run() {
-            // Loop through the rows of trees
-            while (!mushroomFront()){
-                if (!onLeaf()) {
-                    putLeaf();
-                } else {
-                    move();
+        class MyClara extends Clara {
+            /**
+             * In the 'run()' method, you can write your program for Clara.
+             */
+            void run() {
+                // Loop through the rows of trees
+                while (!mushroomFront()){
+                    if (!onLeaf()) {
+                        putLeaf();
+                    } else {
+                        move();
+                    }
+                    if(treeFront()) {
+                        turnLeft(); // Turn left at the end of each row
+                    }
                 }
-                if(treeFront()) {
-                    turnLeft(); // Turn left at the end of each row
-                }
+                putLeaf();
             }
-            putLeaf();
         }
-    }
 }
