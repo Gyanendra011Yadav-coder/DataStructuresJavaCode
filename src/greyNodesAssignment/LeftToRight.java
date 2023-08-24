@@ -1,6 +1,5 @@
-package greyNodesAssignment.SkipListTask;
+package greyNodesAssignment;
 
-import greyNodesAssignment.game.Clara;
 
 /**
  * Created By:  Gyanendra_Yadav
@@ -15,10 +14,10 @@ public class LeftToRight {
    if, while, for
 */
 
-    class MyClara extends Clara {
-        /**
+    /*class MyClara extends Clara {
+        *//**
          * In the 'run()' method you can write your program for Clara
-         */
+         *//*
         void run() {
             completeColumnUp();
             move();
@@ -148,6 +147,6 @@ public class LeftToRight {
         void moveMultipleTimes(int times) {
             for (int i = 0; i < times; i++) move();
         }
-    }
+    }*/
 
 }

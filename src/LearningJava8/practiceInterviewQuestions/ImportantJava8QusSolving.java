@@ -40,26 +40,31 @@ public class ImportantJava8QusSolving {
         System.out.println(list.stream().count());
 
         System.out.println("The maximum value element present in list using Stream functions?");
-        list.stream().max(Integer::compare).ifPresent(System.out::println);
+        list.stream().max(Integer::compare).ifPresent(System.out::println); // this is representing method refrencing's with instance method of particular object
 
         System.out.println(" The most smallest value in list is:");
         list.stream().min(Integer::compare).ifPresent(System.out::println);
 
         System.out.println("Sort all the values present in list using Stream functions?");
 //        Collections.sort(list, (num1, num2)->Integer.compare(num1,num2));
-        list.stream().sorted().forEach(System.out::println);
+        list.stream().sorted().forEach(System.out::println);// here we are applying instance methd of an particular object  object
 //        list.stream().forEach(System.out::print);
 
         System.out.println("Sorting all the values present in list in descending order using Stream functions?");
         list.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
 
-        System.out.println("Return true if any value appears at least twice in the array, and return false if every element is distinct:");
-
 
         System.out.println("Finding count of characters in the giver array:");
         String str="gyanendra";
-        Map<String, Long> collect = Arrays.stream(str.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> collect = Arrays.stream(str.split("")).
+                collect(
+                        Collectors.groupingBy(Function.identity(), Collectors.counting()));
 //        collect.forEach((key, value)-> System.out.println(key +":"+value));
         System.out.println(collect);
+
+        System.out.println("Return true if any value appears at least twice in the array, and return false if every element is distinct:");
+        List<Integer> newList=new ArrayList<>();
+//        list.stream().filter(num-> );
+
     }
 }

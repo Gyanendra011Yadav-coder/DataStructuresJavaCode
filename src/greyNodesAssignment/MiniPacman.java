@@ -1,6 +1,5 @@
 package greyNodesAssignment;
 
-import greyNodesAssignment.game.Clara;
 
 /**
  * Created By:  Gyanendra_Yadav
@@ -8,10 +7,10 @@ import greyNodesAssignment.game.Clara;
  * in Project: DataStructuresJavaCode
  */
 public class MiniPacman {
-    class MyClara extends Clara {
-        /**
+    /*class MyClara extends Clara {
+        *//**
          * In the 'run()' method you can write your program for Clara
-         */
+         *//*
         void run() {
             while(!treeLeft()) {
                 cleanStreet();
@@ -57,6 +56,6 @@ public class MiniPacman {
             turnLeft();
             move(); // Move to the position of the previous leaf
         }
-    }
+    }*/
 
 }
