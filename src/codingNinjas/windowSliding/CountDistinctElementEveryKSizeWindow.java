@@ -92,17 +92,50 @@ public class CountDistinctElementEveryKSizeWindow {
     }
 
     public static List<Integer> maximumInAllSubarraysOfSizeK(int[] arr, int n, int k) {
-        int j = 0;
         List<Integer> ans = new ArrayList<Integer>();
-        int max = Integer.MIN_VALUE;
+        Deque<Integer> dq = new LinkedList<Integer>();
+
         for (int i = 0; i < arr.length; i++) {
-            max = Math.max(max, Math.max(arr[j], arr[i]));
-            if (i - j + 1 == k) {
-                ans.add(max);
-                j++;
-                max = Integer.MIN_VALUE;
+            // Remove elements that are out of the current window
+            while (!dq.isEmpty() && dq.peekFirst() < i - k + 1) {
+                dq.pollFirst();
+            }
+
+            // Remove elements smaller than the current element from the back
+            while (!dq.isEmpty() && arr[dq.peekLast()] < arr[i]) {
+                dq.pollLast();
+            }
+
+            // Add the current element to the back
+            dq.offerLast(i);
+
+            // Add the maximum element of the current window to the result list
+            if (i >= k - 1) {
+                ans.add(arr[dq.peekFirst()]);
             }
         }
         return ans;
+    }
+
+    public static List<Integer> maximumInAllSubarraysOfSizeK2(int[] arr, int n, int k) {
+
+        // Declare an empty array to store maximum of all k sized subarrays
+        List<Integer> answer = new ArrayList<>();
+
+        // Generate all subarrays of size k using two nested loops
+        for (int i = 0; i < n - k + 1; i++) {
+
+            // currentMax denotes current maximum element in subarray
+            int currentMax = arr[i];
+            for (int j = i; j < i + k; j++) {
+                currentMax = Math.max(currentMax, arr[j]);
+            }
+
+            // Add current maximum of this subarray to answer
+            answer.add(currentMax);
+        }
+
+        // Return the answer
+        return answer;
     }
 }
