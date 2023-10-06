@@ -23,10 +23,4 @@ public class OddEvenLevel {
     }
 
 
-    public static void main(String[] args) {
-        BinaryTreeNode binaryTreeNode = new BinaryTreeNode(5);
-        binaryTreeNode.data(5);
-    }
-
-
 }
