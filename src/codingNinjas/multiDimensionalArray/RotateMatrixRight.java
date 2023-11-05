@@ -42,11 +42,11 @@ public class RotateMatrixRight {
     public static void transposeMatrix(int[][] matrix) {
         int[][] temp = new int[matrix[0].length][matrix.length];
 
-        for (int i = 0; i < matrix.length; i++) 
+//        for (int i = 0; i < matrix.length; i++)
 
-        for (int i = 0; i < matrix.length; i++) {
-            System.arraycopy(temp[i], 0, matrix[i], 0, matrix[0].length);
-        }
+//        for (int i = 0; i < matrix.length; i++) {
+//            System.arraycopy(temp[i], 0, matrix[i], 0, matrix[0].length);
+//        }
     }
 
     // Reverse 1D array of the matrix
