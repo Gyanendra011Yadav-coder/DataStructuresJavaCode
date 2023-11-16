@@ -1,6 +1,5 @@
 package codingNinjas.problemOfTheDay;
 
-import java.util.List;
 
 public class WriteNumberNames {
     public static void main(String[] args) {
