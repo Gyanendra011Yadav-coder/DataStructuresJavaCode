@@ -8,8 +8,7 @@ public class WriteNumberNames {
 
     public static String  writeNumberNames(int n) {
         String result="";
-
-
+        
         return result;
     }
 }
