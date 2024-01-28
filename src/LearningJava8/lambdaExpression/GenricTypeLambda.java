@@ -1,7 +1,5 @@
 package LearningJava8.lambdaExpression;
 
-import org.w3c.dom.ls.LSOutput;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-08-13,Aug,2023

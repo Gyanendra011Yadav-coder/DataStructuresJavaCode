@@ -3,13 +3,8 @@ package LearningJava8.lambdaExpression;
 import LearningJava8.Comparator.Student;
 import LearningJava8.Comparator.TraditionComparator;
 
-import java.text.CollationElementIterator;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
-
-import static java.util.Collections.reverseOrder;
 
 /**
  * Created By:  Gyanendra_Yadav

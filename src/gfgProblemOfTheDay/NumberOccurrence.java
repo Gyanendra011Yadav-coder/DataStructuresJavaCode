@@ -1,9 +1,5 @@
 package gfgProblemOfTheDay;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-08-20,Aug,2023

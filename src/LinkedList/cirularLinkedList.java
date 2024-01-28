@@ -1,7 +1,5 @@
 package LinkedList;
 
-import TreeDataStructure.binarySearchTree;
-
 public class cirularLinkedList {
     NodeList last;
     int length;

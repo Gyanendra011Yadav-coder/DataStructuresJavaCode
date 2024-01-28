@@ -1,7 +1,5 @@
 package Threading;
 
-import java.util.Random;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-05-31,May,2023

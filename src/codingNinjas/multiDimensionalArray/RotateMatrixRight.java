@@ -1,14 +1,5 @@
 package codingNinjas.multiDimensionalArray;
 
-import java.util.Arrays;
-
-/**
- * Created By:  Gyanendra_Yadav
- * on 2023-10-12,Oct,2023
- * in Project: DataStructuresJavaCode
- */
-import java.util.Arrays;
-
 public class RotateMatrixRight {
 
     // Main method

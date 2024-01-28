@@ -1,8 +1,5 @@
 package LeetcodeQuestions.Qustions;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
-
 public class moveZeroesProblemNumber283 {
 
     public void moveZeroes(int[] nums) {

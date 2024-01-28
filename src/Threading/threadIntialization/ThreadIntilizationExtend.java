@@ -1,7 +1,5 @@
 package Threading.threadIntialization;
 
-import javaConceptsCode.ThreadsEtendsThreadClass;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-06-17,Jun,2023

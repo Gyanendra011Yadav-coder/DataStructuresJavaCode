@@ -1,8 +1,5 @@
 package codingNinjas.BasicAlgorithms;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-08-10,Aug,2023

@@ -1,9 +1,5 @@
 package GeeksForGeeks.Searching;
 
-import java.util.Arrays;
-import java.util.Arrays;
-import java.util.Comparator;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-04-04,Apr,2023

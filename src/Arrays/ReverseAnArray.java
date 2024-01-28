@@ -1,7 +1,5 @@
 package Arrays;
 
-import codingBlocksQuestions.reverseArray;
-
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -1,8 +1,6 @@
 package Arrays;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * Created By: Gyanendra-Yadav on 2022-09-15,Sep,2022

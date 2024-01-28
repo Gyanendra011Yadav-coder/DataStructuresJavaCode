@@ -1,16 +1,5 @@
 package LearningJava8.lambdaExpression;
 
-import org.w3c.dom.ls.LSOutput;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-08-10,Aug,2023

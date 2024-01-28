@@ -1,7 +1,5 @@
 package Arrays;
 
-import java.util.Scanner;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2022-11-22,Nov,2022

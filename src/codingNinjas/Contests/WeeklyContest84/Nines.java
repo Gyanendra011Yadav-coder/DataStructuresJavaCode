@@ -1,8 +1,5 @@
 package codingNinjas.Contests.WeeklyContest84;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-07-30,Jul,2023

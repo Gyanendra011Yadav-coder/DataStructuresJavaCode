@@ -1,16 +1,6 @@
 package BinarySearchTree;
 
 
-import com.sun.source.tree.Tree;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2022-12-29,Dec,2022

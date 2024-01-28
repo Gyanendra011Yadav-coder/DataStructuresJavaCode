@@ -1,7 +1,5 @@
 package codingNinjas.arrayList;
 
-import TreeDataStructure.InsertNodeBinaryTree;
-
 import java.util.*;
 import java.util.stream.Collectors;
 

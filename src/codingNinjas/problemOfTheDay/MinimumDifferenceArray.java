@@ -1,10 +1,6 @@
 package codingNinjas.problemOfTheDay;
 
-import java.net.Inet4Address;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created By:  Gyanendra_Yadav

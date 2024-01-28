@@ -1,7 +1,5 @@
 package BinarySearchTree;
 
-import com.sun.source.tree.Tree;
-
 public class implementationOfBST {
     private class TreeNode {
         int val;

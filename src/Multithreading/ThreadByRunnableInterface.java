@@ -1,9 +1,5 @@
 package Multithreading;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-
 /**
  * Created By:  Gyanendra_Yadav
  * on 2023-01-10,Jan,2023
