@@ -6,7 +6,7 @@ public class FrogJump {
         System.out.println(frogJump(heights.length, heights));
     }
 
-    public static int frogJump(int n, int heights[]) {
+    public static int frogJump(int n, int []heights) {
         int energyLost = 0;
 
         int index = 0;
