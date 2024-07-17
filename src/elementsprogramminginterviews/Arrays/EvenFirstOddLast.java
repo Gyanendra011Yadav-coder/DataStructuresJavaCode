@@ -3,7 +3,6 @@ package elementsprogramminginterviews.Arrays;
 public class EvenFirstOddLast {
     public static void main(String[] args) {
         int [] array = {2,3,4,7,8,9,10,11,12,13,14,15};
-//        int [] array = {3,7,9,11,12,14,16,8};
         reframeArray(array);
         for (int i = 0; i < array.length; i++) {
             System.out.println(i + "th element"+ array[i]);
@@ -11,7 +10,8 @@ public class EvenFirstOddLast {
     }
 
     public static void reframeArray(int[] array) {
-        int evenIndex = 0, oddIndex = array.length - 1;
+        int evenIndex = 0;
+        int oddIndex = array.length - 1;
         while (evenIndex < oddIndex) {
             if(array[evenIndex] % 2 == 0) {
                 evenIndex++;
