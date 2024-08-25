@@ -6,8 +6,8 @@ import java.util.Arrays;
 // [1,2] & [3,4] return [4,0,8]
 public class MultiplyTwoArrays {
     public static void main(String[] args) {
-        int[] array1 = {1, 9, 3, 7, 0, 7,7, 2, 1};
-        int[] array2 = {-7, 6,1,8,3,8,2,5,7,2,8,7};
+        int[] array1 = {1,2,3};
+        int[] array2 = {9,8,7};
         BigInteger [] resultArr = multiplyArray(array1, array2);
         for (BigInteger num : resultArr){
             System.out.print(num +",");
@@ -40,14 +40,14 @@ public class MultiplyTwoArrays {
 
         BigInteger temp;
         for (int i = array2.length - 1; i >= 0; i--) {
-            if(i==array2.length-1) {
+            if (i == array2.length - 1) {
                 temp = multiplyArray(array1, array2[i]);
-                finalMultiplyRslt.add(temp);
+                finalMultiplyRslt = finalMultiplyRslt.add(temp);
             } else {
                 temp = multiplyArray(array1, array2[i] * multiplier);
-                finalMultiplyRslt.add(temp);
+                finalMultiplyRslt = finalMultiplyRslt.add(temp);
             }
-            multiplier*=10;
+            multiplier *= 10;
         }
 
         return numberToArray(finalMultiplyRslt);
@@ -72,7 +72,9 @@ public class MultiplyTwoArrays {
         String stringFinalArr = String.valueOf(finalMultiplyRslt);
         BigInteger []array = new BigInteger[stringFinalArr.length()];
         for (int i = 0; i < stringFinalArr.length(); i++) {
-            array[i] = BigInteger.valueOf(stringFinalArr.charAt(i));
+            char value = stringFinalArr.charAt(i);
+            String stringVal = String.valueOf(value);
+            array[i] = BigInteger.valueOf(Long.parseLong(stringVal));
         }
         return array;
     }
