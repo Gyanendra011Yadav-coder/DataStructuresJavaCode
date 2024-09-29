@@ -14,26 +14,6 @@ public class MultiplyTwoArrays {
         }
     }
 
-//    public static int[] multiplyArray(int[] array1, int[] array2) {
-//        int finalMultiplyRslt = 0;
-//        int mulitplyer = 1;
-//
-//        int temp;
-//        // first step is to multiply last digit number
-//        for (int i = array2.length - 1; i >= 0; i--) {
-//            if(i==array2.length-1) {
-//                temp = multiplyArray(array1, array2[i]);
-//                finalMultiplyRslt += temp;
-//            } else {
-//                temp = multiplyArray(array1, array2[i] * mulitplyer);
-//                finalMultiplyRslt += temp;
-//            }
-//            mulitplyer*=10;
-//        }
-//
-//        return numberToArray(finalMultiplyRslt);
-//    }
-
     public static BigInteger[] multiplyArray(int[] array1, int[] array2) {
         BigInteger finalMultiplyRslt = BigInteger.ZERO;
         int multiplier = 1;
