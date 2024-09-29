@@ -10,7 +10,5 @@ public class StringProblemsSolving {
         }
         return true;
     }
-
-
 }
 
