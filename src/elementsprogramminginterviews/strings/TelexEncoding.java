@@ -6,28 +6,28 @@ package elementsprogramminginterviews.strings;
  * output: DOT QUESTIONMARK COMMA
  */
 public class TelexEncoding {
-    public static String telexEncoding(String str_to_encode) {
-        String encoded_str = "";
-        if (str_to_encode.isEmpty()) {
-            return encoded_str;
+    public static String telexEncoding(String strToEncode) {
+        StringBuilder encoded_str = new StringBuilder();
+        if (strToEncode.isEmpty()) {
+            return encoded_str.toString();
         }
-        for (int i = 0; i < str_to_encode.length(); i++) {
-            char c = str_to_encode.charAt(i);
+        for (int i = 0; i < strToEncode.length(); i++) {
+            char c = strToEncode.charAt(i);
             if (c == '.') {
-                encoded_str += "DOT" + " ";
+                encoded_str.append("DOT" + " ");
             } else if (c == '#') {
-                encoded_str += "HASH-TAG" + " ";
+                encoded_str.append("HASH-TAG" + " ");
             } else if (c == '?') {
-                encoded_str += "QUESTION-MARK" + " ";
+                encoded_str.append("QUESTION-MARK" + " ");
             } else if (c == '!') {
-                encoded_str += "EXCLAMATION-MARK" + " ";
+                encoded_str.append("EXCLAMATION-MARK" + " ");
             } else if (c == ',') {
-                encoded_str += "COMMA" + " ";
+                encoded_str.append("COMMA" + " ");
             } else {
-                encoded_str += "UNKNOWN_MARK" + " ";
+                encoded_str.append("UNKNOWN_MARK" + " ");
             }
         }
 
-        return encoded_str;
+        return encoded_str.toString();
     }
 }
