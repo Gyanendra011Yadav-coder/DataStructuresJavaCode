@@ -4,8 +4,10 @@ public class ReplaceAndRemove {
     private static final char A_CHAR = 'a';
     private static final char B_CHAR = 'b';
 
+    public ReplaceAndRemove() { } // constructor}
+
     public static int replaceAndRemove(char[] arrayToUpdate, int charToUpdate) {
-        int updatedChars = 0;
+        int updatedChars;
 
         int write_idx = 0, a_count = 0;
 
