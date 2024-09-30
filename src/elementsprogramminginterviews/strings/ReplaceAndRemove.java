@@ -4,7 +4,7 @@ public class ReplaceAndRemove {
     private static final char A_CHAR = 'a';
     private static final char B_CHAR = 'b';
 
-    public ReplaceAndRemove() { } // constructor}
+    public ReplaceAndRemove() { } // constructor
 
     public static int replaceAndRemove(char[] arrayToUpdate, int charToUpdate) {
         int updatedChars;
