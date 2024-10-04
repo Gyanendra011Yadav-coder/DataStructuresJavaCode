@@ -1,6 +1,6 @@
 package elementsprogramminginterviews.strings;
 
-public class ComputerSpreadSheetColumnEncoding {
+public class ComputeSpreadSheetColumnEncoding {
     public static int encodeColumn(String columnNameToEncode) {
         int result = 0;
         for (int idx = 0; idx < columnNameToEncode.length(); idx++) {

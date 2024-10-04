@@ -8,7 +8,7 @@ public class StringsPckgMainClass {
         System.out.println("isPalindrome: " + StringProblemsSolving.isPalindrome(" hsgsvghsvgsvsgvsgsvghsv bbshbhssh "));
         System.out.println("Convert String to integer: " + InterconvertStringToInt.convertStringToInt("123"));
         System.out.println("Convert String to integer: " + InterconvertStringToInt.convertIntToString(123));
-        System.out.println("Convert String to integer: " + ComputerSpreadSheetColumnEncoding.encodeColumn("AAA"));
+        System.out.println("Convert String to integer: " + ComputeSpreadSheetColumnEncoding.encodeColumn("AAA"));
         System.out.println("Updated Characters in array is: " + ReplaceAndRemove.replaceAndRemove(charArray_2, 4));
         System.out.println("Updated Characters in array is: " + TelexEncoding.telexEncoding(".?#,?."));
     }
