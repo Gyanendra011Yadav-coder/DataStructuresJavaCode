@@ -11,5 +11,7 @@ public class StringsPckgMainClass {
         System.out.println("Convert String to integer: " + ComputeSpreadSheetColumnEncoding.encodeColumn("AAA"));
         System.out.println("Updated Characters in array is: " + ReplaceAndRemove.replaceAndRemove(charArray_2, 4));
         System.out.println("Updated Characters in array is: " + TelexEncoding.telexEncoding(".?#,?."));
+        System.out.println("Is Palindrome: " + TestPalindromicity.isPalindromicity("A man, a plan, a canal, Panama"));
+        System.out.println("Is Palindrome: " + TestPalindromicity.isPalindromicity("Ray a Ray"));
     }
 }
