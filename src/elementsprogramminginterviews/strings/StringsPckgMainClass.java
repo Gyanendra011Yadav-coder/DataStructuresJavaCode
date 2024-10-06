@@ -13,5 +13,6 @@ public class StringsPckgMainClass {
         System.out.println("Updated Characters in array is: " + TelexEncoding.telexEncoding(".?#,?."));
         System.out.println("Is Palindrome: " + TestPalindromicity.isPalindromicity("A man, a plan, a canal, Panama"));
         System.out.println("Is Palindrome: " + TestPalindromicity.isPalindromicity("Ray a Ray"));
+        System.out.println("Reverse word: " + ReverseWordsInSentence.reverseSentence("Alice likes Bob"));
     }
 }
