@@ -22,5 +22,6 @@ public class StringsPckgMainClass {
         for (String str : mnemonics) {
             System.out.println(" " + str);
         }
+        System.out.println("Number of Roman Number: " + ConvertRomanToDecimal.convertRomanNumber("MMCMXCVIII"));
     }
 }
