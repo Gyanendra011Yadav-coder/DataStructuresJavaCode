@@ -1,4 +1,4 @@
-package prepByteQuestions.Searching;
+package FirstPhaseLearning.Searching;
 
 import java.io.IOException;
 import java.util.Arrays;

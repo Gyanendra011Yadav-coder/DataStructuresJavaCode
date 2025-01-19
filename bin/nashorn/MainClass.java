@@ -1,4 +1,4 @@
-package nashorn;
+package FirstPhaseLearning.nashorn;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -17,7 +17,7 @@ public class MainClass {
         String file = "src/main.js";
         ScriptEngine engine=new ScriptEngineManager()
                 .getEngineByName("Nashorn");
-//        engine.eval(new FileReader("C:\\Users\\Gyanendra-Yadav\\Documents\\DataStructuresJavaCode\\src\\nashorn\\main.js"));
+//        engine.eval(new FileReader("C:\\Users\\Gyanendra-Yadav\\Documents\\DataStructuresJavaCode\\src\\FirstPhaseLearning.nashorn\\main.js"));
         engine.eval(new FileReader("main.js"));
     }
 }
