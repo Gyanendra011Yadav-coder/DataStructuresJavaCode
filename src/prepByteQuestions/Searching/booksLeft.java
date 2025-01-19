@@ -27,7 +27,7 @@ import java.util.Scanner;
  * Bob cannot read a book with more than 66 chapters. He will read the first 33 books and the last 33 will be left, as he can choose only the first or last each time, 99 will never be chosen.
  * -------------------------------------------------------------------------
  */
-public class BooksLeft {
+public class booksLeft {
     public static void main(String args[]) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int numOfBooks = scanner.nextInt();

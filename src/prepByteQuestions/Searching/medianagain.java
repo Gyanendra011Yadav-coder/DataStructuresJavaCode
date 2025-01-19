@@ -9,7 +9,7 @@ import java.util.Scanner;
  * on 2023-03-14,Mar,2023
  * in Project: DataStructuresJavaCode
  */
-public class MedianAgain {
+public class medianagain {
     public static void main(String args[]) throws IOException {
         Scanner scanner = new Scanner(System.in);
         int lenArr=scanner.nextInt();
