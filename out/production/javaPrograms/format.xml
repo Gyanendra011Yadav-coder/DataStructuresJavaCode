@@ -1,0 +1,426 @@
+<DaaS>
+    <Msg>
+        <MetaData>
+            <MessageBridgeRequestId>588576162</MessageBridgeRequestId>
+            <SubmittedTimeStamp>2024-07-03T15:44:10Z</SubmittedTimeStamp>
+            <DataFormat>FpML</DataFormat>
+            <DataVersion>4.2</DataVersion>
+            <ApplicationId>171002579</ApplicationId>
+            <MevId>0AA1B652778111ECE69D0025B5C033F3</MevId>
+            <MajorVersionNumber/>
+            <MinorVersionNumber>8</MinorVersionNumber>
+            <AssetClass>Interest Rate Products</AssetClass>
+            <dataSource>MarkitWire</dataSource>
+            <numberOfRecords>1</numberOfRecords>
+            <TradeVersionTimestamp>2022-01-17 10:34:25.557731</TradeVersionTimestamp>
+            <DBService>PRE15MSV</DBService>
+            <Platform>JIGSAW</Platform>
+            <batchId>625</batchId>
+            <tradeIndex>3674</tradeIndex>
+            <tradeCount>5595</tradeCount>
+        </MetaData>
+    </Msg>
+    <SWML version="4-2" xmlns="http://www.fpml.org/2005/FpML-4-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.fpml.org/2005/FpML-4-2 swml-ird-main-4-2.xsd">
+        <swHeader>
+            <tradeId>171002579</tradeId>
+            <swTradeVersionId>6</swTradeVersionId>
+            <swTradeVersionTimestamp>2022-01-17T10:33:40Z</swTradeVersionTimestamp>
+            <swTradeStatus>New-Novated</swTradeStatus>
+            <swTradeSource>SwapsWireOffline</swTradeSource>
+            <swOriginatorPartyReference href="partyA"/>
+            <swNegotiationParties>
+                <swTrader id="traderA">
+                    <swParticipantId>GOLD</swParticipantId>
+                    <partyReference href="partyA"/>
+                </swTrader>
+                <swTrader id="traderB">
+                    <swParticipantId>DEUT</swParticipantId>
+                    <partyReference href="partyB"/>
+                </swTrader>
+                <swTrader id="traderC">
+                    <swParticipantId>GOLD</swParticipantId>
+                    <partyReference href="partyA"/>
+                </swTrader>
+                <swTrader id="traderSettlementAgency">
+                    <swParticipantId>LCHSWPAG</swParticipantId>
+                    <partyReference href="settlementAgency"/>
+                    <swUserId>lchsa_dealsink3</swUserId>
+                    <swUserName>lchsa_dealsink3</swUserName>
+                </swTrader>
+            </swNegotiationParties>
+        </swHeader>
+        <novation>
+            <eventId eventIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0"/>
+            <oldTransactionReference>
+                <partyTradeIdentifier>
+                    <partyReference href=""/>
+                    <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0"/>
+                </partyTradeIdentifier>
+                <partyTradeIdentifier>
+                    <partyReference href="partyC"/>
+                    <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0"/>
+                </partyTradeIdentifier>
+            </oldTransactionReference>
+            <transferor href=""/>
+            <transferee href=""/>
+            <remainingParty href="partyC"/>
+            <novationDate/>
+            <novationTradeDate/>
+            <novatedAmount>
+                <currency/>
+                <amount/>
+            </novatedAmount>
+        </novation>
+        <swStructuredTradeDetails>
+            <swProductType>Cross Currency Basis Swap</swProductType>
+            <swTemplateName>Cross Currency Basis Swap CHF v USD 5Y</swTemplateName>
+            <FpML version="4-2" xmlns="http://www.fpml.org/2005/FpML-4-2"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DataDocument">
+                <trade>
+                    <tradeHeader>
+                        <partyTradeIdentifier>
+                            <partyReference href="partyA"/>
+                            <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">171002579-6
+                            </tradeId>
+                        </partyTradeIdentifier>
+                        <partyTradeIdentifier>
+                            <partyReference href="partyB"/>
+                            <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">P229635L</tradeId>
+                        </partyTradeIdentifier>
+                        <tradeDate>2019-10-11</tradeDate>
+                    </tradeHeader>
+                    <swap>
+                        <swapStream id="floatingLeg">
+                            <payerPartyReference href="partyB"/>
+                            <receiverPartyReference href="partyA"/>
+                            <calculationPeriodDates id="floatingLegCalcPeriodDates">
+                                <effectiveDate>
+                                    <unadjustedDate>2024-10-15</unadjustedDate>
+                                    <dateAdjustments>
+                                        <businessDayConvention>NONE</businessDayConvention>
+                                    </dateAdjustments>
+                                </effectiveDate>
+                                <terminationDate>
+                                    <unadjustedDate>2029-10-15</unadjustedDate>
+                                    <dateAdjustments>
+                                        <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                        <businessCenters>
+                                            <businessCenter>GBLO</businessCenter>
+                                            <businessCenter>USNY</businessCenter>
+                                            <businessCenter>CHZU</businessCenter>
+                                        </businessCenters>
+                                    </dateAdjustments>
+                                </terminationDate>
+                                <calculationPeriodDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </calculationPeriodDatesAdjustments>
+                                <calculationPeriodFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                    <rollConvention>15</rollConvention>
+                                </calculationPeriodFrequency>
+                            </calculationPeriodDates>
+                            <paymentDates id="floatingLegPaymentDates">
+                                <calculationPeriodDatesReference href="floatingLegCalcPeriodDates"/>
+                                <paymentFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                </paymentFrequency>
+                                <payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
+                                <paymentDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </paymentDatesAdjustments>
+                            </paymentDates>
+                            <resetDates id="floatingLegResetDates">
+                                <calculationPeriodDatesReference href="floatingLegCalcPeriodDates"/>
+                                <resetRelativeTo>CalculationPeriodStartDate</resetRelativeTo>
+                                <fixingDates>
+                                    <periodMultiplier>-2</periodMultiplier>
+                                    <period>D</period>
+                                    <dayType>Business</dayType>
+                                    <businessDayConvention>NONE</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                    </businessCenters>
+                                    <dateRelativeTo href="floatingLegResetDates"/>
+                                </fixingDates>
+                                <resetFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                </resetFrequency>
+                                <resetDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </resetDatesAdjustments>
+                            </resetDates>
+                            <calculationPeriodAmount>
+                                <calculation>
+                                    <notionalSchedule id="notionalScheduleConstant">
+                                        <notionalStepSchedule>
+                                            <initialValue>19000000</initialValue>
+                                            <currency>CHF</currency>
+                                        </notionalStepSchedule>
+                                    </notionalSchedule>
+                                    <floatingRateCalculation>
+                                        <floatingRateIndex>CHF-LIBOR-BBA</floatingRateIndex>
+                                        <indexTenor>
+                                            <periodMultiplier>3</periodMultiplier>
+                                            <period>M</period>
+                                        </indexTenor>
+                                        <spreadSchedule>
+                                            <initialValue>-0.0027</initialValue>
+                                        </spreadSchedule>
+                                    </floatingRateCalculation>
+                                    <dayCountFraction>ACT/360</dayCountFraction>
+                                </calculation>
+                            </calculationPeriodAmount>
+                            <principalExchanges>
+                                <initialExchange>true</initialExchange>
+                                <finalExchange>true</finalExchange>
+                                <intermediateExchange>true</intermediateExchange>
+                            </principalExchanges>
+                        </swapStream>
+                        <swapStream id="floatingLeg2">
+                            <payerPartyReference href="partyA"/>
+                            <receiverPartyReference href="partyB"/>
+                            <calculationPeriodDates id="floatingLeg2CalcPeriodDates">
+                                <effectiveDate>
+                                    <unadjustedDate>2024-10-15</unadjustedDate>
+                                    <dateAdjustments>
+                                        <businessDayConvention>NONE</businessDayConvention>
+                                    </dateAdjustments>
+                                </effectiveDate>
+                                <terminationDate>
+                                    <unadjustedDate>2029-10-15</unadjustedDate>
+                                    <dateAdjustments>
+                                        <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                        <businessCenters>
+                                            <businessCenter>GBLO</businessCenter>
+                                            <businessCenter>USNY</businessCenter>
+                                            <businessCenter>CHZU</businessCenter>
+                                        </businessCenters>
+                                    </dateAdjustments>
+                                </terminationDate>
+                                <calculationPeriodDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </calculationPeriodDatesAdjustments>
+                                <calculationPeriodFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                    <rollConvention>15</rollConvention>
+                                </calculationPeriodFrequency>
+                            </calculationPeriodDates>
+                            <paymentDates id="floatingLeg2PaymentDates">
+                                <calculationPeriodDatesReference href="floatingLeg2CalcPeriodDates"/>
+                                <paymentFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                </paymentFrequency>
+                                <payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
+                                <paymentDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </paymentDatesAdjustments>
+                            </paymentDates>
+                            <resetDates id="floatingLeg2ResetDates">
+                                <calculationPeriodDatesReference href="floatingLeg2CalcPeriodDates"/>
+                                <resetRelativeTo>CalculationPeriodStartDate</resetRelativeTo>
+                                <fixingDates>
+                                    <periodMultiplier>-2</periodMultiplier>
+                                    <period>D</period>
+                                    <dayType>Business</dayType>
+                                    <businessDayConvention>NONE</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                    </businessCenters>
+                                    <dateRelativeTo href="floatingLeg2ResetDates"/>
+                                </fixingDates>
+                                <resetFrequency>
+                                    <periodMultiplier>3</periodMultiplier>
+                                    <period>M</period>
+                                </resetFrequency>
+                                <resetDatesAdjustments>
+                                    <businessDayConvention>MODFOLLOWING</businessDayConvention>
+                                    <businessCenters>
+                                        <businessCenter>GBLO</businessCenter>
+                                        <businessCenter>USNY</businessCenter>
+                                        <businessCenter>CHZU</businessCenter>
+                                    </businessCenters>
+                                </resetDatesAdjustments>
+                            </resetDates>
+                            <calculationPeriodAmount>
+                                <calculation>
+                                    <fxLinkedNotionalSchedule>
+                                        <constantNotionalScheduleReference href="notionalScheduleConstant"/>
+                                        <varyingNotionalCurrency>USD</varyingNotionalCurrency>
+                                        <varyingNotionalFixingDates>
+                                            <periodMultiplier>-2</periodMultiplier>
+                                            <period>D</period>
+                                            <dayType>Business</dayType>
+                                            <businessDayConvention>NONE</businessDayConvention>
+                                            <businessCenters>
+                                                <businessCenter>GBLO</businessCenter>
+                                            </businessCenters>
+                                            <dateRelativeTo href="floatingLeg2ResetDates"/>
+                                        </varyingNotionalFixingDates>
+                                        <fxSpotRateSource>
+                                            <primaryRateSource>
+                                                <rateSource>Reuters</rateSource>
+                                                <rateSourcePage>WMRPSPOT01</rateSourcePage>
+                                            </primaryRateSource>
+                                            <fixingTime>
+                                                <hourMinuteTime>11:00:00</hourMinuteTime>
+                                                <businessCenter>GBLO</businessCenter>
+                                            </fixingTime>
+                                        </fxSpotRateSource>
+                                        <varyingNotionalInterimExchangePaymentDates>
+                                            <periodMultiplier>0</periodMultiplier>
+                                            <period>D</period>
+                                            <businessDayConvention>NONE</businessDayConvention>
+                                            <dateRelativeTo href="floatingLeg2PaymentDates"/>
+                                        </varyingNotionalInterimExchangePaymentDates>
+                                    </fxLinkedNotionalSchedule>
+                                    <floatingRateCalculation>
+                                        <floatingRateIndex>USD-LIBOR-BBA</floatingRateIndex>
+                                        <indexTenor>
+                                            <periodMultiplier>3</periodMultiplier>
+                                            <period>M</period>
+                                        </indexTenor>
+                                    </floatingRateCalculation>
+                                    <dayCountFraction>ACT/360</dayCountFraction>
+                                </calculation>
+                            </calculationPeriodAmount>
+                            <principalExchanges>
+                                <initialExchange>true</initialExchange>
+                                <finalExchange>true</finalExchange>
+                                <intermediateExchange>true</intermediateExchange>
+                            </principalExchanges>
+                        </swapStream>
+                    </swap>
+                    <documentation>
+                        <masterAgreement>
+                            <masterAgreementType
+                                    masterAgreementTypeScheme="http://www.swapswire.com/spec/2001/master-agreement-type-1-0">
+                                ISDA
+                            </masterAgreementType>
+                        </masterAgreement>
+                        <contractualDefinitions>ISDA2006</contractualDefinitions>
+                    </documentation>
+                </trade>
+                <party id="partyA">
+                    <partyId>GSCMUS33</partyId>
+                    <partyName>Goldman Sachs Bank USA Goldman Sachs Capital Markets L.P. (This transaction was entered
+                        into by Goldman Sachs International as agent for GSCM)
+                    </partyName>
+                </party>
+                <party id="partyB">
+                    <partyId>DEUTDEFF</partyId>
+                    <partyName>Deutsche Bank AG Frankfurt</partyName>
+                </party>
+                <party id="settlementAgency">
+                    <partyId>LCHSGB2L</partyId>
+                    <partyName>SwapAgent Ltd</partyName>
+                </party>
+            </FpML>
+            <swExtendedTradeDetails>
+                <swTradeHeader>
+                    <swManualConfirmationRequired>false</swManualConfirmationRequired>
+                    <swClearingNotRequired>true</swClearingNotRequired>
+                    <swStandardSettlementInstructions>true</swStandardSettlementInstructions>
+                </swTradeHeader>
+                <swFxCutoffTime>
+                    <hourMinuteTime>12:00:00</hourMinuteTime>
+                </swFxCutoffTime>
+                <swSettlementAgent>
+                    <swSettlementAgency>
+                        <partyId>LCHSGB2L</partyId>
+                        <partyName>SwapAgent Ltd</partyName>
+                    </swSettlementAgency>
+                    <swSettlementAgencyModel>STM</swSettlementAgencyModel>
+                    <swSettlementAgencyStatus>Accepted - Registered</swSettlementAgencyStatus>
+                    <swSettlementAgencyTradeId>SWA00001026409</swSettlementAgencyTradeId>
+                </swSettlementAgent>
+            </swExtendedTradeDetails>
+        </swStructuredTradeDetails>
+        <swNegotiation>
+            <swDialog>
+                <swDialogId>EF8EE498778011EC82B20025B5C033EE</swDialogId>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:33:40Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>SettlementInitiated</swMessageStatus>
+                    <swSenderReference href="traderA"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:33:40Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>SettlementInitiated</swMessageStatus>
+                    <swSenderReference href="traderB"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:24Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>Done</swMessageStatus>
+                    <swSenderReference href="traderD"/>
+                    <swReceiverReference href="traderA"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:24Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>Done</swMessageStatus>
+                    <swSenderReference href="traderD"/>
+                    <swReceiverReference href="traderB"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:25Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>SettlementAccepted</swMessageStatus>
+                    <swSenderReference href="traderD"/>
+                    <swMessageText>Registered</swMessageText>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:25Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>Released</swMessageStatus>
+                    <swSenderReference href="traderA"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:25Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>Released</swMessageStatus>
+                    <swSenderReference href="traderB"/>
+                </swTraderMessage>
+                <swTraderMessage>
+                    <swHubTimestamp>2022-01-17T10:34:25Z</swHubTimestamp>
+                    <swTradeVersionId>6</swTradeVersionId>
+                    <swMessageStatus>Released</swMessageStatus>
+                    <swSenderReference href="traderD"/>
+                </swTraderMessage>
+            </swDialog>
+        </swNegotiation>
+    </SWML>
+</DaaS>

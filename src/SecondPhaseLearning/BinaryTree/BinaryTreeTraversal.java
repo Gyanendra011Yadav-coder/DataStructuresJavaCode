@@ -4,17 +4,19 @@ import SecondPhaseLearning.TreeNode;
 
 public class BinaryTreeTraversal {
 
-    public static int sizeOfTree(TreeNode treeNode, int size){
-        int treeSize = 0;
+    // Size of tree means Number of Nodes in Tree
+    public static int sizeOfTree(TreeNode treeNode){
         if(treeNode==null){
-            return size;
+            return 0;
+        } else {
+            int leftNodes = sizeOfTree(treeNode.leftNode);
+            int rightNodes = sizeOfTree(treeNode.rightNode);
+            return 1+ leftNodes + rightNodes;
         }
 
-        size++;
-        sizeOfTree(treeNode,size);
-        return treeSize;
     }
 
+    // Represents maximum number of edges on the longest path from the root node to a leaf node
     public static int heightOfTree(TreeNode treeNode){
         if(treeNode == null){
             return -1;
@@ -81,7 +83,9 @@ public class BinaryTreeTraversal {
         treeNode.rightNode.leftNode = new TreeNode(6);
         treeNode.rightNode.rightNode = new TreeNode(7);
 
-        System.out.println("Size of tree is:"+ heightOfTree(treeNode));
+        System.out.println("Height of tree is:"+ heightOfTree(treeNode));
+
+        System.out.println("Size of tree is:"+ sizeOfTree(treeNode));
 
         System.out.println("PreOrder-Traversal:");
         BinaryTreeTraversalIPreOrder(treeNode);
