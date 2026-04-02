@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class SubarrayWithGivenSum {
     //Function to find a continuous sub-array which adds up to a given number.
-    static ArrayList<Integer> subarraySum(int[] arr, int n, int s){
+    public static ArrayList<Integer> subarraySum(int[] arr, int n, int s){
         ArrayList<Integer> result = new ArrayList<Integer>();
         int start=0; // store starting index
         int sum=0;   // store sum of elements
